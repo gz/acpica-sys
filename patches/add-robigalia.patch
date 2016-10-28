@@ -19,7 +19,7 @@ new file mode 100644
 index 0000000..b4e775b
 --- /dev/null
 +++ b/source/include/platform/acrobigalia.h
-@@ -0,0 +1,140 @@
+@@ -0,0 +1,149 @@
 +/******************************************************************************
 + *
 + * Name: acrobigalia.h - OS specific defines, etc. for Robigalia
@@ -159,4 +159,13 @@ index 0000000..b4e775b
 +/* ACPICA cache implementation is adequate. */
 +#define ACPI_USE_LOCAL_CACHE
 +
++// Make AcpiOsPrintf call AcpiOsVprintf, which rust can then handle
++// (from thePowersGang/rust_os)
++extern void AcpiOsVprintf(const char *fmt, va_list args);
++static inline void AcpiOsPrintf(const char *fmt, ...) {
++    va_list    args;
++    va_start(args, fmt);
++    AcpiOsVprintf(fmt, args);
++    va_end(args);
++}
 +#endif /* __ACROBIGALIA_H__ */
