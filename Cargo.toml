@@ -6,7 +6,7 @@
 # except according to those terms.
 [package]
 name = "acpica-sys"
-version = "0.0.3"
+version = "0.0.4"
 authors = ["Corey Richardson <corey@octayn.net>"]
 description = "Bindings to the ACPI Component Architecture"
 documentation = "https://doc.robigalia.org/acpica_sys"
