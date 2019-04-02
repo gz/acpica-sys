@@ -8,18 +8,24 @@
  * according to those terms.
  */
 
-use std::process::Command;
 use std::env;
+use std::process::Command;
 fn main() {
-    if env::var("TARGET").unwrap() == "i686-sel4-unknown" {
-        assert!(
-            Command::new("/usr/bin/env")
-            .arg("make")
+    if env::var("TARGET").unwrap() == "x86_64-bespin" {
+        assert!(Command::new("make")
             .arg("-f")
             .arg("_Makefile")
-            .status().unwrap().success());
+            .status()
+            .unwrap()
+            .success());
 
-        println!("cargo:rustc-link-lib=static=acpica-{}", env::var("TARGET").unwrap());
-        println!("cargo:rustc-link-search=native={}", env::var("OUT_DIR").unwrap());
+        println!(
+            "cargo:rustc-link-lib=static=acpica-{}",
+            env::var("TARGET").unwrap()
+        );
+        println!(
+            "cargo:rustc-link-search=native={}",
+            env::var("OUT_DIR").unwrap()
+        );
     }
 }

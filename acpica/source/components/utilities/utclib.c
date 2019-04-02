@@ -108,7 +108,7 @@
  *
  ******************************************************************************/
 
-int
+__attribute__((weak)) int
 memcmp (
     void                    *VBuffer1,
     void                    *VBuffer2,
@@ -141,7 +141,7 @@ memcmp (
  *
  ******************************************************************************/
 
-void *
+__attribute__((weak)) void *
 memcpy (
     void                    *Dest,
     const void              *Src,
@@ -177,7 +177,7 @@ memcpy (
  *
  ******************************************************************************/
 
-void *
+__attribute__((weak)) void *
 memset (
     void                    *Dest,
     int                     Value,

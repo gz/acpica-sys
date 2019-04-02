@@ -1,10 +1,4 @@
-ifeq ($(TARGET),i686-sel4-unknown)
- machine_width := 32
- CLANG_TRIPLE := i386-elf
-endif
-
-ifeq ($(TARGET),x86_64-sel4-unknown)
- machine_width := 64
+ifeq ($(TARGET),x86_64-bespin)
  CLANG_TRIPLE := x86_64-elf
 endif
 
@@ -13,18 +7,16 @@ OBJDIR := $(OUT_DIR).obj/$(TARGET)/
 
 SRCS := $(wildcard $(SRCDIR)components/*/*.c)
 SRCS := $(filter-out $(SRCDIR)components/disassembler/%,$(SRCS))
-SRCS := $(filter-out $(SRCDIR)components/debugger/dbfileio.c,$(SRCS))
+SRCS := $(filter-out $(SRCDIR)components/debugger/%,$(SRCS))
+SRCS := $(filter-out $(SRCDIR)components/resources/rsdump.c,$(SRCS))
 SRCS += $(SRCDIR)components/hardware/hwacpi.c
 #SRCS += $(SRCDIR)common/ahuuids.c $(SRCDIR)common/ahids.c
 #SRCS += $(SRCDIR)compiler/aslmapenter.c
 OBJS := $(SRCS:$(SRCDIR)%.c=$(OBJDIR)%.o)
 
-CPPFLAGS := -I $(SRCDIR)include/ -D ROBIGALIA -D ACPI_LIBRARY
-#CPPFLAGS += -D ACPI_DEBUG_OUTPUT=1
-# -D ACPI_DISASSEMBLER=1
-CFLAGS := -ffreestanding
+CPPFLAGS := -I $(SRCDIR)include/ -D BESPIN -DACPI_APPLICATION
+CFLAGS := -ffreestanding -Wno-redundant-decls -Wno-unused-function
 CFLAGS += -O2
-CFLAGS += -D ROBIGALIA_MACHINE_WIDTH=$(machine_width)
 
 .PHONY: all clean srcdir
 
@@ -36,8 +28,8 @@ clean:
 $(OUT_DIR)/libacpica-$(TARGET).a: $(SRCDIR) $(OBJS)
 	@echo [AR] $@
 	@rm -f $@ && ar rc $@ $(OBJS)
-	
+
 $(OBJDIR)%.o: $(SRCDIR)%.c _Makefile
 	@mkdir -p $(dir $@)
-	@echo [CLANG] -o $@
-	@clang -target $(CLANG_TRIPLE) -o $@ -c $< $(CFLAGS) $(CPPFLAGS)
+	@echo [GCC] -o $@
+	@gcc -m64 -o $@ -c $< $(CFLAGS) $(CPPFLAGS)

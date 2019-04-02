@@ -31,10 +31,14 @@ pub struct Struct_acpi_sleep_functions {
     pub ExtendedFunction: ACPI_SLEEP_FUNCTION,
 }
 impl ::core::clone::Clone for Struct_acpi_sleep_functions {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_sleep_functions {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_SLEEP_FUNCTIONS = Struct_acpi_sleep_functions;
 #[repr(C)]
@@ -77,10 +81,14 @@ impl Union_acpi_object {
     }
 }
 impl ::core::clone::Clone for Union_acpi_object {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Union_acpi_object {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -89,10 +97,14 @@ pub struct Struct_Unnamed1 {
     pub Value: UINT64,
 }
 impl ::core::clone::Clone for Struct_Unnamed1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_Unnamed1 {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -102,10 +114,14 @@ pub struct Struct_Unnamed2 {
     pub Pointer: *mut i8,
 }
 impl ::core::clone::Clone for Struct_Unnamed2 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_Unnamed2 {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -115,10 +131,14 @@ pub struct Struct_Unnamed3 {
     pub Pointer: *mut UINT8,
 }
 impl ::core::clone::Clone for Struct_Unnamed3 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_Unnamed3 {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -128,10 +148,14 @@ pub struct Struct_Unnamed4 {
     pub Elements: *mut Union_acpi_object,
 }
 impl ::core::clone::Clone for Struct_Unnamed4 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_Unnamed4 {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -141,10 +165,14 @@ pub struct Struct_Unnamed5 {
     pub Handle: ACPI_HANDLE,
 }
 impl ::core::clone::Clone for Struct_Unnamed5 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_Unnamed5 {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -155,10 +183,14 @@ pub struct Struct_Unnamed6 {
     pub PblkLength: UINT32,
 }
 impl ::core::clone::Clone for Struct_Unnamed6 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_Unnamed6 {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -168,10 +200,14 @@ pub struct Struct_Unnamed7 {
     pub ResourceOrder: UINT32,
 }
 impl ::core::clone::Clone for Struct_Unnamed7 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_Unnamed7 {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_OBJECT = Union_acpi_object;
 #[repr(C)]
@@ -181,10 +217,14 @@ pub struct Struct_acpi_object_list {
     pub Pointer: *mut ACPI_OBJECT,
 }
 impl ::core::clone::Clone for Struct_acpi_object_list {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_object_list {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_OBJECT_LIST = Struct_acpi_object_list;
 #[repr(C)]
@@ -194,10 +234,14 @@ pub struct Struct_acpi_buffer {
     pub Pointer: *mut c_void,
 }
 impl ::core::clone::Clone for Struct_acpi_buffer {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_buffer {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_BUFFER = Struct_acpi_buffer;
 #[repr(C)]
@@ -208,10 +252,14 @@ pub struct Struct_acpi_predefined_names {
     pub Val: *mut i8,
 }
 impl ::core::clone::Clone for Struct_acpi_predefined_names {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_predefined_names {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_PREDEFINED_NAMES = Struct_acpi_predefined_names;
 #[repr(C)]
@@ -226,10 +274,14 @@ pub struct Struct_acpi_system_info {
     pub DebugLayer: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_system_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_system_info {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_SYSTEM_INFO = Struct_acpi_system_info;
 #[repr(C)]
@@ -241,76 +293,64 @@ pub struct Struct_acpi_statistics {
     pub MethodCount: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_statistics {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_statistics {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_STATISTICS = Struct_acpi_statistics;
 pub type ACPI_OSD_HANDLER =
-    ::core::option::Option<unsafe extern "C" fn(Context:
-                                                   *mut c_void)
-                              -> UINT32>;
+    ::core::option::Option<unsafe extern "C" fn(Context: *mut c_void) -> UINT32>;
 pub type ACPI_OSD_EXEC_CALLBACK =
-    ::core::option::Option<unsafe extern "C" fn(Context:
-                                                   *mut c_void)>;
+    ::core::option::Option<unsafe extern "C" fn(Context: *mut c_void)>;
 pub type ACPI_SCI_HANDLER =
-    ::core::option::Option<unsafe extern "C" fn(Context:
-                                                   *mut c_void)
-                              -> UINT32>;
-pub type ACPI_GBL_EVENT_HANDLER =
-    ::core::option::Option<unsafe extern "C" fn(EventType: UINT32,
-                                               Device: ACPI_HANDLE,
-                                               EventNumber: UINT32,
-                                               Context:
-                                                   *mut c_void)>;
+    ::core::option::Option<unsafe extern "C" fn(Context: *mut c_void) -> UINT32>;
+pub type ACPI_GBL_EVENT_HANDLER = ::core::option::Option<
+    unsafe extern "C" fn(
+        EventType: UINT32,
+        Device: ACPI_HANDLE,
+        EventNumber: UINT32,
+        Context: *mut c_void,
+    ),
+>;
 pub type ACPI_EVENT_HANDLER =
-    ::core::option::Option<unsafe extern "C" fn(Context:
-                                                   *mut c_void)
-                              -> UINT32>;
-pub type ACPI_GPE_HANDLER =
-    ::core::option::Option<unsafe extern "C" fn(GpeDevice: ACPI_HANDLE,
-                                               GpeNumber: UINT32,
-                                               Context:
-                                                   *mut c_void)
-                              -> UINT32>;
-pub type ACPI_NOTIFY_HANDLER =
-    ::core::option::Option<unsafe extern "C" fn(Device: ACPI_HANDLE,
-                                               Value: UINT32,
-                                               Context:
-                                                   *mut c_void)>;
+    ::core::option::Option<unsafe extern "C" fn(Context: *mut c_void) -> UINT32>;
+pub type ACPI_GPE_HANDLER = ::core::option::Option<
+    unsafe extern "C" fn(GpeDevice: ACPI_HANDLE, GpeNumber: UINT32, Context: *mut c_void) -> UINT32,
+>;
+pub type ACPI_NOTIFY_HANDLER = ::core::option::Option<
+    unsafe extern "C" fn(Device: ACPI_HANDLE, Value: UINT32, Context: *mut c_void),
+>;
 pub type ACPI_OBJECT_HANDLER =
-    ::core::option::Option<unsafe extern "C" fn(Object: ACPI_HANDLE,
-                                               Data:
-                                                   *mut c_void)>;
+    ::core::option::Option<unsafe extern "C" fn(Object: ACPI_HANDLE, Data: *mut c_void)>;
 pub type ACPI_INIT_HANDLER =
-    ::core::option::Option<extern "C" fn(Object: ACPI_HANDLE, Function: UINT32)
-                              -> ACPI_STATUS>;
-pub type ACPI_EXCEPTION_HANDLER =
-    ::core::option::Option<unsafe extern "C" fn(AmlStatus: ACPI_STATUS,
-                                               Name: ACPI_NAME,
-                                               Opcode: UINT16,
-                                               AmlOffset: UINT32,
-                                               Context:
-                                                   *mut c_void)
-                              -> ACPI_STATUS>;
-pub type ACPI_TABLE_HANDLER =
-    ::core::option::Option<unsafe extern "C" fn(Event: UINT32,
-                                               Table:
-                                                   *mut c_void,
-                                               Context:
-                                                   *mut c_void)
-                              -> ACPI_STATUS>;
-pub type ACPI_ADR_SPACE_HANDLER =
-    ::core::option::Option<unsafe extern "C" fn(Function: UINT32,
-                                               Address: ACPI_PHYSICAL_ADDRESS,
-                                               BitWidth: UINT32,
-                                               Value: *mut UINT64,
-                                               HandlerContext:
-                                                   *mut c_void,
-                                               RegionContext:
-                                                   *mut c_void)
-                              -> ACPI_STATUS>;
+    ::core::option::Option<extern "C" fn(Object: ACPI_HANDLE, Function: UINT32) -> ACPI_STATUS>;
+pub type ACPI_EXCEPTION_HANDLER = ::core::option::Option<
+    unsafe extern "C" fn(
+        AmlStatus: ACPI_STATUS,
+        Name: ACPI_NAME,
+        Opcode: UINT16,
+        AmlOffset: UINT32,
+        Context: *mut c_void,
+    ) -> ACPI_STATUS,
+>;
+pub type ACPI_TABLE_HANDLER = ::core::option::Option<
+    unsafe extern "C" fn(Event: UINT32, Table: *mut c_void, Context: *mut c_void) -> ACPI_STATUS,
+>;
+pub type ACPI_ADR_SPACE_HANDLER = ::core::option::Option<
+    unsafe extern "C" fn(
+        Function: UINT32,
+        Address: ACPI_PHYSICAL_ADDRESS,
+        BitWidth: UINT32,
+        Value: *mut UINT64,
+        HandlerContext: *mut c_void,
+        RegionContext: *mut c_void,
+    ) -> ACPI_STATUS,
+>;
 #[repr(C)]
 #[derive(Copy)]
 pub struct Struct_acpi_connection_info {
@@ -319,31 +359,34 @@ pub struct Struct_acpi_connection_info {
     pub AccessLength: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_connection_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_connection_info {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_CONNECTION_INFO = Struct_acpi_connection_info;
-pub type ACPI_ADR_SPACE_SETUP =
-    ::core::option::Option<unsafe extern "C" fn(RegionHandle: ACPI_HANDLE,
-                                               Function: UINT32,
-                                               HandlerContext:
-                                                   *mut c_void,
-                                               RegionContext:
-                                                   *mut *mut c_void)
-                              -> ACPI_STATUS>;
-pub type ACPI_WALK_CALLBACK =
-    ::core::option::Option<unsafe extern "C" fn(Object: ACPI_HANDLE,
-                                               NestingLevel: UINT32,
-                                               Context:
-                                                   *mut c_void,
-                                               ReturnValue:
-                                                   *mut *mut c_void)
-                              -> ACPI_STATUS>;
+pub type ACPI_ADR_SPACE_SETUP = ::core::option::Option<
+    unsafe extern "C" fn(
+        RegionHandle: ACPI_HANDLE,
+        Function: UINT32,
+        HandlerContext: *mut c_void,
+        RegionContext: *mut *mut c_void,
+    ) -> ACPI_STATUS,
+>;
+pub type ACPI_WALK_CALLBACK = ::core::option::Option<
+    unsafe extern "C" fn(
+        Object: ACPI_HANDLE,
+        NestingLevel: UINT32,
+        Context: *mut c_void,
+        ReturnValue: *mut *mut c_void,
+    ) -> ACPI_STATUS,
+>;
 pub type ACPI_INTERFACE_HANDLER =
-    ::core::option::Option<extern "C" fn(InterfaceName: ACPI_STRING,
-                                        Supported: UINT32) -> UINT32>;
+    ::core::option::Option<extern "C" fn(InterfaceName: ACPI_STRING, Supported: UINT32) -> UINT32>;
 #[repr(C)]
 #[derive(Copy)]
 pub struct Struct_acpi_pnp_device_id {
@@ -351,10 +394,14 @@ pub struct Struct_acpi_pnp_device_id {
     pub String: *mut i8,
 }
 impl ::core::clone::Clone for Struct_acpi_pnp_device_id {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_pnp_device_id {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_PNP_DEVICE_ID = Struct_acpi_pnp_device_id;
 #[repr(C)]
@@ -365,10 +412,14 @@ pub struct Struct_acpi_pnp_device_id_list {
     pub Ids: [ACPI_PNP_DEVICE_ID; 1usize],
 }
 impl ::core::clone::Clone for Struct_acpi_pnp_device_id_list {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_pnp_device_id_list {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_PNP_DEVICE_ID_LIST = Struct_acpi_pnp_device_id_list;
 #[repr(C)]
@@ -390,10 +441,14 @@ pub struct Struct_acpi_device_info {
     pub CompatibleIdList: ACPI_PNP_DEVICE_ID_LIST,
 }
 impl ::core::clone::Clone for Struct_acpi_device_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_device_info {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_DEVICE_INFO = Struct_acpi_device_info;
 #[repr(C)]
@@ -405,10 +460,14 @@ pub struct Struct_acpi_pci_id {
     pub Function: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_pci_id {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_pci_id {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_PCI_ID = Struct_acpi_pci_id;
 #[repr(C)]
@@ -421,10 +480,14 @@ pub struct Struct_acpi_mem_space_context {
     pub MappedLength: ACPI_SIZE,
 }
 impl ::core::clone::Clone for Struct_acpi_mem_space_context {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_mem_space_context {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MEM_SPACE_CONTEXT = Struct_acpi_mem_space_context;
 #[repr(C)]
@@ -437,10 +500,14 @@ pub struct Struct_acpi_memory_list {
     pub CurrentDepth: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_memory_list {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_memory_list {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MEMORY_LIST = Struct_acpi_memory_list;
 #[derive(Clone, Copy)]
@@ -457,10 +524,14 @@ pub struct Struct_acpi_exception_info {
     pub Name: *mut i8,
 }
 impl ::core::clone::Clone for Struct_acpi_exception_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_exception_info {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_EXCEPTION_INFO = Struct_acpi_exception_info;
 #[repr(C)]
@@ -477,10 +548,14 @@ pub struct Struct_acpi_table_header {
     pub AslCompilerRevision: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_table_header {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_header {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_HEADER = Struct_acpi_table_header;
 #[repr(C)]
@@ -493,10 +568,14 @@ pub struct Struct_acpi_generic_address {
     pub Address: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_generic_address {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_generic_address {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_GENERIC_ADDRESS = Struct_acpi_generic_address;
 #[repr(C)]
@@ -513,10 +592,14 @@ pub struct Struct_acpi_table_rsdp {
     pub Reserved: [UINT8; 3usize],
 }
 impl ::core::clone::Clone for Struct_acpi_table_rsdp {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_rsdp {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_RSDP = Struct_acpi_table_rsdp;
 #[repr(C)]
@@ -529,10 +612,14 @@ pub struct Struct_acpi_rsdp_common {
     pub RsdtPhysicalAddress: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_rsdp_common {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_rsdp_common {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RSDP_COMMON = Struct_acpi_rsdp_common;
 #[repr(C)]
@@ -544,10 +631,14 @@ pub struct Struct_acpi_rsdp_extension {
     pub Reserved: [UINT8; 3usize],
 }
 impl ::core::clone::Clone for Struct_acpi_rsdp_extension {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_rsdp_extension {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RSDP_EXTENSION = Struct_acpi_rsdp_extension;
 #[repr(C)]
@@ -557,10 +648,14 @@ pub struct Struct_acpi_table_rsdt {
     pub TableOffsetEntry: [UINT32; 1usize],
 }
 impl ::core::clone::Clone for Struct_acpi_table_rsdt {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_rsdt {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_RSDT = Struct_acpi_table_rsdt;
 #[repr(C)]
@@ -570,10 +665,14 @@ pub struct Struct_acpi_table_xsdt {
     pub TableOffsetEntry: [UINT64; 1usize],
 }
 impl ::core::clone::Clone for Struct_acpi_table_xsdt {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_xsdt {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_XSDT = Struct_acpi_table_xsdt;
 #[repr(C)]
@@ -592,10 +691,14 @@ pub struct Struct_acpi_table_facs {
     pub Reserved1: [UINT8; 24usize],
 }
 impl ::core::clone::Clone for Struct_acpi_table_facs {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_facs {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_FACS = Struct_acpi_table_facs;
 #[repr(C)]
@@ -659,10 +762,14 @@ pub struct Struct_acpi_table_fadt {
     pub HypervisorId: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_table_fadt {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_fadt {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_FADT = Struct_acpi_table_fadt;
 #[derive(Clone, Copy)]
@@ -694,10 +801,14 @@ impl Union_acpi_name_union {
     }
 }
 impl ::core::clone::Clone for Union_acpi_name_union {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Union_acpi_name_union {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_NAME_UNION = Union_acpi_name_union;
 #[repr(C)]
@@ -711,10 +822,14 @@ pub struct Struct_acpi_table_desc {
     pub Flags: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_table_desc {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_desc {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_DESC = Struct_acpi_table_desc;
 #[repr(C)]
@@ -724,10 +839,14 @@ pub struct Struct_acpi_subtable_header {
     pub Length: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_subtable_header {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_subtable_header {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_SUBTABLE_HEADER = Struct_acpi_subtable_header;
 #[repr(C)]
@@ -742,10 +861,14 @@ pub struct Struct_acpi_whea_header {
     pub Mask: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_whea_header {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_whea_header {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_WHEA_HEADER = Struct_acpi_whea_header;
 #[repr(C)]
@@ -756,10 +879,14 @@ pub struct Struct_acpi_table_bert {
     pub Address: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_table_bert {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_bert {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_BERT = Struct_acpi_table_bert;
 #[repr(C)]
@@ -772,10 +899,14 @@ pub struct Struct_acpi_bert_region {
     pub ErrorSeverity: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_bert_region {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_bert_region {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_BERT_REGION = Struct_acpi_bert_region;
 #[derive(Clone, Copy)]
@@ -794,10 +925,14 @@ pub struct Struct_acpi_table_cpep {
     pub Reserved: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_table_cpep {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_cpep {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_CPEP = Struct_acpi_table_cpep;
 #[repr(C)]
@@ -809,10 +944,14 @@ pub struct Struct_acpi_cpep_polling {
     pub Interval: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_cpep_polling {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_cpep_polling {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_CPEP_POLLING = Struct_acpi_cpep_polling;
 #[repr(C)]
@@ -826,10 +965,14 @@ pub struct Struct_acpi_table_ecdt {
     pub Id: [UINT8; 1usize],
 }
 impl ::core::clone::Clone for Struct_acpi_table_ecdt {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_ecdt {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_ECDT = Struct_acpi_table_ecdt;
 #[repr(C)]
@@ -842,10 +985,14 @@ pub struct Struct_acpi_table_einj {
     pub Entries: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_table_einj {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_einj {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_EINJ = Struct_acpi_table_einj;
 #[repr(C)]
@@ -854,10 +1001,14 @@ pub struct Struct_acpi_einj_entry {
     pub WheaHeader: ACPI_WHEA_HEADER,
 }
 impl ::core::clone::Clone for Struct_acpi_einj_entry {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_einj_entry {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_EINJ_ENTRY = Struct_acpi_einj_entry;
 #[derive(Clone, Copy)]
@@ -899,13 +1050,16 @@ pub struct Struct_acpi_einj_error_type_with_addr {
     pub PcieId: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_einj_error_type_with_addr {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_einj_error_type_with_addr {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
-pub type ACPI_EINJ_ERROR_TYPE_WITH_ADDR =
-    Struct_acpi_einj_error_type_with_addr;
+pub type ACPI_EINJ_ERROR_TYPE_WITH_ADDR = Struct_acpi_einj_error_type_with_addr;
 #[repr(C)]
 #[derive(Copy)]
 pub struct Struct_acpi_einj_vendor {
@@ -917,10 +1071,14 @@ pub struct Struct_acpi_einj_vendor {
     pub Reserved: [UINT8; 3usize],
 }
 impl ::core::clone::Clone for Struct_acpi_einj_vendor {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_einj_vendor {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_EINJ_VENDOR = Struct_acpi_einj_vendor;
 #[repr(C)]
@@ -932,10 +1090,14 @@ pub struct Struct_acpi_einj_trigger {
     pub EntryCount: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_einj_trigger {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_einj_trigger {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_EINJ_TRIGGER = Struct_acpi_einj_trigger;
 #[derive(Clone, Copy)]
@@ -955,10 +1117,14 @@ pub struct Struct_acpi_table_erst {
     pub Entries: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_table_erst {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_erst {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_ERST = Struct_acpi_table_erst;
 #[repr(C)]
@@ -967,10 +1133,14 @@ pub struct Struct_acpi_erst_entry {
     pub WheaHeader: ACPI_WHEA_HEADER,
 }
 impl ::core::clone::Clone for Struct_acpi_erst_entry {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_erst_entry {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_ERST_ENTRY = Struct_acpi_erst_entry;
 #[derive(Clone, Copy)]
@@ -1037,10 +1207,14 @@ pub struct Struct_acpi_erst_info {
     pub Data: [UINT8; 48usize],
 }
 impl ::core::clone::Clone for Struct_acpi_erst_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_erst_info {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_ERST_INFO = Struct_acpi_erst_info;
 #[repr(C)]
@@ -1050,10 +1224,14 @@ pub struct Struct_acpi_table_hest {
     pub ErrorSourceCount: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_table_hest {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_hest {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_HEST = Struct_acpi_table_hest;
 #[repr(C)]
@@ -1063,10 +1241,14 @@ pub struct Struct_acpi_hest_header {
     pub SourceId: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_hest_header {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_hest_header {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_HEST_HEADER = Struct_acpi_hest_header;
 #[derive(Clone, Copy)]
@@ -1099,10 +1281,14 @@ pub struct Struct_acpi_hest_ia_error_bank {
     pub MiscRegister: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_hest_ia_error_bank {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_hest_ia_error_bank {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_HEST_IA_ERROR_BANK = Struct_acpi_hest_ia_error_bank;
 #[repr(C)]
@@ -1124,10 +1310,14 @@ pub struct Struct_acpi_hest_aer_common {
     pub AdvancedCapabilities: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_hest_aer_common {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_hest_aer_common {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_HEST_AER_COMMON = Struct_acpi_hest_aer_common;
 #[repr(C)]
@@ -1144,10 +1334,14 @@ pub struct Struct_acpi_hest_notify {
     pub ErrorThresholdWindow: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_hest_notify {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_hest_notify {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_HEST_NOTIFY = Struct_acpi_hest_notify;
 #[derive(Clone, Copy)]
@@ -1177,10 +1371,14 @@ pub struct Struct_acpi_hest_ia_machine_check {
     pub Reserved3: [UINT8; 7usize],
 }
 impl ::core::clone::Clone for Struct_acpi_hest_ia_machine_check {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_hest_ia_machine_check {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_HEST_IA_MACHINE_CHECK = Struct_acpi_hest_ia_machine_check;
 #[repr(C)]
@@ -1197,10 +1395,14 @@ pub struct Struct_acpi_hest_ia_corrected {
     pub Reserved2: [UINT8; 3usize],
 }
 impl ::core::clone::Clone for Struct_acpi_hest_ia_corrected {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_hest_ia_corrected {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_HEST_IA_CORRECTED = Struct_acpi_hest_ia_corrected;
 #[repr(C)]
@@ -1213,10 +1415,14 @@ pub struct Struct_acpi_hest_ia_nmi {
     pub MaxRawDataLength: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_hest_ia_nmi {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_hest_ia_nmi {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_HEST_IA_NMI = Struct_acpi_hest_ia_nmi;
 #[repr(C)]
@@ -1227,10 +1433,14 @@ pub struct Struct_acpi_hest_aer_root {
     pub RootErrorCommand: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_hest_aer_root {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_hest_aer_root {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_HEST_AER_ROOT = Struct_acpi_hest_aer_root;
 #[repr(C)]
@@ -1240,10 +1450,14 @@ pub struct Struct_acpi_hest_aer {
     pub Aer: ACPI_HEST_AER_COMMON,
 }
 impl ::core::clone::Clone for Struct_acpi_hest_aer {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_hest_aer {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_HEST_AER = Struct_acpi_hest_aer;
 #[repr(C)]
@@ -1256,10 +1470,14 @@ pub struct Struct_acpi_hest_aer_bridge {
     pub AdvancedCapabilities2: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_hest_aer_bridge {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_hest_aer_bridge {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_HEST_AER_BRIDGE = Struct_acpi_hest_aer_bridge;
 #[repr(C)]
@@ -1277,10 +1495,14 @@ pub struct Struct_acpi_hest_generic {
     pub ErrorBlockLength: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_hest_generic {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_hest_generic {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_HEST_GENERIC = Struct_acpi_hest_generic;
 #[repr(C)]
@@ -1301,10 +1523,14 @@ pub struct Struct_acpi_hest_generic_v2 {
     pub ReadAckWrite: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_hest_generic_v2 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_hest_generic_v2 {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_HEST_GENERIC_V2 = Struct_acpi_hest_generic_v2;
 #[repr(C)]
@@ -1317,10 +1543,14 @@ pub struct Struct_acpi_hest_generic_status {
     pub ErrorSeverity: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_hest_generic_status {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_hest_generic_status {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_HEST_GENERIC_STATUS = Struct_acpi_hest_generic_status;
 #[repr(C)]
@@ -1337,10 +1567,14 @@ pub struct Struct_acpi_hest_generic_data {
     pub TimeStamp: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_hest_generic_data {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_hest_generic_data {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_HEST_GENERIC_DATA = Struct_acpi_hest_generic_data;
 #[repr(C)]
@@ -1351,13 +1585,17 @@ pub struct Struct_acpi_table_madt {
     pub Flags: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_table_madt {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_madt {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_MADT = Struct_acpi_table_madt;
-#[derive(Clone, Copy)]
+#[derive(Clone, Copy, Debug)]
 #[repr(u32)]
 pub enum Enum_AcpiMadtType {
     ACPI_MADT_TYPE_LOCAL_APIC = 0,
@@ -1387,10 +1625,14 @@ pub struct Struct_acpi_madt_local_apic {
     pub LapicFlags: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_madt_local_apic {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_madt_local_apic {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MADT_LOCAL_APIC = Struct_acpi_madt_local_apic;
 #[repr(C)]
@@ -1403,10 +1645,14 @@ pub struct Struct_acpi_madt_io_apic {
     pub GlobalIrqBase: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_madt_io_apic {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_madt_io_apic {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MADT_IO_APIC = Struct_acpi_madt_io_apic;
 #[repr(C)]
@@ -1419,10 +1665,14 @@ pub struct Struct_acpi_madt_interrupt_override {
     pub IntiFlags: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_madt_interrupt_override {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_madt_interrupt_override {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MADT_INTERRUPT_OVERRIDE = Struct_acpi_madt_interrupt_override;
 #[repr(C)]
@@ -1433,10 +1683,14 @@ pub struct Struct_acpi_madt_nmi_source {
     pub GlobalIrq: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_madt_nmi_source {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_madt_nmi_source {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MADT_NMI_SOURCE = Struct_acpi_madt_nmi_source;
 #[repr(C)]
@@ -1448,10 +1702,14 @@ pub struct Struct_acpi_madt_local_apic_nmi {
     pub Lint: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_madt_local_apic_nmi {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_madt_local_apic_nmi {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MADT_LOCAL_APIC_NMI = Struct_acpi_madt_local_apic_nmi;
 #[repr(C)]
@@ -1462,10 +1720,14 @@ pub struct Struct_acpi_madt_local_apic_override {
     pub Address: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_madt_local_apic_override {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_madt_local_apic_override {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MADT_LOCAL_APIC_OVERRIDE = Struct_acpi_madt_local_apic_override;
 #[repr(C)]
@@ -1478,10 +1740,14 @@ pub struct Struct_acpi_madt_io_sapic {
     pub Address: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_madt_io_sapic {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_madt_io_sapic {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MADT_IO_SAPIC = Struct_acpi_madt_io_sapic;
 #[repr(C)]
@@ -1497,10 +1763,14 @@ pub struct Struct_acpi_madt_local_sapic {
     pub UidString: [i8; 1usize],
 }
 impl ::core::clone::Clone for Struct_acpi_madt_local_sapic {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_madt_local_sapic {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MADT_LOCAL_SAPIC = Struct_acpi_madt_local_sapic;
 #[repr(C)]
@@ -1516,10 +1786,14 @@ pub struct Struct_acpi_madt_interrupt_source {
     pub Flags: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_madt_interrupt_source {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_madt_interrupt_source {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MADT_INTERRUPT_SOURCE = Struct_acpi_madt_interrupt_source;
 #[repr(C)]
@@ -1532,10 +1806,14 @@ pub struct Struct_acpi_madt_local_x2apic {
     pub Uid: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_madt_local_x2apic {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_madt_local_x2apic {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MADT_LOCAL_X2APIC = Struct_acpi_madt_local_x2apic;
 #[repr(C)]
@@ -1548,10 +1826,14 @@ pub struct Struct_acpi_madt_local_x2apic_nmi {
     pub Reserved: [UINT8; 3usize],
 }
 impl ::core::clone::Clone for Struct_acpi_madt_local_x2apic_nmi {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_madt_local_x2apic_nmi {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MADT_LOCAL_X2APIC_NMI = Struct_acpi_madt_local_x2apic_nmi;
 #[repr(C)]
@@ -1575,10 +1857,14 @@ pub struct Struct_acpi_madt_generic_interrupt {
     pub Reserved2: [UINT8; 3usize],
 }
 impl ::core::clone::Clone for Struct_acpi_madt_generic_interrupt {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_madt_generic_interrupt {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MADT_GENERIC_INTERRUPT = Struct_acpi_madt_generic_interrupt;
 #[repr(C)]
@@ -1593,10 +1879,14 @@ pub struct Struct_acpi_madt_generic_distributor {
     pub Reserved2: [UINT8; 3usize],
 }
 impl ::core::clone::Clone for Struct_acpi_madt_generic_distributor {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_madt_generic_distributor {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MADT_GENERIC_DISTRIBUTOR = Struct_acpi_madt_generic_distributor;
 #[derive(Clone, Copy)]
@@ -1621,10 +1911,14 @@ pub struct Struct_acpi_madt_generic_msi_frame {
     pub SpiBase: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_madt_generic_msi_frame {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_madt_generic_msi_frame {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MADT_GENERIC_MSI_FRAME = Struct_acpi_madt_generic_msi_frame;
 #[repr(C)]
@@ -1636,13 +1930,16 @@ pub struct Struct_acpi_madt_generic_redistributor {
     pub Length: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_madt_generic_redistributor {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_madt_generic_redistributor {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
-pub type ACPI_MADT_GENERIC_REDISTRIBUTOR =
-    Struct_acpi_madt_generic_redistributor;
+pub type ACPI_MADT_GENERIC_REDISTRIBUTOR = Struct_acpi_madt_generic_redistributor;
 #[repr(C)]
 #[derive(Copy)]
 pub struct Struct_acpi_madt_generic_translator {
@@ -1653,10 +1950,14 @@ pub struct Struct_acpi_madt_generic_translator {
     pub Reserved2: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_madt_generic_translator {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_madt_generic_translator {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MADT_GENERIC_TRANSLATOR = Struct_acpi_madt_generic_translator;
 #[repr(C)]
@@ -1669,10 +1970,14 @@ pub struct Struct_acpi_table_msct {
     pub MaxAddress: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_table_msct {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_msct {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_MSCT = Struct_acpi_table_msct;
 #[repr(C)]
@@ -1686,10 +1991,14 @@ pub struct Struct_acpi_msct_proximity {
     pub MemoryCapacity: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_msct_proximity {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_msct_proximity {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MSCT_PROXIMITY = Struct_acpi_msct_proximity;
 #[repr(C)]
@@ -1699,10 +2008,14 @@ pub struct Struct_acpi_table_nfit {
     pub Reserved: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_table_nfit {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_nfit {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_NFIT = Struct_acpi_table_nfit;
 #[repr(C)]
@@ -1712,10 +2025,14 @@ pub struct Struct_acpi_nfit_header {
     pub Length: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_nfit_header {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_nfit_header {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_NFIT_HEADER = Struct_acpi_nfit_header;
 #[derive(Clone, Copy)]
@@ -1744,10 +2061,14 @@ pub struct Struct_acpi_nfit_system_address {
     pub MemoryMapping: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_nfit_system_address {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_nfit_system_address {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_NFIT_SYSTEM_ADDRESS = Struct_acpi_nfit_system_address;
 #[repr(C)]
@@ -1768,10 +2089,14 @@ pub struct Struct_acpi_nfit_memory_map {
     pub Reserved: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_nfit_memory_map {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_nfit_memory_map {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_NFIT_MEMORY_MAP = Struct_acpi_nfit_memory_map;
 #[repr(C)]
@@ -1785,10 +2110,14 @@ pub struct Struct_acpi_nfit_interleave {
     pub LineOffset: [UINT32; 1usize],
 }
 impl ::core::clone::Clone for Struct_acpi_nfit_interleave {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_nfit_interleave {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_NFIT_INTERLEAVE = Struct_acpi_nfit_interleave;
 #[repr(C)]
@@ -1799,10 +2128,14 @@ pub struct Struct_acpi_nfit_smbios {
     pub Data: [UINT8; 1usize],
 }
 impl ::core::clone::Clone for Struct_acpi_nfit_smbios {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_nfit_smbios {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_NFIT_SMBIOS = Struct_acpi_nfit_smbios;
 #[repr(C)]
@@ -1829,10 +2162,14 @@ pub struct Struct_acpi_nfit_control_region {
     pub Reserved1: [UINT8; 6usize],
 }
 impl ::core::clone::Clone for Struct_acpi_nfit_control_region {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_nfit_control_region {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_NFIT_CONTROL_REGION = Struct_acpi_nfit_control_region;
 #[repr(C)]
@@ -1847,10 +2184,14 @@ pub struct Struct_acpi_nfit_data_region {
     pub StartAddress: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_nfit_data_region {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_nfit_data_region {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_NFIT_DATA_REGION = Struct_acpi_nfit_data_region;
 #[repr(C)]
@@ -1863,10 +2204,14 @@ pub struct Struct_acpi_nfit_flush_address {
     pub HintAddress: [UINT64; 1usize],
 }
 impl ::core::clone::Clone for Struct_acpi_nfit_flush_address {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_nfit_flush_address {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_NFIT_FLUSH_ADDRESS = Struct_acpi_nfit_flush_address;
 #[repr(C)]
@@ -1878,10 +2223,14 @@ pub struct Struct_acpi_table_sbst {
     pub CriticalLevel: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_table_sbst {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_sbst {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_SBST = Struct_acpi_table_sbst;
 #[repr(C)]
@@ -1892,10 +2241,14 @@ pub struct Struct_acpi_table_slit {
     pub Entry: [UINT8; 1usize],
 }
 impl ::core::clone::Clone for Struct_acpi_table_slit {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_slit {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_SLIT = Struct_acpi_table_slit;
 #[repr(C)]
@@ -1906,10 +2259,14 @@ pub struct Struct_acpi_table_srat {
     pub Reserved: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_table_srat {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_srat {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_SRAT = Struct_acpi_table_srat;
 #[derive(Clone, Copy)]
@@ -1933,10 +2290,14 @@ pub struct Struct_acpi_srat_cpu_affinity {
     pub ClockDomain: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_srat_cpu_affinity {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_srat_cpu_affinity {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_SRAT_CPU_AFFINITY = Struct_acpi_srat_cpu_affinity;
 #[repr(C)]
@@ -1952,10 +2313,14 @@ pub struct Struct_acpi_srat_mem_affinity {
     pub Reserved2: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_srat_mem_affinity {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_srat_mem_affinity {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_SRAT_MEM_AFFINITY = Struct_acpi_srat_mem_affinity;
 #[repr(C)]
@@ -1970,10 +2335,14 @@ pub struct Struct_acpi_srat_x2apic_cpu_affinity {
     pub Reserved2: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_srat_x2apic_cpu_affinity {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_srat_x2apic_cpu_affinity {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_SRAT_X2APIC_CPU_AFFINITY = Struct_acpi_srat_x2apic_cpu_affinity;
 #[repr(C)]
@@ -1986,10 +2355,14 @@ pub struct Struct_acpi_srat_gicc_affinity {
     pub ClockDomain: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_srat_gicc_affinity {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_srat_gicc_affinity {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_SRAT_GICC_AFFINITY = Struct_acpi_srat_gicc_affinity;
 #[repr(C)]
@@ -1998,10 +2371,14 @@ pub struct Struct_acpi_table_asf {
     pub Header: ACPI_TABLE_HEADER,
 }
 impl ::core::clone::Clone for Struct_acpi_table_asf {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_asf {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_ASF = Struct_acpi_table_asf;
 #[repr(C)]
@@ -2012,10 +2389,14 @@ pub struct Struct_acpi_asf_header {
     pub Length: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_asf_header {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_asf_header {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_ASF_HEADER = Struct_acpi_asf_header;
 #[derive(Clone, Copy)]
@@ -2040,10 +2421,14 @@ pub struct Struct_acpi_asf_info {
     pub Reserved2: [UINT8; 3usize],
 }
 impl ::core::clone::Clone for Struct_acpi_asf_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_asf_info {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_ASF_INFO = Struct_acpi_asf_info;
 #[repr(C)]
@@ -2056,10 +2441,14 @@ pub struct Struct_acpi_asf_alert {
     pub DataLength: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_asf_alert {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_asf_alert {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_ASF_ALERT = Struct_acpi_asf_alert;
 #[repr(C)]
@@ -2079,10 +2468,14 @@ pub struct Struct_acpi_asf_alert_data {
     pub Instance: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_asf_alert_data {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_asf_alert_data {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_ASF_ALERT_DATA = Struct_acpi_asf_alert_data;
 #[repr(C)]
@@ -2094,10 +2487,14 @@ pub struct Struct_acpi_asf_remote {
     pub Reserved2: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_asf_remote {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_asf_remote {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_ASF_REMOTE = Struct_acpi_asf_remote;
 #[repr(C)]
@@ -2109,10 +2506,14 @@ pub struct Struct_acpi_asf_control_data {
     pub Value: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_asf_control_data {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_asf_control_data {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_ASF_CONTROL_DATA = Struct_acpi_asf_control_data;
 #[repr(C)]
@@ -2128,10 +2529,14 @@ pub struct Struct_acpi_asf_rmcp {
     pub OemParameters: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_asf_rmcp {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_asf_rmcp {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_ASF_RMCP = Struct_acpi_asf_rmcp;
 #[repr(C)]
@@ -2142,10 +2547,14 @@ pub struct Struct_acpi_asf_address {
     pub Devices: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_asf_address {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_asf_address {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_ASF_ADDRESS = Struct_acpi_asf_address;
 #[repr(C)]
@@ -2156,10 +2565,14 @@ pub struct Struct_acpi_table_boot {
     pub Reserved: [UINT8; 3usize],
 }
 impl ::core::clone::Clone for Struct_acpi_table_boot {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_boot {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_BOOT = Struct_acpi_table_boot;
 #[repr(C)]
@@ -2168,10 +2581,14 @@ pub struct Struct_acpi_table_csrt {
     pub Header: ACPI_TABLE_HEADER,
 }
 impl ::core::clone::Clone for Struct_acpi_table_csrt {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_csrt {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_CSRT = Struct_acpi_table_csrt;
 #[repr(C)]
@@ -2187,10 +2604,14 @@ pub struct Struct_acpi_csrt_group {
     pub SharedInfoLength: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_csrt_group {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_csrt_group {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_CSRT_GROUP = Struct_acpi_csrt_group;
 #[repr(C)]
@@ -2210,10 +2631,14 @@ pub struct Struct_acpi_csrt_shared_info {
     pub MaxBlockSize: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_csrt_shared_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_csrt_shared_info {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_CSRT_SHARED_INFO = Struct_acpi_csrt_shared_info;
 #[repr(C)]
@@ -2225,10 +2650,14 @@ pub struct Struct_acpi_csrt_descriptor {
     pub Uid: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_csrt_descriptor {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_csrt_descriptor {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_CSRT_DESCRIPTOR = Struct_acpi_csrt_descriptor;
 #[repr(C)]
@@ -2239,10 +2668,14 @@ pub struct Struct_acpi_table_dbg2 {
     pub InfoCount: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_table_dbg2 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_dbg2 {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_DBG2 = Struct_acpi_table_dbg2;
 #[repr(C)]
@@ -2252,10 +2685,14 @@ pub struct Struct_acpi_dbg2_header {
     pub InfoCount: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_dbg2_header {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_dbg2_header {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_DBG2_HEADER = Struct_acpi_dbg2_header;
 #[repr(C)]
@@ -2275,10 +2712,14 @@ pub struct Struct_acpi_dbg2_device {
     pub AddressSizeOffset: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_dbg2_device {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_dbg2_device {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_DBG2_DEVICE = Struct_acpi_dbg2_device;
 #[repr(C)]
@@ -2290,10 +2731,14 @@ pub struct Struct_acpi_table_dbgp {
     pub DebugPort: ACPI_GENERIC_ADDRESS,
 }
 impl ::core::clone::Clone for Struct_acpi_table_dbgp {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_dbgp {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_DBGP = Struct_acpi_table_dbgp;
 #[repr(C)]
@@ -2305,10 +2750,14 @@ pub struct Struct_acpi_table_dmar {
     pub Reserved: [UINT8; 10usize],
 }
 impl ::core::clone::Clone for Struct_acpi_table_dmar {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_dmar {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_DMAR = Struct_acpi_table_dmar;
 #[repr(C)]
@@ -2318,10 +2767,14 @@ pub struct Struct_acpi_dmar_header {
     pub Length: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_dmar_header {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_dmar_header {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_DMAR_HEADER = Struct_acpi_dmar_header;
 #[derive(Clone, Copy)]
@@ -2344,10 +2797,14 @@ pub struct Struct_acpi_dmar_device_scope {
     pub Bus: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_dmar_device_scope {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_dmar_device_scope {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_DMAR_DEVICE_SCOPE = Struct_acpi_dmar_device_scope;
 #[derive(Clone, Copy)]
@@ -2368,10 +2825,14 @@ pub struct Struct_acpi_dmar_pci_path {
     pub Function: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_dmar_pci_path {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_dmar_pci_path {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_DMAR_PCI_PATH = Struct_acpi_dmar_pci_path;
 #[repr(C)]
@@ -2384,10 +2845,14 @@ pub struct Struct_acpi_dmar_hardware_unit {
     pub Address: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_dmar_hardware_unit {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_dmar_hardware_unit {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_DMAR_HARDWARE_UNIT = Struct_acpi_dmar_hardware_unit;
 #[repr(C)]
@@ -2400,10 +2865,14 @@ pub struct Struct_acpi_dmar_reserved_memory {
     pub EndAddress: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_dmar_reserved_memory {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_dmar_reserved_memory {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_DMAR_RESERVED_MEMORY = Struct_acpi_dmar_reserved_memory;
 #[repr(C)]
@@ -2415,10 +2884,14 @@ pub struct Struct_acpi_dmar_atsr {
     pub Segment: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_dmar_atsr {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_dmar_atsr {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_DMAR_ATSR = Struct_acpi_dmar_atsr;
 #[repr(C)]
@@ -2430,10 +2903,14 @@ pub struct Struct_acpi_dmar_rhsa {
     pub ProximityDomain: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_dmar_rhsa {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_dmar_rhsa {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_DMAR_RHSA = Struct_acpi_dmar_rhsa;
 #[repr(C)]
@@ -2445,10 +2922,14 @@ pub struct Struct_acpi_dmar_andd {
     pub DeviceName: [i8; 1usize],
 }
 impl ::core::clone::Clone for Struct_acpi_dmar_andd {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_dmar_andd {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_DMAR_ANDD = Struct_acpi_dmar_andd;
 #[repr(C)]
@@ -2462,10 +2943,14 @@ pub struct Struct_acpi_table_hpet {
     pub Flags: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_table_hpet {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_hpet {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_HPET = Struct_acpi_table_hpet;
 #[derive(Clone, Copy)]
@@ -2482,10 +2967,14 @@ pub struct Struct_acpi_table_ibft {
     pub Reserved: [UINT8; 12usize],
 }
 impl ::core::clone::Clone for Struct_acpi_table_ibft {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_ibft {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_IBFT = Struct_acpi_table_ibft;
 #[repr(C)]
@@ -2498,10 +2987,14 @@ pub struct Struct_acpi_ibft_header {
     pub Flags: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_ibft_header {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_ibft_header {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_IBFT_HEADER = Struct_acpi_ibft_header;
 #[derive(Clone, Copy)]
@@ -2527,10 +3020,14 @@ pub struct Struct_acpi_ibft_control {
     pub Target1Offset: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_ibft_control {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_ibft_control {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_IBFT_CONTROL = Struct_acpi_ibft_control;
 #[repr(C)]
@@ -2545,10 +3042,14 @@ pub struct Struct_acpi_ibft_initiator {
     pub NameOffset: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_ibft_initiator {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_ibft_initiator {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_IBFT_INITIATOR = Struct_acpi_ibft_initiator;
 #[repr(C)]
@@ -2569,10 +3070,14 @@ pub struct Struct_acpi_ibft_nic {
     pub NameOffset: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_ibft_nic {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_ibft_nic {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_IBFT_NIC = Struct_acpi_ibft_nic;
 #[repr(C)]
@@ -2596,10 +3101,14 @@ pub struct Struct_acpi_ibft_target {
     pub ReverseChapSecretOffset: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_ibft_target {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_ibft_target {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_IBFT_TARGET = Struct_acpi_ibft_target;
 #[repr(C)]
@@ -2611,10 +3120,14 @@ pub struct Struct_acpi_table_iort {
     pub Reserved: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_table_iort {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_iort {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_IORT = Struct_acpi_table_iort;
 #[repr(C)]
@@ -2629,10 +3142,14 @@ pub struct Struct_acpi_iort_node {
     pub NodeData: [i8; 1usize],
 }
 impl ::core::clone::Clone for Struct_acpi_iort_node {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_iort_node {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_IORT_NODE = Struct_acpi_iort_node;
 #[derive(Clone, Copy)]
@@ -2653,10 +3170,14 @@ pub struct Struct_acpi_iort_id_mapping {
     pub Flags: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_iort_id_mapping {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_iort_id_mapping {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_IORT_ID_MAPPING = Struct_acpi_iort_id_mapping;
 #[repr(C)]
@@ -2668,10 +3189,14 @@ pub struct Struct_acpi_iort_memory_access {
     pub MemoryFlags: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_iort_memory_access {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_iort_memory_access {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_IORT_MEMORY_ACCESS = Struct_acpi_iort_memory_access;
 #[repr(C)]
@@ -2681,10 +3206,14 @@ pub struct Struct_acpi_iort_its_group {
     pub Identifiers: [UINT32; 1usize],
 }
 impl ::core::clone::Clone for Struct_acpi_iort_its_group {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_iort_its_group {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_IORT_ITS_GROUP = Struct_acpi_iort_its_group;
 #[repr(C)]
@@ -2696,10 +3225,14 @@ pub struct Struct_acpi_iort_named_component {
     pub DeviceName: [i8; 1usize],
 }
 impl ::core::clone::Clone for Struct_acpi_iort_named_component {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_iort_named_component {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_IORT_NAMED_COMPONENT = Struct_acpi_iort_named_component;
 #[repr(C)]
@@ -2710,10 +3243,14 @@ pub struct Struct_acpi_iort_root_complex {
     pub PciSegmentNumber: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_iort_root_complex {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_iort_root_complex {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_IORT_ROOT_COMPLEX = Struct_acpi_iort_root_complex;
 #[repr(C)]
@@ -2731,10 +3268,14 @@ pub struct Struct_acpi_iort_smmu {
     pub Interrupts: [UINT64; 1usize],
 }
 impl ::core::clone::Clone for Struct_acpi_iort_smmu {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_iort_smmu {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_IORT_SMMU = Struct_acpi_iort_smmu;
 #[repr(C)]
@@ -2745,10 +3286,14 @@ pub struct Struct_acpi_table_ivrs {
     pub Reserved: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_table_ivrs {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_ivrs {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_IVRS = Struct_acpi_table_ivrs;
 #[repr(C)]
@@ -2760,10 +3305,14 @@ pub struct Struct_acpi_ivrs_header {
     pub DeviceId: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_ivrs_header {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_ivrs_header {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_IVRS_HEADER = Struct_acpi_ivrs_header;
 #[derive(Clone, Copy)]
@@ -2785,10 +3334,14 @@ pub struct Struct_acpi_ivrs_hardware {
     pub Reserved: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_ivrs_hardware {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_ivrs_hardware {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_IVRS_HARDWARE = Struct_acpi_ivrs_hardware;
 #[repr(C)]
@@ -2799,10 +3352,14 @@ pub struct Struct_acpi_ivrs_de_header {
     pub DataSetting: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_ivrs_de_header {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_ivrs_de_header {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_IVRS_DE_HEADER = Struct_acpi_ivrs_de_header;
 #[derive(Clone, Copy)]
@@ -2827,10 +3384,14 @@ pub struct Struct_acpi_ivrs_device4 {
     pub Header: ACPI_IVRS_DE_HEADER,
 }
 impl ::core::clone::Clone for Struct_acpi_ivrs_device4 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_ivrs_device4 {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_IVRS_DEVICE4 = Struct_acpi_ivrs_device4;
 #[repr(C)]
@@ -2842,10 +3403,14 @@ pub struct Struct_acpi_ivrs_device8a {
     pub Reserved2: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_ivrs_device8a {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_ivrs_device8a {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_IVRS_DEVICE8A = Struct_acpi_ivrs_device8a;
 #[repr(C)]
@@ -2855,10 +3420,14 @@ pub struct Struct_acpi_ivrs_device8b {
     pub ExtendedData: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_ivrs_device8b {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_ivrs_device8b {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_IVRS_DEVICE8B = Struct_acpi_ivrs_device8b;
 #[repr(C)]
@@ -2870,10 +3439,14 @@ pub struct Struct_acpi_ivrs_device8c {
     pub Variety: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_ivrs_device8c {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_ivrs_device8c {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_IVRS_DEVICE8C = Struct_acpi_ivrs_device8c;
 #[repr(C)]
@@ -2886,10 +3459,14 @@ pub struct Struct_acpi_ivrs_memory {
     pub MemoryLength: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_ivrs_memory {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_ivrs_memory {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_IVRS_MEMORY = Struct_acpi_ivrs_memory;
 #[repr(C)]
@@ -2898,10 +3475,14 @@ pub struct Struct_acpi_table_lpit {
     pub Header: ACPI_TABLE_HEADER,
 }
 impl ::core::clone::Clone for Struct_acpi_table_lpit {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_lpit {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_LPIT = Struct_acpi_table_lpit;
 #[repr(C)]
@@ -2914,10 +3495,14 @@ pub struct Struct_acpi_lpit_header {
     pub Flags: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_lpit_header {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_lpit_header {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_LPIT_HEADER = Struct_acpi_lpit_header;
 #[derive(Clone, Copy)]
@@ -2937,10 +3522,14 @@ pub struct Struct_acpi_lpit_native {
     pub CounterFrequency: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_lpit_native {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_lpit_native {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_LPIT_NATIVE = Struct_acpi_lpit_native;
 #[repr(C)]
@@ -2950,10 +3539,14 @@ pub struct Struct_acpi_table_mcfg {
     pub Reserved: [UINT8; 8usize],
 }
 impl ::core::clone::Clone for Struct_acpi_table_mcfg {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_mcfg {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_MCFG = Struct_acpi_table_mcfg;
 #[repr(C)]
@@ -2966,10 +3559,14 @@ pub struct Struct_acpi_mcfg_allocation {
     pub Reserved: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_mcfg_allocation {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_mcfg_allocation {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MCFG_ALLOCATION = Struct_acpi_mcfg_allocation;
 #[repr(C)]
@@ -2990,10 +3587,14 @@ pub struct Struct_acpi_table_mchi {
     pub PciFunction: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_table_mchi {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_mchi {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_MCHI = Struct_acpi_table_mchi;
 #[repr(C)]
@@ -3002,10 +3603,14 @@ pub struct Struct_acpi_table_msdm {
     pub Header: ACPI_TABLE_HEADER,
 }
 impl ::core::clone::Clone for Struct_acpi_table_msdm {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_msdm {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_MSDM = Struct_acpi_table_msdm;
 #[repr(C)]
@@ -3014,10 +3619,14 @@ pub struct Struct_acpi_table_mtmr {
     pub Header: ACPI_TABLE_HEADER,
 }
 impl ::core::clone::Clone for Struct_acpi_table_mtmr {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_mtmr {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_MTMR = Struct_acpi_table_mtmr;
 #[repr(C)]
@@ -3028,10 +3637,14 @@ pub struct Struct_acpi_mtmr_entry {
     pub Irq: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_mtmr_entry {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_mtmr_entry {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MTMR_ENTRY = Struct_acpi_mtmr_entry;
 #[repr(C)]
@@ -3040,10 +3653,14 @@ pub struct Struct_acpi_table_slic {
     pub Header: ACPI_TABLE_HEADER,
 }
 impl ::core::clone::Clone for Struct_acpi_table_slic {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_slic {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_SLIC = Struct_acpi_table_slic;
 #[repr(C)]
@@ -3072,10 +3689,14 @@ pub struct Struct_acpi_table_spcr {
     pub Reserved2: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_table_spcr {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_spcr {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_SPCR = Struct_acpi_table_spcr;
 #[repr(C)]
@@ -3098,10 +3719,14 @@ pub struct Struct_acpi_table_spmi {
     pub Reserved2: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_table_spmi {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_spmi {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_SPMI = Struct_acpi_table_spmi;
 #[derive(Clone, Copy)]
@@ -3121,10 +3746,14 @@ pub struct Struct_acpi_table_tcpa_hdr {
     pub PlatformClass: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_table_tcpa_hdr {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_tcpa_hdr {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_TCPA_HDR = Struct_acpi_table_tcpa_hdr;
 #[repr(C)]
@@ -3134,10 +3763,14 @@ pub struct Struct_acpi_table_tcpa_client {
     pub LogAddress: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_table_tcpa_client {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_tcpa_client {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_TCPA_CLIENT = Struct_acpi_table_tcpa_client;
 #[repr(C)]
@@ -3161,10 +3794,14 @@ pub struct Struct_acpi_table_tcpa_server {
     pub Function: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_table_tcpa_server {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_tcpa_server {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_TCPA_SERVER = Struct_acpi_table_tcpa_server;
 #[repr(C)]
@@ -3177,10 +3814,14 @@ pub struct Struct_acpi_table_tpm2 {
     pub StartMethod: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_table_tpm2 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_tpm2 {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_TPM2 = Struct_acpi_table_tpm2;
 #[repr(C)]
@@ -3191,10 +3832,14 @@ pub struct Struct_acpi_table_uefi {
     pub DataOffset: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_table_uefi {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_uefi {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_UEFI = Struct_acpi_table_uefi;
 #[repr(C)]
@@ -3203,10 +3848,14 @@ pub struct Struct_acpi_table_vrtc {
     pub Header: ACPI_TABLE_HEADER,
 }
 impl ::core::clone::Clone for Struct_acpi_table_vrtc {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_vrtc {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_VRTC = Struct_acpi_table_vrtc;
 #[repr(C)]
@@ -3216,10 +3865,14 @@ pub struct Struct_acpi_vrtc_entry {
     pub Irq: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_vrtc_entry {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_vrtc_entry {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_VRTC_ENTRY = Struct_acpi_vrtc_entry;
 #[repr(C)]
@@ -3229,10 +3882,14 @@ pub struct Struct_acpi_table_waet {
     pub Flags: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_table_waet {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_waet {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_WAET = Struct_acpi_table_waet;
 #[repr(C)]
@@ -3253,10 +3910,14 @@ pub struct Struct_acpi_table_wdat {
     pub Entries: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_table_wdat {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_wdat {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_WDAT = Struct_acpi_table_wdat;
 #[repr(C)]
@@ -3270,10 +3931,14 @@ pub struct Struct_acpi_wdat_entry {
     pub Mask: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_wdat_entry {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_wdat_entry {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_WDAT_ENTRY = Struct_acpi_wdat_entry;
 #[derive(Clone, Copy)]
@@ -3320,10 +3985,14 @@ pub struct Struct_acpi_table_wddt {
     pub Capability: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_table_wddt {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_wddt {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_WDDT = Struct_acpi_table_wddt;
 #[repr(C)]
@@ -3342,10 +4011,14 @@ pub struct Struct_acpi_table_wdrt {
     pub Units: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_table_wdrt {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_wdrt {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_WDRT = Struct_acpi_table_wdrt;
 #[repr(C)]
@@ -3360,10 +4033,14 @@ pub struct Struct_acpi_table_bgrt {
     pub ImageOffsetY: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_table_bgrt {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_bgrt {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_BGRT = Struct_acpi_table_bgrt;
 #[repr(C)]
@@ -3381,10 +4058,14 @@ pub struct Struct_acpi_table_drtm {
     pub Flags: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_table_drtm {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_drtm {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_DRTM = Struct_acpi_table_drtm;
 #[repr(C)]
@@ -3394,10 +4075,14 @@ pub struct Struct_acpi_drtm_vtable_list {
     pub ValidatedTables: [UINT64; 1usize],
 }
 impl ::core::clone::Clone for Struct_acpi_drtm_vtable_list {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_drtm_vtable_list {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_DRTM_VTABLE_LIST = Struct_acpi_drtm_vtable_list;
 #[repr(C)]
@@ -3408,10 +4093,14 @@ pub struct Struct_acpi_drtm_resource {
     pub Address: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_drtm_resource {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_drtm_resource {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_DRTM_RESOURCE = Struct_acpi_drtm_resource;
 #[repr(C)]
@@ -3421,10 +4110,14 @@ pub struct Struct_acpi_drtm_resource_list {
     pub Resources: [ACPI_DRTM_RESOURCE; 1usize],
 }
 impl ::core::clone::Clone for Struct_acpi_drtm_resource_list {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_drtm_resource_list {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_DRTM_RESOURCE_LIST = Struct_acpi_drtm_resource_list;
 #[repr(C)]
@@ -3434,10 +4127,14 @@ pub struct Struct_acpi_drtm_dps_id {
     pub DpsId: [UINT8; 16usize],
 }
 impl ::core::clone::Clone for Struct_acpi_drtm_dps_id {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_drtm_dps_id {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_DRTM_DPS_ID = Struct_acpi_drtm_dps_id;
 #[repr(C)]
@@ -3446,10 +4143,14 @@ pub struct Struct_acpi_table_fpdt {
     pub Header: ACPI_TABLE_HEADER,
 }
 impl ::core::clone::Clone for Struct_acpi_table_fpdt {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_fpdt {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_FPDT = Struct_acpi_table_fpdt;
 #[repr(C)]
@@ -3460,10 +4161,14 @@ pub struct Struct_acpi_fpdt_header {
     pub Revision: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_fpdt_header {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_fpdt_header {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_FPDT_HEADER = Struct_acpi_fpdt_header;
 #[derive(Clone, Copy)]
@@ -3484,10 +4189,14 @@ pub struct Struct_acpi_fpdt_boot {
     pub ExitServicesExit: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_fpdt_boot {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_fpdt_boot {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_FPDT_BOOT = Struct_acpi_fpdt_boot;
 #[repr(C)]
@@ -3498,10 +4207,14 @@ pub struct Struct_acpi_fpdt_s3pt_ptr {
     pub Address: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_fpdt_s3pt_ptr {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_fpdt_s3pt_ptr {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_FPDT_S3PT_PTR = Struct_acpi_fpdt_s3pt_ptr;
 #[repr(C)]
@@ -3511,10 +4224,14 @@ pub struct Struct_acpi_table_s3pt {
     pub Length: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_table_s3pt {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_s3pt {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_S3PT = Struct_acpi_table_s3pt;
 #[repr(C)]
@@ -3525,10 +4242,14 @@ pub struct Struct_acpi_s3pt_header {
     pub Revision: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_s3pt_header {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_s3pt_header {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_S3PT_HEADER = Struct_acpi_s3pt_header;
 #[derive(Clone, Copy)]
@@ -3546,10 +4267,14 @@ pub struct Struct_acpi_s3pt_resume {
     pub AverageResume: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_s3pt_resume {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_s3pt_resume {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_S3PT_RESUME = Struct_acpi_s3pt_resume;
 #[repr(C)]
@@ -3560,10 +4285,14 @@ pub struct Struct_acpi_s3pt_suspend {
     pub SuspendEnd: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_s3pt_suspend {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_s3pt_suspend {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_S3PT_SUSPEND = Struct_acpi_s3pt_suspend;
 #[repr(C)]
@@ -3585,10 +4314,14 @@ pub struct Struct_acpi_table_gtdt {
     pub PlatformTimerOffset: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_table_gtdt {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_gtdt {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_GTDT = Struct_acpi_table_gtdt;
 #[repr(C)]
@@ -3598,10 +4331,14 @@ pub struct Struct_acpi_gtdt_header {
     pub Length: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_gtdt_header {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_gtdt_header {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_GTDT_HEADER = Struct_acpi_gtdt_header;
 #[derive(Clone, Copy)]
@@ -3621,10 +4358,14 @@ pub struct Struct_acpi_gtdt_timer_block {
     pub TimerOffset: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_gtdt_timer_block {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_gtdt_timer_block {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_GTDT_TIMER_BLOCK = Struct_acpi_gtdt_timer_block;
 #[repr(C)]
@@ -3641,10 +4382,14 @@ pub struct Struct_acpi_gtdt_timer_entry {
     pub CommonFlags: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_gtdt_timer_entry {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_gtdt_timer_entry {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_GTDT_TIMER_ENTRY = Struct_acpi_gtdt_timer_entry;
 #[repr(C)]
@@ -3658,10 +4403,14 @@ pub struct Struct_acpi_gtdt_watchdog {
     pub TimerFlags: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_gtdt_watchdog {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_gtdt_watchdog {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_GTDT_WATCHDOG = Struct_acpi_gtdt_watchdog;
 #[repr(C)]
@@ -3674,10 +4423,14 @@ pub struct Struct_acpi_table_mpst {
     pub Reserved2: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_table_mpst {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_mpst {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_MPST = Struct_acpi_table_mpst;
 #[repr(C)]
@@ -3689,10 +4442,14 @@ pub struct Struct_acpi_mpst_channel {
     pub Reserved2: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_mpst_channel {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_mpst_channel {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MPST_CHANNEL = Struct_acpi_mpst_channel;
 #[repr(C)]
@@ -3708,10 +4465,14 @@ pub struct Struct_acpi_mpst_power_node {
     pub NumPhysicalComponents: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_mpst_power_node {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_mpst_power_node {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MPST_POWER_NODE = Struct_acpi_mpst_power_node;
 #[repr(C)]
@@ -3721,10 +4482,14 @@ pub struct Struct_acpi_mpst_power_state {
     pub InfoIndex: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_mpst_power_state {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_mpst_power_state {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MPST_POWER_STATE = Struct_acpi_mpst_power_state;
 #[repr(C)]
@@ -3733,10 +4498,14 @@ pub struct Struct_acpi_mpst_component {
     pub ComponentId: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_mpst_component {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_mpst_component {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MPST_COMPONENT = Struct_acpi_mpst_component;
 #[repr(C)]
@@ -3746,10 +4515,14 @@ pub struct Struct_acpi_mpst_data_hdr {
     pub Reserved: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_mpst_data_hdr {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_mpst_data_hdr {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MPST_DATA_HDR = Struct_acpi_mpst_data_hdr;
 #[repr(C)]
@@ -3764,10 +4537,14 @@ pub struct Struct_acpi_mpst_power_data {
     pub Reserved2: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_mpst_power_data {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_mpst_power_data {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MPST_POWER_DATA = Struct_acpi_mpst_power_data;
 #[repr(C)]
@@ -3784,10 +4561,14 @@ pub struct Struct_acpi_mpst_shared {
     pub AveragePower: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_mpst_shared {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_mpst_shared {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MPST_SHARED = Struct_acpi_mpst_shared;
 #[repr(C)]
@@ -3798,10 +4579,14 @@ pub struct Struct_acpi_table_pcct {
     pub Reserved: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_table_pcct {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_pcct {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_PCCT = Struct_acpi_table_pcct;
 #[derive(Clone, Copy)]
@@ -3826,10 +4611,14 @@ pub struct Struct_acpi_pcct_subspace {
     pub MinTurnaroundTime: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_pcct_subspace {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_pcct_subspace {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_PCCT_SUBSPACE = Struct_acpi_pcct_subspace;
 #[repr(C)]
@@ -3849,10 +4638,14 @@ pub struct Struct_acpi_pcct_hw_reduced {
     pub MinTurnaroundTime: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_pcct_hw_reduced {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_pcct_hw_reduced {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_PCCT_HW_REDUCED = Struct_acpi_pcct_hw_reduced;
 #[repr(C)]
@@ -3863,10 +4656,14 @@ pub struct Struct_acpi_pcct_shared_memory {
     pub Status: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_pcct_shared_memory {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_pcct_shared_memory {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_PCCT_SHARED_MEMORY = Struct_acpi_pcct_shared_memory;
 #[repr(C)]
@@ -3876,10 +4673,14 @@ pub struct Struct_acpi_table_pmtt {
     pub Reserved: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_table_pmtt {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_pmtt {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_PMTT = Struct_acpi_table_pmtt;
 #[repr(C)]
@@ -3892,10 +4693,14 @@ pub struct Struct_acpi_pmtt_header {
     pub Reserved2: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_pmtt_header {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_pmtt_header {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_PMTT_HEADER = Struct_acpi_pmtt_header;
 #[repr(C)]
@@ -3906,10 +4711,14 @@ pub struct Struct_acpi_pmtt_socket {
     pub Reserved: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_pmtt_socket {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_pmtt_socket {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_PMTT_SOCKET = Struct_acpi_pmtt_socket;
 #[repr(C)]
@@ -3926,10 +4735,14 @@ pub struct Struct_acpi_pmtt_controller {
     pub DomainCount: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_pmtt_controller {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_pmtt_controller {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_PMTT_CONTROLLER = Struct_acpi_pmtt_controller;
 #[repr(C)]
@@ -3938,10 +4751,14 @@ pub struct Struct_acpi_pmtt_domain {
     pub ProximityDomain: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_pmtt_domain {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_pmtt_domain {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_PMTT_DOMAIN = Struct_acpi_pmtt_domain;
 #[repr(C)]
@@ -3954,10 +4771,14 @@ pub struct Struct_acpi_pmtt_physical_component {
     pub BiosHandle: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_pmtt_physical_component {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_pmtt_physical_component {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_PMTT_PHYSICAL_COMPONENT = Struct_acpi_pmtt_physical_component;
 #[repr(C)]
@@ -3967,10 +4788,14 @@ pub struct Struct_acpi_table_rasf {
     pub ChannelId: [UINT8; 12usize],
 }
 impl ::core::clone::Clone for Struct_acpi_table_rasf {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_rasf {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_RASF = Struct_acpi_table_rasf;
 #[repr(C)]
@@ -3986,10 +4811,14 @@ pub struct Struct_acpi_rasf_shared_memory {
     pub SetCapabilitiesStatus: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_rasf_shared_memory {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_rasf_shared_memory {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RASF_SHARED_MEMORY = Struct_acpi_rasf_shared_memory;
 #[repr(C)]
@@ -4000,10 +4829,14 @@ pub struct Struct_acpi_rasf_parameter_block {
     pub Length: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_rasf_parameter_block {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_rasf_parameter_block {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RASF_PARAMETER_BLOCK = Struct_acpi_rasf_parameter_block;
 #[repr(C)]
@@ -4017,16 +4850,22 @@ pub struct Struct_acpi_rasf_patrol_scrub_parameter {
     pub RequestedSpeed: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_rasf_patrol_scrub_parameter {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_rasf_patrol_scrub_parameter {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
-pub type ACPI_RASF_PATROL_SCRUB_PARAMETER =
-    Struct_acpi_rasf_patrol_scrub_parameter;
+pub type ACPI_RASF_PATROL_SCRUB_PARAMETER = Struct_acpi_rasf_patrol_scrub_parameter;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_AcpiRasfCommands { ACPI_RASF_EXECUTE_RASF_COMMAND = 1, _UNUSED_VARIANT = 2, }
+pub enum Enum_AcpiRasfCommands {
+    ACPI_RASF_EXECUTE_RASF_COMMAND = 1,
+    _UNUSED_VARIANT = 2,
+}
 #[derive(Clone, Copy)]
 #[repr(u32)]
 pub enum Enum_AcpiRasfCapabiliities {
@@ -4058,10 +4897,14 @@ pub struct Struct_acpi_table_stao {
     pub IgnoreUart: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_table_stao {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_stao {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_STAO = Struct_acpi_table_stao;
 #[repr(C)]
@@ -4075,10 +4918,14 @@ pub struct Struct_acpi_table_wpbt {
     pub ArgumentsLength: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_table_wpbt {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_wpbt {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_WPBT = Struct_acpi_table_wpbt;
 #[repr(C)]
@@ -4091,10 +4938,14 @@ pub struct Struct_acpi_table_xenv {
     pub EventFlags: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_table_xenv {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_table_xenv {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_TABLE_XENV = Struct_acpi_table_xenv;
 pub type ACPI_RS_LENGTH = UINT16;
@@ -4105,10 +4956,14 @@ pub struct Struct_acpi_uuid {
     pub Data: [UINT8; 16usize],
 }
 impl ::core::clone::Clone for Struct_acpi_uuid {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_uuid {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_UUID = Struct_acpi_uuid;
 #[repr(C)]
@@ -4118,10 +4973,14 @@ pub struct Struct_acpi_vendor_uuid {
     pub Data: [UINT8; 16usize],
 }
 impl ::core::clone::Clone for Struct_acpi_vendor_uuid {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_vendor_uuid {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_VENDOR_UUID = Struct_acpi_vendor_uuid;
 #[repr(C)]
@@ -4136,10 +4995,14 @@ pub struct Struct_acpi_resource_irq {
     pub Interrupts: [UINT8; 1usize],
 }
 impl ::core::clone::Clone for Struct_acpi_resource_irq {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_irq {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE_IRQ = Struct_acpi_resource_irq;
 #[repr(C)]
@@ -4152,10 +5015,14 @@ pub struct Struct_acpi_resource_dma {
     pub Channels: [UINT8; 1usize],
 }
 impl ::core::clone::Clone for Struct_acpi_resource_dma {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_dma {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE_DMA = Struct_acpi_resource_dma;
 #[repr(C)]
@@ -4166,10 +5033,14 @@ pub struct Struct_acpi_resource_start_dependent {
     pub PerformanceRobustness: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_resource_start_dependent {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_start_dependent {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE_START_DEPENDENT = Struct_acpi_resource_start_dependent;
 #[repr(C)]
@@ -4182,10 +5053,14 @@ pub struct Struct_acpi_resource_io {
     pub Maximum: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_resource_io {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_io {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE_IO = Struct_acpi_resource_io;
 #[repr(C)]
@@ -4195,10 +5070,14 @@ pub struct Struct_acpi_resource_fixed_io {
     pub AddressLength: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_resource_fixed_io {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_fixed_io {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE_FIXED_IO = Struct_acpi_resource_fixed_io;
 #[repr(C)]
@@ -4209,10 +5088,14 @@ pub struct Struct_acpi_resource_fixed_dma {
     pub Width: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_resource_fixed_dma {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_fixed_dma {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE_FIXED_DMA = Struct_acpi_resource_fixed_dma;
 #[repr(C)]
@@ -4222,10 +5105,14 @@ pub struct Struct_acpi_resource_vendor {
     pub ByteData: [UINT8; 1usize],
 }
 impl ::core::clone::Clone for Struct_acpi_resource_vendor {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_vendor {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE_VENDOR = Struct_acpi_resource_vendor;
 #[repr(C)]
@@ -4237,10 +5124,14 @@ pub struct Struct_acpi_resource_vendor_typed {
     pub ByteData: [UINT8; 1usize],
 }
 impl ::core::clone::Clone for Struct_acpi_resource_vendor_typed {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_vendor_typed {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE_VENDOR_TYPED = Struct_acpi_resource_vendor_typed;
 #[repr(C)]
@@ -4249,10 +5140,14 @@ pub struct Struct_acpi_resource_end_tag {
     pub Checksum: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_resource_end_tag {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_end_tag {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE_END_TAG = Struct_acpi_resource_end_tag;
 #[repr(C)]
@@ -4265,10 +5160,14 @@ pub struct Struct_acpi_resource_memory24 {
     pub AddressLength: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_resource_memory24 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_memory24 {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE_MEMORY24 = Struct_acpi_resource_memory24;
 #[repr(C)]
@@ -4281,10 +5180,14 @@ pub struct Struct_acpi_resource_memory32 {
     pub AddressLength: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_resource_memory32 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_memory32 {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE_MEMORY32 = Struct_acpi_resource_memory32;
 #[repr(C)]
@@ -4295,10 +5198,14 @@ pub struct Struct_acpi_resource_fixed_memory32 {
     pub AddressLength: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_resource_fixed_memory32 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_fixed_memory32 {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE_FIXED_MEMORY32 = Struct_acpi_resource_fixed_memory32;
 #[repr(C)]
@@ -4310,10 +5217,14 @@ pub struct Struct_acpi_memory_attribute {
     pub Translation: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_memory_attribute {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_memory_attribute {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_MEMORY_ATTRIBUTE = Struct_acpi_memory_attribute;
 #[repr(C)]
@@ -4325,10 +5236,14 @@ pub struct Struct_acpi_io_attribute {
     pub Reserved1: UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_io_attribute {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_io_attribute {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_IO_ATTRIBUTE = Struct_acpi_io_attribute;
 #[repr(C)]
@@ -4351,10 +5266,14 @@ impl Union_acpi_resource_attribute {
     }
 }
 impl ::core::clone::Clone for Union_acpi_resource_attribute {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Union_acpi_resource_attribute {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE_ATTRIBUTE = Union_acpi_resource_attribute;
 #[repr(C)]
@@ -4365,10 +5284,14 @@ pub struct Struct_acpi_resource_source {
     pub StringPtr: *mut i8,
 }
 impl ::core::clone::Clone for Struct_acpi_resource_source {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_source {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE_SOURCE = Struct_acpi_resource_source;
 #[repr(C)]
@@ -4381,10 +5304,14 @@ pub struct Struct_acpi_address16_attribute {
     pub AddressLength: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_address16_attribute {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_address16_attribute {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_ADDRESS16_ATTRIBUTE = Struct_acpi_address16_attribute;
 #[repr(C)]
@@ -4397,10 +5324,14 @@ pub struct Struct_acpi_address32_attribute {
     pub AddressLength: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_address32_attribute {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_address32_attribute {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_ADDRESS32_ATTRIBUTE = Struct_acpi_address32_attribute;
 #[repr(C)]
@@ -4413,10 +5344,14 @@ pub struct Struct_acpi_address64_attribute {
     pub AddressLength: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_address64_attribute {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_address64_attribute {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_ADDRESS64_ATTRIBUTE = Struct_acpi_address64_attribute;
 #[repr(C)]
@@ -4430,10 +5365,14 @@ pub struct Struct_acpi_resource_address {
     pub Info: ACPI_RESOURCE_ATTRIBUTE,
 }
 impl ::core::clone::Clone for Struct_acpi_resource_address {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_address {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE_ADDRESS = Struct_acpi_resource_address;
 #[repr(C)]
@@ -4449,10 +5388,14 @@ pub struct Struct_acpi_resource_address16 {
     pub ResourceSource: ACPI_RESOURCE_SOURCE,
 }
 impl ::core::clone::Clone for Struct_acpi_resource_address16 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_address16 {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE_ADDRESS16 = Struct_acpi_resource_address16;
 #[repr(C)]
@@ -4468,10 +5411,14 @@ pub struct Struct_acpi_resource_address32 {
     pub ResourceSource: ACPI_RESOURCE_SOURCE,
 }
 impl ::core::clone::Clone for Struct_acpi_resource_address32 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_address32 {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE_ADDRESS32 = Struct_acpi_resource_address32;
 #[repr(C)]
@@ -4487,10 +5434,14 @@ pub struct Struct_acpi_resource_address64 {
     pub ResourceSource: ACPI_RESOURCE_SOURCE,
 }
 impl ::core::clone::Clone for Struct_acpi_resource_address64 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_address64 {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE_ADDRESS64 = Struct_acpi_resource_address64;
 #[repr(C)]
@@ -4507,13 +5458,16 @@ pub struct Struct_acpi_resource_extended_address64 {
     pub TypeSpecific: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_resource_extended_address64 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_extended_address64 {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
-pub type ACPI_RESOURCE_EXTENDED_ADDRESS64 =
-    Struct_acpi_resource_extended_address64;
+pub type ACPI_RESOURCE_EXTENDED_ADDRESS64 = Struct_acpi_resource_extended_address64;
 #[repr(C)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_extended_irq {
@@ -4527,10 +5481,14 @@ pub struct Struct_acpi_resource_extended_irq {
     pub Interrupts: [UINT32; 1usize],
 }
 impl ::core::clone::Clone for Struct_acpi_resource_extended_irq {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_extended_irq {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE_EXTENDED_IRQ = Struct_acpi_resource_extended_irq;
 #[repr(C)]
@@ -4543,13 +5501,16 @@ pub struct Struct_acpi_resource_generic_register {
     pub Address: UINT64,
 }
 impl ::core::clone::Clone for Struct_acpi_resource_generic_register {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_generic_register {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
-pub type ACPI_RESOURCE_GENERIC_REGISTER =
-    Struct_acpi_resource_generic_register;
+pub type ACPI_RESOURCE_GENERIC_REGISTER = Struct_acpi_resource_generic_register;
 #[repr(C)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_gpio {
@@ -4571,10 +5532,14 @@ pub struct Struct_acpi_resource_gpio {
     pub VendorData: *mut UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_resource_gpio {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_gpio {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE_GPIO = Struct_acpi_resource_gpio;
 #[repr(C)]
@@ -4591,13 +5556,16 @@ pub struct Struct_acpi_resource_common_serialbus {
     pub VendorData: *mut UINT8,
 }
 impl ::core::clone::Clone for Struct_acpi_resource_common_serialbus {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_common_serialbus {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
-pub type ACPI_RESOURCE_COMMON_SERIALBUS =
-    Struct_acpi_resource_common_serialbus;
+pub type ACPI_RESOURCE_COMMON_SERIALBUS = Struct_acpi_resource_common_serialbus;
 #[repr(C)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_i2c_serialbus {
@@ -4615,10 +5583,14 @@ pub struct Struct_acpi_resource_i2c_serialbus {
     pub ConnectionSpeed: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_resource_i2c_serialbus {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_i2c_serialbus {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE_I2C_SERIALBUS = Struct_acpi_resource_i2c_serialbus;
 #[repr(C)]
@@ -4642,10 +5614,14 @@ pub struct Struct_acpi_resource_spi_serialbus {
     pub ConnectionSpeed: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_resource_spi_serialbus {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_spi_serialbus {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE_SPI_SERIALBUS = Struct_acpi_resource_spi_serialbus;
 #[repr(C)]
@@ -4671,10 +5647,14 @@ pub struct Struct_acpi_resource_uart_serialbus {
     pub DefaultBaudRate: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_resource_uart_serialbus {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource_uart_serialbus {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE_UART_SERIALBUS = Struct_acpi_resource_uart_serialbus;
 #[repr(C)]
@@ -4727,8 +5707,7 @@ impl Union_acpi_resource_data {
         let raw: *mut u8 = ::core::mem::transmute(&self._bindgen_data_);
         ::core::mem::transmute(raw.offset(0))
     }
-    pub unsafe fn FixedMemory32(&mut self)
-     -> *mut ACPI_RESOURCE_FIXED_MEMORY32 {
+    pub unsafe fn FixedMemory32(&mut self) -> *mut ACPI_RESOURCE_FIXED_MEMORY32 {
         let raw: *mut u8 = ::core::mem::transmute(&self._bindgen_data_);
         ::core::mem::transmute(raw.offset(0))
     }
@@ -4744,8 +5723,7 @@ impl Union_acpi_resource_data {
         let raw: *mut u8 = ::core::mem::transmute(&self._bindgen_data_);
         ::core::mem::transmute(raw.offset(0))
     }
-    pub unsafe fn ExtAddress64(&mut self)
-     -> *mut ACPI_RESOURCE_EXTENDED_ADDRESS64 {
+    pub unsafe fn ExtAddress64(&mut self) -> *mut ACPI_RESOURCE_EXTENDED_ADDRESS64 {
         let raw: *mut u8 = ::core::mem::transmute(&self._bindgen_data_);
         ::core::mem::transmute(raw.offset(0))
     }
@@ -4753,8 +5731,7 @@ impl Union_acpi_resource_data {
         let raw: *mut u8 = ::core::mem::transmute(&self._bindgen_data_);
         ::core::mem::transmute(raw.offset(0))
     }
-    pub unsafe fn GenericReg(&mut self)
-     -> *mut ACPI_RESOURCE_GENERIC_REGISTER {
+    pub unsafe fn GenericReg(&mut self) -> *mut ACPI_RESOURCE_GENERIC_REGISTER {
         let raw: *mut u8 = ::core::mem::transmute(&self._bindgen_data_);
         ::core::mem::transmute(raw.offset(0))
     }
@@ -4762,23 +5739,19 @@ impl Union_acpi_resource_data {
         let raw: *mut u8 = ::core::mem::transmute(&self._bindgen_data_);
         ::core::mem::transmute(raw.offset(0))
     }
-    pub unsafe fn I2cSerialBus(&mut self)
-     -> *mut ACPI_RESOURCE_I2C_SERIALBUS {
+    pub unsafe fn I2cSerialBus(&mut self) -> *mut ACPI_RESOURCE_I2C_SERIALBUS {
         let raw: *mut u8 = ::core::mem::transmute(&self._bindgen_data_);
         ::core::mem::transmute(raw.offset(0))
     }
-    pub unsafe fn SpiSerialBus(&mut self)
-     -> *mut ACPI_RESOURCE_SPI_SERIALBUS {
+    pub unsafe fn SpiSerialBus(&mut self) -> *mut ACPI_RESOURCE_SPI_SERIALBUS {
         let raw: *mut u8 = ::core::mem::transmute(&self._bindgen_data_);
         ::core::mem::transmute(raw.offset(0))
     }
-    pub unsafe fn UartSerialBus(&mut self)
-     -> *mut ACPI_RESOURCE_UART_SERIALBUS {
+    pub unsafe fn UartSerialBus(&mut self) -> *mut ACPI_RESOURCE_UART_SERIALBUS {
         let raw: *mut u8 = ::core::mem::transmute(&self._bindgen_data_);
         ::core::mem::transmute(raw.offset(0))
     }
-    pub unsafe fn CommonSerialBus(&mut self)
-     -> *mut ACPI_RESOURCE_COMMON_SERIALBUS {
+    pub unsafe fn CommonSerialBus(&mut self) -> *mut ACPI_RESOURCE_COMMON_SERIALBUS {
         let raw: *mut u8 = ::core::mem::transmute(&self._bindgen_data_);
         ::core::mem::transmute(raw.offset(0))
     }
@@ -4788,10 +5761,14 @@ impl Union_acpi_resource_data {
     }
 }
 impl ::core::clone::Clone for Union_acpi_resource_data {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Union_acpi_resource_data {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE_DATA = Union_acpi_resource_data;
 #[repr(C)]
@@ -4802,10 +5779,14 @@ pub struct Struct_acpi_resource {
     pub Data: ACPI_RESOURCE_DATA,
 }
 impl ::core::clone::Clone for Struct_acpi_resource {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_resource {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_RESOURCE = Struct_acpi_resource;
 #[repr(C)]
@@ -4818,10 +5799,14 @@ pub struct Struct_acpi_pci_routing_table {
     pub Source: [i8; 4usize],
 }
 impl ::core::clone::Clone for Struct_acpi_pci_routing_table {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_pci_routing_table {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_PCI_ROUTING_TABLE = Struct_acpi_pci_routing_table;
 #[derive(Clone, Copy)]
@@ -4844,10 +5829,14 @@ pub struct Struct_acpi_signal_fatal_info {
     pub Argument: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_signal_fatal_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_signal_fatal_info {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_SIGNAL_FATAL_INFO = Struct_acpi_signal_fatal_info;
 #[repr(C)]
@@ -4860,10 +5849,14 @@ pub struct Struct_acpi_fde_info {
     pub Tape: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_fde_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_fde_info {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_FDE_INFO = Struct_acpi_fde_info;
 #[repr(C)]
@@ -4882,10 +5875,14 @@ pub struct Struct_acpi_grt_info {
     pub Reserved: [UINT8; 3usize],
 }
 impl ::core::clone::Clone for Struct_acpi_grt_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_grt_info {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_GRT_INFO = Struct_acpi_grt_info;
 #[repr(C)]
@@ -4898,10 +5895,14 @@ pub struct Struct_acpi_gtm_info {
     pub Flags: UINT32,
 }
 impl ::core::clone::Clone for Struct_acpi_gtm_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_gtm_info {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_GTM_INFO = Struct_acpi_gtm_info;
 #[repr(C)]
@@ -4937,17 +5938,19 @@ pub struct Struct_acpi_pld_info {
     pub HorizontalOffset: UINT16,
 }
 impl ::core::clone::Clone for Struct_acpi_pld_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl ::core::default::Default for Struct_acpi_pld_info {
-    fn default() -> Self { unsafe { ::core::mem::zeroed() } }
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
 }
 pub type ACPI_PLD_INFO = Struct_acpi_pld_info;
-pub type ACPI_WALK_RESOURCE_CALLBACK =
-    ::core::option::Option<unsafe extern "C" fn(Resource: *mut ACPI_RESOURCE,
-                                               Context:
-                                                   *mut c_void)
-                              -> ACPI_STATUS>;
+pub type ACPI_WALK_RESOURCE_CALLBACK = ::core::option::Option<
+    unsafe extern "C" fn(Resource: *mut ACPI_RESOURCE, Context: *mut c_void) -> ACPI_STATUS,
+>;
 extern "C" {
     pub static mut AcpiGbl_EnableInterpreterSlack: UINT8;
     pub static mut AcpiGbl_AutoSerializeMethods: UINT8;
@@ -4978,9 +5981,11 @@ extern "C" {
     pub static mut AcpiGbl_SystemAwakeAndRunning: BOOLEAN;
 }
 extern "C" {
-    pub fn AcpiInitializeTables(InitialStorage: *mut ACPI_TABLE_DESC,
-                                InitialTableCount: UINT32,
-                                AllowResize: BOOLEAN) -> ACPI_STATUS;
+    pub fn AcpiInitializeTables(
+        InitialStorage: *mut ACPI_TABLE_DESC,
+        InitialTableCount: UINT32,
+        AllowResize: BOOLEAN,
+    ) -> ACPI_STATUS;
     pub fn AcpiInitializeSubsystem() -> ACPI_STATUS;
     pub fn AcpiEnableSubsystem(Flags: UINT32) -> ACPI_STATUS;
     pub fn AcpiInitializeObjects(Flags: UINT32) -> ACPI_STATUS;
@@ -4990,247 +5995,299 @@ extern "C" {
     pub fn AcpiSubsystemStatus() -> ACPI_STATUS;
     pub fn AcpiGetSystemInfo(RetBuffer: *mut ACPI_BUFFER) -> ACPI_STATUS;
     pub fn AcpiGetStatistics(Stats: *mut ACPI_STATISTICS) -> ACPI_STATUS;
-    pub fn AcpiFormatException(Exception: ACPI_STATUS)
-     -> *const i8;
+    pub fn AcpiFormatException(Exception: ACPI_STATUS) -> *const i8;
     pub fn AcpiPurgeCachedObjects() -> ACPI_STATUS;
     pub fn AcpiInstallInterface(InterfaceName: ACPI_STRING) -> ACPI_STATUS;
     pub fn AcpiRemoveInterface(InterfaceName: ACPI_STRING) -> ACPI_STATUS;
     pub fn AcpiUpdateInterfaces(Action: UINT8) -> ACPI_STATUS;
-    pub fn AcpiCheckAddressRange(SpaceId: ACPI_ADR_SPACE_TYPE,
-                                 Address: ACPI_PHYSICAL_ADDRESS,
-                                 Length: ACPI_SIZE, Warn: BOOLEAN) -> UINT32;
-    pub fn AcpiDecodePldBuffer(InBuffer: *mut UINT8, Length: ACPI_SIZE,
-                               ReturnBuffer: *mut *mut ACPI_PLD_INFO)
-     -> ACPI_STATUS;
-    pub fn AcpiInstallTable(Address: ACPI_PHYSICAL_ADDRESS, Physical: BOOLEAN)
-     -> ACPI_STATUS;
+    pub fn AcpiCheckAddressRange(
+        SpaceId: ACPI_ADR_SPACE_TYPE,
+        Address: ACPI_PHYSICAL_ADDRESS,
+        Length: ACPI_SIZE,
+        Warn: BOOLEAN,
+    ) -> UINT32;
+    pub fn AcpiDecodePldBuffer(
+        InBuffer: *mut UINT8,
+        Length: ACPI_SIZE,
+        ReturnBuffer: *mut *mut ACPI_PLD_INFO,
+    ) -> ACPI_STATUS;
+    pub fn AcpiInstallTable(Address: ACPI_PHYSICAL_ADDRESS, Physical: BOOLEAN) -> ACPI_STATUS;
     pub fn AcpiLoadTable(Table: *mut ACPI_TABLE_HEADER) -> ACPI_STATUS;
     pub fn AcpiUnloadParentTable(Object: ACPI_HANDLE) -> ACPI_STATUS;
     pub fn AcpiLoadTables() -> ACPI_STATUS;
     pub fn AcpiReallocateRootTable() -> ACPI_STATUS;
-    pub fn AcpiFindRootPointer(RsdpAddress: *mut ACPI_PHYSICAL_ADDRESS)
-     -> ACPI_STATUS;
-    pub fn AcpiGetTableHeader(Signature: ACPI_STRING, Instance: UINT32,
-                              OutTableHeader: *mut ACPI_TABLE_HEADER)
-     -> ACPI_STATUS;
-    pub fn AcpiGetTable(Signature: ACPI_STRING, Instance: UINT32,
-                        OutTable: *mut *mut ACPI_TABLE_HEADER) -> ACPI_STATUS;
-    pub fn AcpiGetTableByIndex(TableIndex: UINT32,
-                               OutTable: *mut *mut ACPI_TABLE_HEADER)
-     -> ACPI_STATUS;
-    pub fn AcpiInstallTableHandler(Handler: ACPI_TABLE_HANDLER,
-                                   Context: *mut c_void)
-     -> ACPI_STATUS;
+    pub fn AcpiFindRootPointer(RsdpAddress: *mut ACPI_PHYSICAL_ADDRESS) -> ACPI_STATUS;
+    pub fn AcpiGetTableHeader(
+        Signature: ACPI_STRING,
+        Instance: UINT32,
+        OutTableHeader: *mut ACPI_TABLE_HEADER,
+    ) -> ACPI_STATUS;
+    pub fn AcpiGetTable(
+        Signature: ACPI_STRING,
+        Instance: UINT32,
+        OutTable: *mut *mut ACPI_TABLE_HEADER,
+    ) -> ACPI_STATUS;
+    pub fn AcpiGetTableByIndex(
+        TableIndex: UINT32,
+        OutTable: *mut *mut ACPI_TABLE_HEADER,
+    ) -> ACPI_STATUS;
+    pub fn AcpiInstallTableHandler(
+        Handler: ACPI_TABLE_HANDLER,
+        Context: *mut c_void,
+    ) -> ACPI_STATUS;
     pub fn AcpiRemoveTableHandler(Handler: ACPI_TABLE_HANDLER) -> ACPI_STATUS;
-    pub fn AcpiWalkNamespace(Type: ACPI_OBJECT_TYPE, StartObject: ACPI_HANDLE,
-                             MaxDepth: UINT32,
-                             DescendingCallback: ACPI_WALK_CALLBACK,
-                             AscendingCallback: ACPI_WALK_CALLBACK,
-                             Context: *mut c_void,
-                             ReturnValue: *mut *mut c_void)
-     -> ACPI_STATUS;
-    pub fn AcpiGetDevices(HID: *mut i8,
-                          UserFunction: ACPI_WALK_CALLBACK,
-                          Context: *mut c_void,
-                          ReturnValue: *mut *mut c_void)
-     -> ACPI_STATUS;
-    pub fn AcpiGetName(Object: ACPI_HANDLE, NameType: UINT32,
-                       RetPathPtr: *mut ACPI_BUFFER) -> ACPI_STATUS;
-    pub fn AcpiGetHandle(Parent: ACPI_HANDLE, Pathname: ACPI_STRING,
-                         RetHandle: *mut ACPI_HANDLE) -> ACPI_STATUS;
-    pub fn AcpiAttachData(Object: ACPI_HANDLE, Handler: ACPI_OBJECT_HANDLER,
-                          Data: *mut c_void) -> ACPI_STATUS;
-    pub fn AcpiDetachData(Object: ACPI_HANDLE, Handler: ACPI_OBJECT_HANDLER)
-     -> ACPI_STATUS;
-    pub fn AcpiGetData(Object: ACPI_HANDLE, Handler: ACPI_OBJECT_HANDLER,
-                       Data: *mut *mut c_void) -> ACPI_STATUS;
-    pub fn AcpiDebugTrace(Name: *const i8,
-                          DebugLevel: UINT32, DebugLayer: UINT32,
-                          Flags: UINT32) -> ACPI_STATUS;
-    pub fn AcpiEvaluateObject(Object: ACPI_HANDLE, Pathname: ACPI_STRING,
-                              ParameterObjects: *mut ACPI_OBJECT_LIST,
-                              ReturnObjectBuffer: *mut ACPI_BUFFER)
-     -> ACPI_STATUS;
-    pub fn AcpiEvaluateObjectTyped(Object: ACPI_HANDLE, Pathname: ACPI_STRING,
-                                   ExternalParams: *mut ACPI_OBJECT_LIST,
-                                   ReturnBuffer: *mut ACPI_BUFFER,
-                                   ReturnType: ACPI_OBJECT_TYPE)
-     -> ACPI_STATUS;
-    pub fn AcpiGetObjectInfo(Object: ACPI_HANDLE,
-                             ReturnBuffer: *mut *mut ACPI_DEVICE_INFO)
-     -> ACPI_STATUS;
+    pub fn AcpiWalkNamespace(
+        Type: ACPI_OBJECT_TYPE,
+        StartObject: ACPI_HANDLE,
+        MaxDepth: UINT32,
+        DescendingCallback: ACPI_WALK_CALLBACK,
+        AscendingCallback: ACPI_WALK_CALLBACK,
+        Context: *mut c_void,
+        ReturnValue: *mut *mut c_void,
+    ) -> ACPI_STATUS;
+    pub fn AcpiGetDevices(
+        HID: *mut i8,
+        UserFunction: ACPI_WALK_CALLBACK,
+        Context: *mut c_void,
+        ReturnValue: *mut *mut c_void,
+    ) -> ACPI_STATUS;
+    pub fn AcpiGetName(
+        Object: ACPI_HANDLE,
+        NameType: UINT32,
+        RetPathPtr: *mut ACPI_BUFFER,
+    ) -> ACPI_STATUS;
+    pub fn AcpiGetHandle(
+        Parent: ACPI_HANDLE,
+        Pathname: ACPI_STRING,
+        RetHandle: *mut ACPI_HANDLE,
+    ) -> ACPI_STATUS;
+    pub fn AcpiAttachData(
+        Object: ACPI_HANDLE,
+        Handler: ACPI_OBJECT_HANDLER,
+        Data: *mut c_void,
+    ) -> ACPI_STATUS;
+    pub fn AcpiDetachData(Object: ACPI_HANDLE, Handler: ACPI_OBJECT_HANDLER) -> ACPI_STATUS;
+    pub fn AcpiGetData(
+        Object: ACPI_HANDLE,
+        Handler: ACPI_OBJECT_HANDLER,
+        Data: *mut *mut c_void,
+    ) -> ACPI_STATUS;
+    pub fn AcpiDebugTrace(
+        Name: *const i8,
+        DebugLevel: UINT32,
+        DebugLayer: UINT32,
+        Flags: UINT32,
+    ) -> ACPI_STATUS;
+    pub fn AcpiEvaluateObject(
+        Object: ACPI_HANDLE,
+        Pathname: ACPI_STRING,
+        ParameterObjects: *mut ACPI_OBJECT_LIST,
+        ReturnObjectBuffer: *mut ACPI_BUFFER,
+    ) -> ACPI_STATUS;
+    pub fn AcpiEvaluateObjectTyped(
+        Object: ACPI_HANDLE,
+        Pathname: ACPI_STRING,
+        ExternalParams: *mut ACPI_OBJECT_LIST,
+        ReturnBuffer: *mut ACPI_BUFFER,
+        ReturnType: ACPI_OBJECT_TYPE,
+    ) -> ACPI_STATUS;
+    pub fn AcpiGetObjectInfo(
+        Object: ACPI_HANDLE,
+        ReturnBuffer: *mut *mut ACPI_DEVICE_INFO,
+    ) -> ACPI_STATUS;
     pub fn AcpiInstallMethod(Buffer: *mut UINT8) -> ACPI_STATUS;
-    pub fn AcpiGetNextObject(Type: ACPI_OBJECT_TYPE, Parent: ACPI_HANDLE,
-                             Child: ACPI_HANDLE, OutHandle: *mut ACPI_HANDLE)
-     -> ACPI_STATUS;
-    pub fn AcpiGetType(Object: ACPI_HANDLE, OutType: *mut ACPI_OBJECT_TYPE)
-     -> ACPI_STATUS;
-    pub fn AcpiGetParent(Object: ACPI_HANDLE, OutHandle: *mut ACPI_HANDLE)
-     -> ACPI_STATUS;
-    pub fn AcpiInstallInitializationHandler(Handler: ACPI_INIT_HANDLER,
-                                            Function: UINT32) -> ACPI_STATUS;
-    pub fn AcpiInstallSciHandler(Address: ACPI_SCI_HANDLER,
-                                 Context: *mut c_void)
-     -> ACPI_STATUS;
+    pub fn AcpiGetNextObject(
+        Type: ACPI_OBJECT_TYPE,
+        Parent: ACPI_HANDLE,
+        Child: ACPI_HANDLE,
+        OutHandle: *mut ACPI_HANDLE,
+    ) -> ACPI_STATUS;
+    pub fn AcpiGetType(Object: ACPI_HANDLE, OutType: *mut ACPI_OBJECT_TYPE) -> ACPI_STATUS;
+    pub fn AcpiGetParent(Object: ACPI_HANDLE, OutHandle: *mut ACPI_HANDLE) -> ACPI_STATUS;
+    pub fn AcpiInstallInitializationHandler(
+        Handler: ACPI_INIT_HANDLER,
+        Function: UINT32,
+    ) -> ACPI_STATUS;
+    pub fn AcpiInstallSciHandler(Address: ACPI_SCI_HANDLER, Context: *mut c_void) -> ACPI_STATUS;
     pub fn AcpiRemoveSciHandler(Address: ACPI_SCI_HANDLER) -> ACPI_STATUS;
-    pub fn AcpiInstallGlobalEventHandler(Handler: ACPI_GBL_EVENT_HANDLER,
-                                         Context: *mut c_void)
-     -> ACPI_STATUS;
-    pub fn AcpiInstallFixedEventHandler(AcpiEvent: UINT32,
-                                        Handler: ACPI_EVENT_HANDLER,
-                                        Context: *mut c_void)
-     -> ACPI_STATUS;
-    pub fn AcpiRemoveFixedEventHandler(AcpiEvent: UINT32,
-                                       Handler: ACPI_EVENT_HANDLER)
-     -> ACPI_STATUS;
-    pub fn AcpiInstallGpeHandler(GpeDevice: ACPI_HANDLE, GpeNumber: UINT32,
-                                 Type: UINT32, Address: ACPI_GPE_HANDLER,
-                                 Context: *mut c_void)
-     -> ACPI_STATUS;
-    pub fn AcpiInstallGpeRawHandler(GpeDevice: ACPI_HANDLE, GpeNumber: UINT32,
-                                    Type: UINT32, Address: ACPI_GPE_HANDLER,
-                                    Context: *mut c_void)
-     -> ACPI_STATUS;
-    pub fn AcpiRemoveGpeHandler(GpeDevice: ACPI_HANDLE, GpeNumber: UINT32,
-                                Address: ACPI_GPE_HANDLER) -> ACPI_STATUS;
-    pub fn AcpiInstallNotifyHandler(Device: ACPI_HANDLE, HandlerType: UINT32,
-                                    Handler: ACPI_NOTIFY_HANDLER,
-                                    Context: *mut c_void)
-     -> ACPI_STATUS;
-    pub fn AcpiRemoveNotifyHandler(Device: ACPI_HANDLE, HandlerType: UINT32,
-                                   Handler: ACPI_NOTIFY_HANDLER)
-     -> ACPI_STATUS;
-    pub fn AcpiInstallAddressSpaceHandler(Device: ACPI_HANDLE,
-                                          SpaceId: ACPI_ADR_SPACE_TYPE,
-                                          Handler: ACPI_ADR_SPACE_HANDLER,
-                                          Setup: ACPI_ADR_SPACE_SETUP,
-                                          Context:
-                                              *mut c_void)
-     -> ACPI_STATUS;
-    pub fn AcpiRemoveAddressSpaceHandler(Device: ACPI_HANDLE,
-                                         SpaceId: ACPI_ADR_SPACE_TYPE,
-                                         Handler: ACPI_ADR_SPACE_HANDLER)
-     -> ACPI_STATUS;
-    pub fn AcpiInstallExceptionHandler(Handler: ACPI_EXCEPTION_HANDLER)
-     -> ACPI_STATUS;
-    pub fn AcpiInstallInterfaceHandler(Handler: ACPI_INTERFACE_HANDLER)
-     -> ACPI_STATUS;
-    pub fn AcpiAcquireGlobalLock(Timeout: UINT16, Handle: *mut UINT32)
-     -> ACPI_STATUS;
+    pub fn AcpiInstallGlobalEventHandler(
+        Handler: ACPI_GBL_EVENT_HANDLER,
+        Context: *mut c_void,
+    ) -> ACPI_STATUS;
+    pub fn AcpiInstallFixedEventHandler(
+        AcpiEvent: UINT32,
+        Handler: ACPI_EVENT_HANDLER,
+        Context: *mut c_void,
+    ) -> ACPI_STATUS;
+    pub fn AcpiRemoveFixedEventHandler(
+        AcpiEvent: UINT32,
+        Handler: ACPI_EVENT_HANDLER,
+    ) -> ACPI_STATUS;
+    pub fn AcpiInstallGpeHandler(
+        GpeDevice: ACPI_HANDLE,
+        GpeNumber: UINT32,
+        Type: UINT32,
+        Address: ACPI_GPE_HANDLER,
+        Context: *mut c_void,
+    ) -> ACPI_STATUS;
+    pub fn AcpiInstallGpeRawHandler(
+        GpeDevice: ACPI_HANDLE,
+        GpeNumber: UINT32,
+        Type: UINT32,
+        Address: ACPI_GPE_HANDLER,
+        Context: *mut c_void,
+    ) -> ACPI_STATUS;
+    pub fn AcpiRemoveGpeHandler(
+        GpeDevice: ACPI_HANDLE,
+        GpeNumber: UINT32,
+        Address: ACPI_GPE_HANDLER,
+    ) -> ACPI_STATUS;
+    pub fn AcpiInstallNotifyHandler(
+        Device: ACPI_HANDLE,
+        HandlerType: UINT32,
+        Handler: ACPI_NOTIFY_HANDLER,
+        Context: *mut c_void,
+    ) -> ACPI_STATUS;
+    pub fn AcpiRemoveNotifyHandler(
+        Device: ACPI_HANDLE,
+        HandlerType: UINT32,
+        Handler: ACPI_NOTIFY_HANDLER,
+    ) -> ACPI_STATUS;
+    pub fn AcpiInstallAddressSpaceHandler(
+        Device: ACPI_HANDLE,
+        SpaceId: ACPI_ADR_SPACE_TYPE,
+        Handler: ACPI_ADR_SPACE_HANDLER,
+        Setup: ACPI_ADR_SPACE_SETUP,
+        Context: *mut c_void,
+    ) -> ACPI_STATUS;
+    pub fn AcpiRemoveAddressSpaceHandler(
+        Device: ACPI_HANDLE,
+        SpaceId: ACPI_ADR_SPACE_TYPE,
+        Handler: ACPI_ADR_SPACE_HANDLER,
+    ) -> ACPI_STATUS;
+    pub fn AcpiInstallExceptionHandler(Handler: ACPI_EXCEPTION_HANDLER) -> ACPI_STATUS;
+    pub fn AcpiInstallInterfaceHandler(Handler: ACPI_INTERFACE_HANDLER) -> ACPI_STATUS;
+    pub fn AcpiAcquireGlobalLock(Timeout: UINT16, Handle: *mut UINT32) -> ACPI_STATUS;
     pub fn AcpiReleaseGlobalLock(Handle: UINT32) -> ACPI_STATUS;
-    pub fn AcpiAcquireMutex(Handle: ACPI_HANDLE, Pathname: ACPI_STRING,
-                            Timeout: UINT16) -> ACPI_STATUS;
-    pub fn AcpiReleaseMutex(Handle: ACPI_HANDLE, Pathname: ACPI_STRING)
-     -> ACPI_STATUS;
+    pub fn AcpiAcquireMutex(
+        Handle: ACPI_HANDLE,
+        Pathname: ACPI_STRING,
+        Timeout: UINT16,
+    ) -> ACPI_STATUS;
+    pub fn AcpiReleaseMutex(Handle: ACPI_HANDLE, Pathname: ACPI_STRING) -> ACPI_STATUS;
     pub fn AcpiEnableEvent(Event: UINT32, Flags: UINT32) -> ACPI_STATUS;
     pub fn AcpiDisableEvent(Event: UINT32, Flags: UINT32) -> ACPI_STATUS;
     pub fn AcpiClearEvent(Event: UINT32) -> ACPI_STATUS;
-    pub fn AcpiGetEventStatus(Event: UINT32,
-                              EventStatus: *mut ACPI_EVENT_STATUS)
-     -> ACPI_STATUS;
+    pub fn AcpiGetEventStatus(Event: UINT32, EventStatus: *mut ACPI_EVENT_STATUS) -> ACPI_STATUS;
     pub fn AcpiUpdateAllGpes() -> ACPI_STATUS;
-    pub fn AcpiEnableGpe(GpeDevice: ACPI_HANDLE, GpeNumber: UINT32)
-     -> ACPI_STATUS;
-    pub fn AcpiDisableGpe(GpeDevice: ACPI_HANDLE, GpeNumber: UINT32)
-     -> ACPI_STATUS;
-    pub fn AcpiClearGpe(GpeDevice: ACPI_HANDLE, GpeNumber: UINT32)
-     -> ACPI_STATUS;
-    pub fn AcpiSetGpe(GpeDevice: ACPI_HANDLE, GpeNumber: UINT32,
-                      Action: UINT8) -> ACPI_STATUS;
-    pub fn AcpiFinishGpe(GpeDevice: ACPI_HANDLE, GpeNumber: UINT32)
-     -> ACPI_STATUS;
-    pub fn AcpiMarkGpeForWake(GpeDevice: ACPI_HANDLE, GpeNumber: UINT32)
-     -> ACPI_STATUS;
-    pub fn AcpiSetupGpeForWake(ParentDevice: ACPI_HANDLE,
-                               GpeDevice: ACPI_HANDLE, GpeNumber: UINT32)
-     -> ACPI_STATUS;
-    pub fn AcpiSetGpeWakeMask(GpeDevice: ACPI_HANDLE, GpeNumber: UINT32,
-                              Action: UINT8) -> ACPI_STATUS;
-    pub fn AcpiGetGpeStatus(GpeDevice: ACPI_HANDLE, GpeNumber: UINT32,
-                            EventStatus: *mut ACPI_EVENT_STATUS)
-     -> ACPI_STATUS;
+    pub fn AcpiEnableGpe(GpeDevice: ACPI_HANDLE, GpeNumber: UINT32) -> ACPI_STATUS;
+    pub fn AcpiDisableGpe(GpeDevice: ACPI_HANDLE, GpeNumber: UINT32) -> ACPI_STATUS;
+    pub fn AcpiClearGpe(GpeDevice: ACPI_HANDLE, GpeNumber: UINT32) -> ACPI_STATUS;
+    pub fn AcpiSetGpe(GpeDevice: ACPI_HANDLE, GpeNumber: UINT32, Action: UINT8) -> ACPI_STATUS;
+    pub fn AcpiFinishGpe(GpeDevice: ACPI_HANDLE, GpeNumber: UINT32) -> ACPI_STATUS;
+    pub fn AcpiMarkGpeForWake(GpeDevice: ACPI_HANDLE, GpeNumber: UINT32) -> ACPI_STATUS;
+    pub fn AcpiSetupGpeForWake(
+        ParentDevice: ACPI_HANDLE,
+        GpeDevice: ACPI_HANDLE,
+        GpeNumber: UINT32,
+    ) -> ACPI_STATUS;
+    pub fn AcpiSetGpeWakeMask(
+        GpeDevice: ACPI_HANDLE,
+        GpeNumber: UINT32,
+        Action: UINT8,
+    ) -> ACPI_STATUS;
+    pub fn AcpiGetGpeStatus(
+        GpeDevice: ACPI_HANDLE,
+        GpeNumber: UINT32,
+        EventStatus: *mut ACPI_EVENT_STATUS,
+    ) -> ACPI_STATUS;
     pub fn AcpiDisableAllGpes() -> ACPI_STATUS;
     pub fn AcpiEnableAllRuntimeGpes() -> ACPI_STATUS;
     pub fn AcpiEnableAllWakeupGpes() -> ACPI_STATUS;
-    pub fn AcpiGetGpeDevice(GpeIndex: UINT32, GpeDevice: *mut ACPI_HANDLE)
-     -> ACPI_STATUS;
-    pub fn AcpiInstallGpeBlock(GpeDevice: ACPI_HANDLE,
-                               GpeBlockAddress: *mut ACPI_GENERIC_ADDRESS,
-                               RegisterCount: UINT32, InterruptNumber: UINT32)
-     -> ACPI_STATUS;
+    pub fn AcpiGetGpeDevice(GpeIndex: UINT32, GpeDevice: *mut ACPI_HANDLE) -> ACPI_STATUS;
+    pub fn AcpiInstallGpeBlock(
+        GpeDevice: ACPI_HANDLE,
+        GpeBlockAddress: *mut ACPI_GENERIC_ADDRESS,
+        RegisterCount: UINT32,
+        InterruptNumber: UINT32,
+    ) -> ACPI_STATUS;
     pub fn AcpiRemoveGpeBlock(GpeDevice: ACPI_HANDLE) -> ACPI_STATUS;
-    pub fn AcpiGetVendorResource(Device: ACPI_HANDLE,
-                                 Name: *mut i8,
-                                 Uuid: *mut ACPI_VENDOR_UUID,
-                                 RetBuffer: *mut ACPI_BUFFER) -> ACPI_STATUS;
-    pub fn AcpiGetCurrentResources(Device: ACPI_HANDLE,
-                                   RetBuffer: *mut ACPI_BUFFER)
-     -> ACPI_STATUS;
-    pub fn AcpiGetPossibleResources(Device: ACPI_HANDLE,
-                                    RetBuffer: *mut ACPI_BUFFER)
-     -> ACPI_STATUS;
-    pub fn AcpiGetEventResources(DeviceHandle: ACPI_HANDLE,
-                                 RetBuffer: *mut ACPI_BUFFER) -> ACPI_STATUS;
-    pub fn AcpiWalkResourceBuffer(Buffer: *mut ACPI_BUFFER,
-                                  UserFunction: ACPI_WALK_RESOURCE_CALLBACK,
-                                  Context: *mut c_void)
-     -> ACPI_STATUS;
-    pub fn AcpiWalkResources(Device: ACPI_HANDLE,
-                             Name: *mut i8,
-                             UserFunction: ACPI_WALK_RESOURCE_CALLBACK,
-                             Context: *mut c_void)
-     -> ACPI_STATUS;
-    pub fn AcpiSetCurrentResources(Device: ACPI_HANDLE,
-                                   InBuffer: *mut ACPI_BUFFER) -> ACPI_STATUS;
-    pub fn AcpiGetIrqRoutingTable(Device: ACPI_HANDLE,
-                                  RetBuffer: *mut ACPI_BUFFER) -> ACPI_STATUS;
-    pub fn AcpiResourceToAddress64(Resource: *mut ACPI_RESOURCE,
-                                   Out: *mut ACPI_RESOURCE_ADDRESS64)
-     -> ACPI_STATUS;
-    pub fn AcpiBufferToResource(AmlBuffer: *mut UINT8,
-                                AmlBufferLength: UINT16,
-                                ResourcePtr: *mut *mut ACPI_RESOURCE)
-     -> ACPI_STATUS;
+    pub fn AcpiGetVendorResource(
+        Device: ACPI_HANDLE,
+        Name: *mut i8,
+        Uuid: *mut ACPI_VENDOR_UUID,
+        RetBuffer: *mut ACPI_BUFFER,
+    ) -> ACPI_STATUS;
+    pub fn AcpiGetCurrentResources(Device: ACPI_HANDLE, RetBuffer: *mut ACPI_BUFFER)
+        -> ACPI_STATUS;
+    pub fn AcpiGetPossibleResources(
+        Device: ACPI_HANDLE,
+        RetBuffer: *mut ACPI_BUFFER,
+    ) -> ACPI_STATUS;
+    pub fn AcpiGetEventResources(
+        DeviceHandle: ACPI_HANDLE,
+        RetBuffer: *mut ACPI_BUFFER,
+    ) -> ACPI_STATUS;
+    pub fn AcpiWalkResourceBuffer(
+        Buffer: *mut ACPI_BUFFER,
+        UserFunction: ACPI_WALK_RESOURCE_CALLBACK,
+        Context: *mut c_void,
+    ) -> ACPI_STATUS;
+    pub fn AcpiWalkResources(
+        Device: ACPI_HANDLE,
+        Name: *mut i8,
+        UserFunction: ACPI_WALK_RESOURCE_CALLBACK,
+        Context: *mut c_void,
+    ) -> ACPI_STATUS;
+    pub fn AcpiSetCurrentResources(Device: ACPI_HANDLE, InBuffer: *mut ACPI_BUFFER) -> ACPI_STATUS;
+    pub fn AcpiGetIrqRoutingTable(Device: ACPI_HANDLE, RetBuffer: *mut ACPI_BUFFER) -> ACPI_STATUS;
+    pub fn AcpiResourceToAddress64(
+        Resource: *mut ACPI_RESOURCE,
+        Out: *mut ACPI_RESOURCE_ADDRESS64,
+    ) -> ACPI_STATUS;
+    pub fn AcpiBufferToResource(
+        AmlBuffer: *mut UINT8,
+        AmlBufferLength: UINT16,
+        ResourcePtr: *mut *mut ACPI_RESOURCE,
+    ) -> ACPI_STATUS;
     pub fn AcpiReset() -> ACPI_STATUS;
-    pub fn AcpiRead(Value: *mut UINT64, Reg: *mut ACPI_GENERIC_ADDRESS)
-     -> ACPI_STATUS;
-    pub fn AcpiWrite(Value: UINT64, Reg: *mut ACPI_GENERIC_ADDRESS)
-     -> ACPI_STATUS;
-    pub fn AcpiReadBitRegister(RegisterId: UINT32, ReturnValue: *mut UINT32)
-     -> ACPI_STATUS;
-    pub fn AcpiWriteBitRegister(RegisterId: UINT32, Value: UINT32)
-     -> ACPI_STATUS;
-    pub fn AcpiGetSleepTypeData(SleepState: UINT8, Slp_TypA: *mut UINT8,
-                                Slp_TypB: *mut UINT8) -> ACPI_STATUS;
+    pub fn AcpiRead(Value: *mut UINT64, Reg: *mut ACPI_GENERIC_ADDRESS) -> ACPI_STATUS;
+    pub fn AcpiWrite(Value: UINT64, Reg: *mut ACPI_GENERIC_ADDRESS) -> ACPI_STATUS;
+    pub fn AcpiReadBitRegister(RegisterId: UINT32, ReturnValue: *mut UINT32) -> ACPI_STATUS;
+    pub fn AcpiWriteBitRegister(RegisterId: UINT32, Value: UINT32) -> ACPI_STATUS;
+    pub fn AcpiGetSleepTypeData(
+        SleepState: UINT8,
+        Slp_TypA: *mut UINT8,
+        Slp_TypB: *mut UINT8,
+    ) -> ACPI_STATUS;
     pub fn AcpiEnterSleepStatePrep(SleepState: UINT8) -> ACPI_STATUS;
     pub fn AcpiEnterSleepState(SleepState: UINT8) -> ACPI_STATUS;
     pub fn AcpiEnterSleepStateS4bios() -> ACPI_STATUS;
     pub fn AcpiLeaveSleepStatePrep(SleepState: UINT8) -> ACPI_STATUS;
     pub fn AcpiLeaveSleepState(SleepState: UINT8) -> ACPI_STATUS;
-    pub fn AcpiSetFirmwareWakingVector(PhysicalAddress: ACPI_PHYSICAL_ADDRESS,
-                                       PhysicalAddress64:
-                                           ACPI_PHYSICAL_ADDRESS)
-     -> ACPI_STATUS;
+    pub fn AcpiSetFirmwareWakingVector(
+        PhysicalAddress: ACPI_PHYSICAL_ADDRESS,
+        PhysicalAddress64: ACPI_PHYSICAL_ADDRESS,
+    ) -> ACPI_STATUS;
     pub fn AcpiGetTimerResolution(Resolution: *mut UINT32) -> ACPI_STATUS;
     pub fn AcpiGetTimer(Ticks: *mut UINT32) -> ACPI_STATUS;
-    pub fn AcpiGetTimerDuration(StartTicks: UINT32, EndTicks: UINT32,
-                                TimeElapsed: *mut UINT32) -> ACPI_STATUS;
-    pub fn AcpiError(ModuleName: *const i8,
-                     LineNumber: UINT32,
-                     Format: *const i8, ...);
-    pub fn AcpiException(ModuleName: *const i8,
-                         LineNumber: UINT32, Status: ACPI_STATUS,
-                         Format: *const i8, ...);
-    pub fn AcpiWarning(ModuleName: *const i8,
-                       LineNumber: UINT32,
-                       Format: *const i8, ...);
+    pub fn AcpiGetTimerDuration(
+        StartTicks: UINT32,
+        EndTicks: UINT32,
+        TimeElapsed: *mut UINT32,
+    ) -> ACPI_STATUS;
+    pub fn AcpiError(ModuleName: *const i8, LineNumber: UINT32, Format: *const i8, ...);
+    pub fn AcpiException(
+        ModuleName: *const i8,
+        LineNumber: UINT32,
+        Status: ACPI_STATUS,
+        Format: *const i8,
+        ...
+    );
+    pub fn AcpiWarning(ModuleName: *const i8, LineNumber: UINT32, Format: *const i8, ...);
     pub fn AcpiInfo(Format: *const i8, ...);
-    pub fn AcpiBiosError(ModuleName: *const i8,
-                         LineNumber: UINT32,
-                         Format: *const i8, ...);
-    pub fn AcpiBiosWarning(ModuleName: *const i8,
-                           LineNumber: UINT32,
-                           Format: *const i8, ...);
+    pub fn AcpiBiosError(ModuleName: *const i8, LineNumber: UINT32, Format: *const i8, ...);
+    pub fn AcpiBiosWarning(ModuleName: *const i8, LineNumber: UINT32, Format: *const i8, ...);
     pub fn AcpiInitializeDebugger() -> ACPI_STATUS;
     pub fn AcpiTerminateDebugger();
     pub fn AcpiSetDebuggerThreadId(ThreadId: UINT64);

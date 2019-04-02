@@ -1,12 +1,5 @@
 /******************************************************************************
  *
- * Name: acrobigalia.h - OS specific defines, etc. for Robigalia
- * (https://robigalia.org)
- *
- *****************************************************************************/
-
-/******************************************************************************
- *
  * 1. Copyright Notice
  *
  * Some or all of this work - Copyright (c) 1999 - 2016, Intel Corp.
@@ -114,27 +107,24 @@
  *
  *****************************************************************************/
 
-#ifndef __ACROBIGALIA_H__
-#define __ACROBIGALIA_H__
+#ifndef __ACBESPIN_H__
+#define __ACBESPIN_H__
 
 #include "acgcc.h"
 
 #include <stdint.h>
 #include <stdarg.h>
 
-#undef ACPI_USE_SYSTEM_CLIBRARY
-#define ACPI_USE_STANDARD_HEADERS
-
-#define ACPI_USE_NATIVE_DIVIDE
-
 #define COMPILER_DEPENDENT_INT64    int64_t
 #define COMPILER_DEPENDENT_UINT64   uint64_t
 
-#define ACPI_MACHINE_WIDTH          ROBIGALIA_MACHINE_WIDTH
-
+#define ACPI_MACHINE_WIDTH          64
 #define ACPI_SINGLE_THREADED
 
-/* ACPICA cache implementation is adequate. */
-#define ACPI_USE_LOCAL_CACHE 1
+//#define ACPI_USE_LOCAL_CACHE 1
+#define ACPI_USE_NATIVE_DIVIDE
+#define ACPI_USE_STANDARD_HEADERS
 
-#endif /* __ACROBIGALIA_H__ */
+#undef ACPI_USE_SYSTEM_CLIBRARY
+
+#endif /* __ACBESPIN_H__ */

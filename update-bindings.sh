@@ -8,8 +8,8 @@ if [ ! -f acpica/source/include/platform/acrobigalia.h ]; then
     patch -N -d acpica -p1 < patches/add-robigalia.patch
 fi
 
-$BINDGEN -match acpica -o src/raw32.rs -D ROBIGALIA_MACHINE_WIDTH=32 -D ROBIGALIA -I /usr/lib/clang/*/include/ acpica/source/include/acpi.h
-$BINDGEN -match acpica -o src/raw64.rs -D ROBIGALIA_MACHINE_WIDTH=64 -D ROBIGALIA -I /usr/lib/clang/*/include/ acpica/source/include/acpi.h
+$BINDGEN -match acpica -o src/raw32.rs -D BESPIN -I /usr/lib/clang/*/include/ acpica/source/include/acpi.h
+$BINDGEN -match acpica -o src/raw64.rs -D BESPIN -I /usr/lib/clang/*/include/ acpica/source/include/acpi.h
 
 function replacements() {
     sed $1 -i -e 's/::std::os::raw::c_char/i8/'
