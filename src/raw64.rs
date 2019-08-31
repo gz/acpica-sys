@@ -2279,7 +2279,7 @@ pub enum Enum_AcpiSratType {
     ACPI_SRAT_TYPE_RESERVED = 4,
 }
 #[repr(C)]
-#[derive(Copy)]
+#[derive(Debug, Copy)]
 pub struct Struct_acpi_srat_cpu_affinity {
     pub Header: ACPI_SUBTABLE_HEADER,
     pub ProximityDomainLo: UINT8,
@@ -2301,7 +2301,7 @@ impl ::core::default::Default for Struct_acpi_srat_cpu_affinity {
 }
 pub type ACPI_SRAT_CPU_AFFINITY = Struct_acpi_srat_cpu_affinity;
 #[repr(C)]
-#[derive(Copy)]
+#[derive(Debug, Copy)]
 pub struct Struct_acpi_srat_mem_affinity {
     pub Header: ACPI_SUBTABLE_HEADER,
     pub ProximityDomain: UINT32,
@@ -2324,7 +2324,7 @@ impl ::core::default::Default for Struct_acpi_srat_mem_affinity {
 }
 pub type ACPI_SRAT_MEM_AFFINITY = Struct_acpi_srat_mem_affinity;
 #[repr(C)]
-#[derive(Copy)]
+#[derive(Debug, Copy)]
 pub struct Struct_acpi_srat_x2apic_cpu_affinity {
     pub Header: ACPI_SUBTABLE_HEADER,
     pub Reserved: UINT16,
@@ -2346,7 +2346,7 @@ impl ::core::default::Default for Struct_acpi_srat_x2apic_cpu_affinity {
 }
 pub type ACPI_SRAT_X2APIC_CPU_AFFINITY = Struct_acpi_srat_x2apic_cpu_affinity;
 #[repr(C)]
-#[derive(Copy)]
+#[derive(Debug, Copy)]
 pub struct Struct_acpi_srat_gicc_affinity {
     pub Header: ACPI_SUBTABLE_HEADER,
     pub ProximityDomain: UINT32,
