@@ -833,7 +833,7 @@ impl ::core::default::Default for Struct_acpi_table_desc {
 }
 pub type ACPI_TABLE_DESC = Struct_acpi_table_desc;
 #[repr(C)]
-#[derive(Copy)]
+#[derive(Debug, Copy)]
 pub struct Struct_acpi_subtable_header {
     pub Type: UINT8,
     pub Length: UINT8,
