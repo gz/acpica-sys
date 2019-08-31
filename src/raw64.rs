@@ -2269,7 +2269,7 @@ impl ::core::default::Default for Struct_acpi_table_srat {
     }
 }
 pub type ACPI_TABLE_SRAT = Struct_acpi_table_srat;
-#[derive(Clone, Copy)]
+#[derive(Clone, Copy, Debug, Eq, PartialEq)]
 #[repr(u32)]
 pub enum Enum_AcpiSratType {
     ACPI_SRAT_TYPE_CPU_AFFINITY = 0,
