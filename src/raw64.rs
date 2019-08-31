@@ -2,11 +2,11 @@
 
 pub type BOOLEAN = bool;
 pub type UINT8 = u8;
-pub type UINT16 = i16;
+pub type UINT16 = u16;
 pub type INT16 = i16;
-pub type UINT64 = i64;
+pub type UINT64 = u64;
 pub type INT64 = i64;
-pub type UINT32 = i32;
+pub type UINT32 = u32;
 pub type INT32 = i32;
 pub type ACPI_NATIVE_INT = INT64;
 pub type ACPI_SIZE = UINT64;
