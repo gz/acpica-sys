@@ -24,7 +24,7 @@ pub type ACPI_EVENT_STATUS = UINT32;
 pub type ACPI_ADR_SPACE_TYPE = UINT8;
 pub type ACPI_SLEEP_FUNCTION =
     ::core::option::Option<extern "C" fn(SleepState: UINT8) -> ACPI_STATUS>;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_sleep_functions {
     pub LegacyFunction: ACPI_SLEEP_FUNCTION,
@@ -37,7 +37,7 @@ impl ::core::default::Default for Struct_acpi_sleep_functions {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_SLEEP_FUNCTIONS = Struct_acpi_sleep_functions;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Union_acpi_object {
     pub _bindgen_data_: [u64; 3usize],
@@ -82,7 +82,7 @@ impl ::core::clone::Clone for Union_acpi_object {
 impl ::core::default::Default for Union_acpi_object {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_Unnamed1 {
     pub Type: ACPI_OBJECT_TYPE,
@@ -94,7 +94,7 @@ impl ::core::clone::Clone for Struct_Unnamed1 {
 impl ::core::default::Default for Struct_Unnamed1 {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_Unnamed2 {
     pub Type: ACPI_OBJECT_TYPE,
@@ -107,7 +107,7 @@ impl ::core::clone::Clone for Struct_Unnamed2 {
 impl ::core::default::Default for Struct_Unnamed2 {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_Unnamed3 {
     pub Type: ACPI_OBJECT_TYPE,
@@ -120,7 +120,7 @@ impl ::core::clone::Clone for Struct_Unnamed3 {
 impl ::core::default::Default for Struct_Unnamed3 {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_Unnamed4 {
     pub Type: ACPI_OBJECT_TYPE,
@@ -133,7 +133,7 @@ impl ::core::clone::Clone for Struct_Unnamed4 {
 impl ::core::default::Default for Struct_Unnamed4 {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_Unnamed5 {
     pub Type: ACPI_OBJECT_TYPE,
@@ -146,7 +146,7 @@ impl ::core::clone::Clone for Struct_Unnamed5 {
 impl ::core::default::Default for Struct_Unnamed5 {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_Unnamed6 {
     pub Type: ACPI_OBJECT_TYPE,
@@ -160,7 +160,7 @@ impl ::core::clone::Clone for Struct_Unnamed6 {
 impl ::core::default::Default for Struct_Unnamed6 {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_Unnamed7 {
     pub Type: ACPI_OBJECT_TYPE,
@@ -174,7 +174,7 @@ impl ::core::default::Default for Struct_Unnamed7 {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_OBJECT = Union_acpi_object;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_object_list {
     pub Count: UINT32,
@@ -187,7 +187,7 @@ impl ::core::default::Default for Struct_acpi_object_list {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_OBJECT_LIST = Struct_acpi_object_list;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_buffer {
     pub Length: ACPI_SIZE,
@@ -200,7 +200,7 @@ impl ::core::default::Default for Struct_acpi_buffer {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_BUFFER = Struct_acpi_buffer;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_predefined_names {
     pub Name: *mut i8,
@@ -214,7 +214,7 @@ impl ::core::default::Default for Struct_acpi_predefined_names {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_PREDEFINED_NAMES = Struct_acpi_predefined_names;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_system_info {
     pub AcpiCaVersion: UINT32,
@@ -232,7 +232,7 @@ impl ::core::default::Default for Struct_acpi_system_info {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_SYSTEM_INFO = Struct_acpi_system_info;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_statistics {
     pub SciCount: UINT32,
@@ -311,7 +311,7 @@ pub type ACPI_ADR_SPACE_HANDLER =
                                                RegionContext:
                                                    *mut c_void)
                               -> ACPI_STATUS>;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_connection_info {
     pub Connection: *mut UINT8,
@@ -344,7 +344,7 @@ pub type ACPI_WALK_CALLBACK =
 pub type ACPI_INTERFACE_HANDLER =
     ::core::option::Option<extern "C" fn(InterfaceName: ACPI_STRING,
                                         Supported: UINT32) -> UINT32>;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_pnp_device_id {
     pub Length: UINT32,
@@ -357,7 +357,7 @@ impl ::core::default::Default for Struct_acpi_pnp_device_id {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_PNP_DEVICE_ID = Struct_acpi_pnp_device_id;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_pnp_device_id_list {
     pub Count: UINT32,
@@ -371,7 +371,7 @@ impl ::core::default::Default for Struct_acpi_pnp_device_id_list {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_PNP_DEVICE_ID_LIST = Struct_acpi_pnp_device_id_list;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_device_info {
     pub InfoSize: UINT32,
@@ -396,7 +396,7 @@ impl ::core::default::Default for Struct_acpi_device_info {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_DEVICE_INFO = Struct_acpi_device_info;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_pci_id {
     pub Segment: UINT16,
@@ -411,7 +411,7 @@ impl ::core::default::Default for Struct_acpi_pci_id {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_PCI_ID = Struct_acpi_pci_id;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_mem_space_context {
     pub Length: UINT32,
@@ -427,7 +427,7 @@ impl ::core::default::Default for Struct_acpi_mem_space_context {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MEM_SPACE_CONTEXT = Struct_acpi_mem_space_context;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_memory_list {
     pub ListName: *mut i8,
@@ -451,7 +451,7 @@ pub enum Enum_Unnamed8 {
     ACPI_TRACE_AML_REGION = 2,
 }
 pub type ACPI_TRACE_EVENT_TYPE = Enum_Unnamed8;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_exception_info {
     pub Name: *mut i8,
@@ -463,7 +463,7 @@ impl ::core::default::Default for Struct_acpi_exception_info {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_EXCEPTION_INFO = Struct_acpi_exception_info;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_header {
     pub Signature: [i8; 4usize],
@@ -483,7 +483,7 @@ impl ::core::default::Default for Struct_acpi_table_header {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_HEADER = Struct_acpi_table_header;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_generic_address {
     pub SpaceId: UINT8,
@@ -499,7 +499,7 @@ impl ::core::default::Default for Struct_acpi_generic_address {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_GENERIC_ADDRESS = Struct_acpi_generic_address;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_rsdp {
     pub Signature: [i8; 8usize],
@@ -519,7 +519,7 @@ impl ::core::default::Default for Struct_acpi_table_rsdp {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_RSDP = Struct_acpi_table_rsdp;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_rsdp_common {
     pub Signature: [i8; 8usize],
@@ -535,7 +535,7 @@ impl ::core::default::Default for Struct_acpi_rsdp_common {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RSDP_COMMON = Struct_acpi_rsdp_common;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_rsdp_extension {
     pub Length: UINT32,
@@ -550,7 +550,7 @@ impl ::core::default::Default for Struct_acpi_rsdp_extension {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RSDP_EXTENSION = Struct_acpi_rsdp_extension;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_rsdt {
     pub Header: ACPI_TABLE_HEADER,
@@ -563,7 +563,7 @@ impl ::core::default::Default for Struct_acpi_table_rsdt {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_RSDT = Struct_acpi_table_rsdt;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_xsdt {
     pub Header: ACPI_TABLE_HEADER,
@@ -576,7 +576,7 @@ impl ::core::default::Default for Struct_acpi_table_xsdt {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_XSDT = Struct_acpi_table_xsdt;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_facs {
     pub Signature: [i8; 4usize],
@@ -598,7 +598,7 @@ impl ::core::default::Default for Struct_acpi_table_facs {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_FACS = Struct_acpi_table_facs;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_fadt {
     pub Header: ACPI_TABLE_HEADER,
@@ -678,7 +678,7 @@ pub enum Enum_AcpiPreferredPmProfiles {
     PM_PERFORMANCE_SERVER = 7,
     PM_TABLET = 8,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Union_acpi_name_union {
     pub _bindgen_data_: [u32; 1usize],
@@ -700,7 +700,7 @@ impl ::core::default::Default for Union_acpi_name_union {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_NAME_UNION = Union_acpi_name_union;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_desc {
     pub Address: ACPI_PHYSICAL_ADDRESS,
@@ -717,7 +717,7 @@ impl ::core::default::Default for Struct_acpi_table_desc {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_DESC = Struct_acpi_table_desc;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_subtable_header {
     pub Type: UINT8,
@@ -730,7 +730,7 @@ impl ::core::default::Default for Struct_acpi_subtable_header {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_SUBTABLE_HEADER = Struct_acpi_subtable_header;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_whea_header {
     pub Action: UINT8,
@@ -748,7 +748,7 @@ impl ::core::default::Default for Struct_acpi_whea_header {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_WHEA_HEADER = Struct_acpi_whea_header;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_bert {
     pub Header: ACPI_TABLE_HEADER,
@@ -762,7 +762,7 @@ impl ::core::default::Default for Struct_acpi_table_bert {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_BERT = Struct_acpi_table_bert;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_bert_region {
     pub BlockStatus: UINT32,
@@ -787,7 +787,7 @@ pub enum Enum_AcpiBertErrorSeverity {
     ACPI_BERT_ERROR_NONE = 3,
     ACPI_BERT_ERROR_RESERVED = 4,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_cpep {
     pub Header: ACPI_TABLE_HEADER,
@@ -800,7 +800,7 @@ impl ::core::default::Default for Struct_acpi_table_cpep {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_CPEP = Struct_acpi_table_cpep;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_cpep_polling {
     pub Header: ACPI_SUBTABLE_HEADER,
@@ -815,7 +815,7 @@ impl ::core::default::Default for Struct_acpi_cpep_polling {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_CPEP_POLLING = Struct_acpi_cpep_polling;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_ecdt {
     pub Header: ACPI_TABLE_HEADER,
@@ -832,7 +832,7 @@ impl ::core::default::Default for Struct_acpi_table_ecdt {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_ECDT = Struct_acpi_table_ecdt;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_einj {
     pub Header: ACPI_TABLE_HEADER,
@@ -848,7 +848,7 @@ impl ::core::default::Default for Struct_acpi_table_einj {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_EINJ = Struct_acpi_table_einj;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_einj_entry {
     pub WheaHeader: ACPI_WHEA_HEADER,
@@ -887,7 +887,7 @@ pub enum Enum_AcpiEinjInstructions {
     ACPI_EINJ_FLUSH_CACHELINE = 5,
     ACPI_EINJ_INSTRUCTION_RESERVED = 6,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_einj_error_type_with_addr {
     pub ErrorType: UINT32,
@@ -906,7 +906,7 @@ impl ::core::default::Default for Struct_acpi_einj_error_type_with_addr {
 }
 pub type ACPI_EINJ_ERROR_TYPE_WITH_ADDR =
     Struct_acpi_einj_error_type_with_addr;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_einj_vendor {
     pub Length: UINT32,
@@ -923,7 +923,7 @@ impl ::core::default::Default for Struct_acpi_einj_vendor {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_EINJ_VENDOR = Struct_acpi_einj_vendor;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_einj_trigger {
     pub HeaderSize: UINT32,
@@ -946,7 +946,7 @@ pub enum Enum_AcpiEinjCommandStatus {
     ACPI_EINJ_INVALID_ACCESS = 2,
     ACPI_EINJ_STATUS_RESERVED = 3,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_erst {
     pub Header: ACPI_TABLE_HEADER,
@@ -961,7 +961,7 @@ impl ::core::default::Default for Struct_acpi_table_erst {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_ERST = Struct_acpi_table_erst;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_erst_entry {
     pub WheaHeader: ACPI_WHEA_HEADER,
@@ -1030,7 +1030,7 @@ pub enum Enum_AcpiErstCommandStatus {
     ACPI_ERST_NOT_FOUND = 5,
     ACPI_ERST_STATUS_RESERVED = 6,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_erst_info {
     pub Signature: UINT16,
@@ -1043,7 +1043,7 @@ impl ::core::default::Default for Struct_acpi_erst_info {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_ERST_INFO = Struct_acpi_erst_info;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_hest {
     pub Header: ACPI_TABLE_HEADER,
@@ -1056,7 +1056,7 @@ impl ::core::default::Default for Struct_acpi_table_hest {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_HEST = Struct_acpi_table_hest;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_hest_header {
     pub Type: UINT16,
@@ -1085,7 +1085,7 @@ pub enum Enum_AcpiHestTypes {
     ACPI_HEST_TYPE_GENERIC_ERROR_V2 = 10,
     ACPI_HEST_TYPE_RESERVED = 11,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_hest_ia_error_bank {
     pub BankNumber: UINT8,
@@ -1105,7 +1105,7 @@ impl ::core::default::Default for Struct_acpi_hest_ia_error_bank {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_HEST_IA_ERROR_BANK = Struct_acpi_hest_ia_error_bank;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_hest_aer_common {
     pub Reserved1: UINT16,
@@ -1130,7 +1130,7 @@ impl ::core::default::Default for Struct_acpi_hest_aer_common {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_HEST_AER_COMMON = Struct_acpi_hest_aer_common;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_hest_notify {
     pub Type: UINT8,
@@ -1162,7 +1162,7 @@ pub enum Enum_AcpiHestNotifyTypes {
     ACPI_HEST_NOTIFY_MCE = 6,
     ACPI_HEST_NOTIFY_RESERVED = 7,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_hest_ia_machine_check {
     pub Header: ACPI_HEST_HEADER,
@@ -1183,7 +1183,7 @@ impl ::core::default::Default for Struct_acpi_hest_ia_machine_check {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_HEST_IA_MACHINE_CHECK = Struct_acpi_hest_ia_machine_check;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_hest_ia_corrected {
     pub Header: ACPI_HEST_HEADER,
@@ -1203,7 +1203,7 @@ impl ::core::default::Default for Struct_acpi_hest_ia_corrected {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_HEST_IA_CORRECTED = Struct_acpi_hest_ia_corrected;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_hest_ia_nmi {
     pub Header: ACPI_HEST_HEADER,
@@ -1219,7 +1219,7 @@ impl ::core::default::Default for Struct_acpi_hest_ia_nmi {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_HEST_IA_NMI = Struct_acpi_hest_ia_nmi;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_hest_aer_root {
     pub Header: ACPI_HEST_HEADER,
@@ -1233,7 +1233,7 @@ impl ::core::default::Default for Struct_acpi_hest_aer_root {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_HEST_AER_ROOT = Struct_acpi_hest_aer_root;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_hest_aer {
     pub Header: ACPI_HEST_HEADER,
@@ -1246,7 +1246,7 @@ impl ::core::default::Default for Struct_acpi_hest_aer {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_HEST_AER = Struct_acpi_hest_aer;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_hest_aer_bridge {
     pub Header: ACPI_HEST_HEADER,
@@ -1262,7 +1262,7 @@ impl ::core::default::Default for Struct_acpi_hest_aer_bridge {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_HEST_AER_BRIDGE = Struct_acpi_hest_aer_bridge;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_hest_generic {
     pub Header: ACPI_HEST_HEADER,
@@ -1283,7 +1283,7 @@ impl ::core::default::Default for Struct_acpi_hest_generic {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_HEST_GENERIC = Struct_acpi_hest_generic;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_hest_generic_v2 {
     pub Header: ACPI_HEST_HEADER,
@@ -1307,7 +1307,7 @@ impl ::core::default::Default for Struct_acpi_hest_generic_v2 {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_HEST_GENERIC_V2 = Struct_acpi_hest_generic_v2;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_hest_generic_status {
     pub BlockStatus: UINT32,
@@ -1323,7 +1323,7 @@ impl ::core::default::Default for Struct_acpi_hest_generic_status {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_HEST_GENERIC_STATUS = Struct_acpi_hest_generic_status;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_hest_generic_data {
     pub SectionType: [UINT8; 16usize],
@@ -1343,7 +1343,7 @@ impl ::core::default::Default for Struct_acpi_hest_generic_data {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_HEST_GENERIC_DATA = Struct_acpi_hest_generic_data;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_madt {
     pub Header: ACPI_TABLE_HEADER,
@@ -1378,7 +1378,7 @@ pub enum Enum_AcpiMadtType {
     ACPI_MADT_TYPE_GENERIC_TRANSLATOR = 15,
     ACPI_MADT_TYPE_RESERVED = 16,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_madt_local_apic {
     pub Header: ACPI_SUBTABLE_HEADER,
@@ -1393,7 +1393,7 @@ impl ::core::default::Default for Struct_acpi_madt_local_apic {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MADT_LOCAL_APIC = Struct_acpi_madt_local_apic;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_madt_io_apic {
     pub Header: ACPI_SUBTABLE_HEADER,
@@ -1409,7 +1409,7 @@ impl ::core::default::Default for Struct_acpi_madt_io_apic {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MADT_IO_APIC = Struct_acpi_madt_io_apic;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_madt_interrupt_override {
     pub Header: ACPI_SUBTABLE_HEADER,
@@ -1425,7 +1425,7 @@ impl ::core::default::Default for Struct_acpi_madt_interrupt_override {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MADT_INTERRUPT_OVERRIDE = Struct_acpi_madt_interrupt_override;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_madt_nmi_source {
     pub Header: ACPI_SUBTABLE_HEADER,
@@ -1439,7 +1439,7 @@ impl ::core::default::Default for Struct_acpi_madt_nmi_source {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MADT_NMI_SOURCE = Struct_acpi_madt_nmi_source;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_madt_local_apic_nmi {
     pub Header: ACPI_SUBTABLE_HEADER,
@@ -1454,7 +1454,7 @@ impl ::core::default::Default for Struct_acpi_madt_local_apic_nmi {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MADT_LOCAL_APIC_NMI = Struct_acpi_madt_local_apic_nmi;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_madt_local_apic_override {
     pub Header: ACPI_SUBTABLE_HEADER,
@@ -1468,7 +1468,7 @@ impl ::core::default::Default for Struct_acpi_madt_local_apic_override {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MADT_LOCAL_APIC_OVERRIDE = Struct_acpi_madt_local_apic_override;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_madt_io_sapic {
     pub Header: ACPI_SUBTABLE_HEADER,
@@ -1484,7 +1484,7 @@ impl ::core::default::Default for Struct_acpi_madt_io_sapic {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MADT_IO_SAPIC = Struct_acpi_madt_io_sapic;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_madt_local_sapic {
     pub Header: ACPI_SUBTABLE_HEADER,
@@ -1503,7 +1503,7 @@ impl ::core::default::Default for Struct_acpi_madt_local_sapic {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MADT_LOCAL_SAPIC = Struct_acpi_madt_local_sapic;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_madt_interrupt_source {
     pub Header: ACPI_SUBTABLE_HEADER,
@@ -1522,7 +1522,7 @@ impl ::core::default::Default for Struct_acpi_madt_interrupt_source {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MADT_INTERRUPT_SOURCE = Struct_acpi_madt_interrupt_source;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_madt_local_x2apic {
     pub Header: ACPI_SUBTABLE_HEADER,
@@ -1538,7 +1538,7 @@ impl ::core::default::Default for Struct_acpi_madt_local_x2apic {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MADT_LOCAL_X2APIC = Struct_acpi_madt_local_x2apic;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_madt_local_x2apic_nmi {
     pub Header: ACPI_SUBTABLE_HEADER,
@@ -1554,7 +1554,7 @@ impl ::core::default::Default for Struct_acpi_madt_local_x2apic_nmi {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MADT_LOCAL_X2APIC_NMI = Struct_acpi_madt_local_x2apic_nmi;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_madt_generic_interrupt {
     pub Header: ACPI_SUBTABLE_HEADER,
@@ -1581,7 +1581,7 @@ impl ::core::default::Default for Struct_acpi_madt_generic_interrupt {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MADT_GENERIC_INTERRUPT = Struct_acpi_madt_generic_interrupt;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_madt_generic_distributor {
     pub Header: ACPI_SUBTABLE_HEADER,
@@ -1609,7 +1609,7 @@ pub enum Enum_AcpiMadtGicVersion {
     ACPI_MADT_GIC_VERSION_V4 = 4,
     ACPI_MADT_GIC_VERSION_RESERVED = 5,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_madt_generic_msi_frame {
     pub Header: ACPI_SUBTABLE_HEADER,
@@ -1627,7 +1627,7 @@ impl ::core::default::Default for Struct_acpi_madt_generic_msi_frame {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MADT_GENERIC_MSI_FRAME = Struct_acpi_madt_generic_msi_frame;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_madt_generic_redistributor {
     pub Header: ACPI_SUBTABLE_HEADER,
@@ -1643,7 +1643,7 @@ impl ::core::default::Default for Struct_acpi_madt_generic_redistributor {
 }
 pub type ACPI_MADT_GENERIC_REDISTRIBUTOR =
     Struct_acpi_madt_generic_redistributor;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_madt_generic_translator {
     pub Header: ACPI_SUBTABLE_HEADER,
@@ -1659,7 +1659,7 @@ impl ::core::default::Default for Struct_acpi_madt_generic_translator {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MADT_GENERIC_TRANSLATOR = Struct_acpi_madt_generic_translator;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_msct {
     pub Header: ACPI_TABLE_HEADER,
@@ -1675,7 +1675,7 @@ impl ::core::default::Default for Struct_acpi_table_msct {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_MSCT = Struct_acpi_table_msct;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_msct_proximity {
     pub Revision: UINT8,
@@ -1692,7 +1692,7 @@ impl ::core::default::Default for Struct_acpi_msct_proximity {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MSCT_PROXIMITY = Struct_acpi_msct_proximity;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_nfit {
     pub Header: ACPI_TABLE_HEADER,
@@ -1705,7 +1705,7 @@ impl ::core::default::Default for Struct_acpi_table_nfit {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_NFIT = Struct_acpi_table_nfit;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_nfit_header {
     pub Type: UINT16,
@@ -1730,7 +1730,7 @@ pub enum Enum_AcpiNfitType {
     ACPI_NFIT_TYPE_FLUSH_ADDRESS = 6,
     ACPI_NFIT_TYPE_RESERVED = 7,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_nfit_system_address {
     pub Header: ACPI_NFIT_HEADER,
@@ -1750,7 +1750,7 @@ impl ::core::default::Default for Struct_acpi_nfit_system_address {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_NFIT_SYSTEM_ADDRESS = Struct_acpi_nfit_system_address;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_nfit_memory_map {
     pub Header: ACPI_NFIT_HEADER,
@@ -1774,7 +1774,7 @@ impl ::core::default::Default for Struct_acpi_nfit_memory_map {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_NFIT_MEMORY_MAP = Struct_acpi_nfit_memory_map;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_nfit_interleave {
     pub Header: ACPI_NFIT_HEADER,
@@ -1791,7 +1791,7 @@ impl ::core::default::Default for Struct_acpi_nfit_interleave {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_NFIT_INTERLEAVE = Struct_acpi_nfit_interleave;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_nfit_smbios {
     pub Header: ACPI_NFIT_HEADER,
@@ -1805,7 +1805,7 @@ impl ::core::default::Default for Struct_acpi_nfit_smbios {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_NFIT_SMBIOS = Struct_acpi_nfit_smbios;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_nfit_control_region {
     pub Header: ACPI_NFIT_HEADER,
@@ -1835,7 +1835,7 @@ impl ::core::default::Default for Struct_acpi_nfit_control_region {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_NFIT_CONTROL_REGION = Struct_acpi_nfit_control_region;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_nfit_data_region {
     pub Header: ACPI_NFIT_HEADER,
@@ -1853,7 +1853,7 @@ impl ::core::default::Default for Struct_acpi_nfit_data_region {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_NFIT_DATA_REGION = Struct_acpi_nfit_data_region;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_nfit_flush_address {
     pub Header: ACPI_NFIT_HEADER,
@@ -1869,7 +1869,7 @@ impl ::core::default::Default for Struct_acpi_nfit_flush_address {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_NFIT_FLUSH_ADDRESS = Struct_acpi_nfit_flush_address;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_sbst {
     pub Header: ACPI_TABLE_HEADER,
@@ -1884,7 +1884,7 @@ impl ::core::default::Default for Struct_acpi_table_sbst {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_SBST = Struct_acpi_table_sbst;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_slit {
     pub Header: ACPI_TABLE_HEADER,
@@ -1898,7 +1898,7 @@ impl ::core::default::Default for Struct_acpi_table_slit {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_SLIT = Struct_acpi_table_slit;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_srat {
     pub Header: ACPI_TABLE_HEADER,
@@ -1921,7 +1921,7 @@ pub enum Enum_AcpiSratType {
     ACPI_SRAT_TYPE_GICC_AFFINITY = 3,
     ACPI_SRAT_TYPE_RESERVED = 4,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_srat_cpu_affinity {
     pub Header: ACPI_SUBTABLE_HEADER,
@@ -1939,7 +1939,7 @@ impl ::core::default::Default for Struct_acpi_srat_cpu_affinity {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_SRAT_CPU_AFFINITY = Struct_acpi_srat_cpu_affinity;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_srat_mem_affinity {
     pub Header: ACPI_SUBTABLE_HEADER,
@@ -1958,7 +1958,7 @@ impl ::core::default::Default for Struct_acpi_srat_mem_affinity {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_SRAT_MEM_AFFINITY = Struct_acpi_srat_mem_affinity;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_srat_x2apic_cpu_affinity {
     pub Header: ACPI_SUBTABLE_HEADER,
@@ -1976,7 +1976,7 @@ impl ::core::default::Default for Struct_acpi_srat_x2apic_cpu_affinity {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_SRAT_X2APIC_CPU_AFFINITY = Struct_acpi_srat_x2apic_cpu_affinity;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_srat_gicc_affinity {
     pub Header: ACPI_SUBTABLE_HEADER,
@@ -1992,7 +1992,7 @@ impl ::core::default::Default for Struct_acpi_srat_gicc_affinity {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_SRAT_GICC_AFFINITY = Struct_acpi_srat_gicc_affinity;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_asf {
     pub Header: ACPI_TABLE_HEADER,
@@ -2004,7 +2004,7 @@ impl ::core::default::Default for Struct_acpi_table_asf {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_ASF = Struct_acpi_table_asf;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_asf_header {
     pub Type: UINT8,
@@ -2028,7 +2028,7 @@ pub enum Enum_AcpiAsfType {
     ACPI_ASF_TYPE_ADDRESS = 4,
     ACPI_ASF_TYPE_RESERVED = 5,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_asf_info {
     pub Header: ACPI_ASF_HEADER,
@@ -2046,7 +2046,7 @@ impl ::core::default::Default for Struct_acpi_asf_info {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_ASF_INFO = Struct_acpi_asf_info;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_asf_alert {
     pub Header: ACPI_ASF_HEADER,
@@ -2062,7 +2062,7 @@ impl ::core::default::Default for Struct_acpi_asf_alert {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_ASF_ALERT = Struct_acpi_asf_alert;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_asf_alert_data {
     pub Address: UINT8,
@@ -2085,7 +2085,7 @@ impl ::core::default::Default for Struct_acpi_asf_alert_data {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_ASF_ALERT_DATA = Struct_acpi_asf_alert_data;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_asf_remote {
     pub Header: ACPI_ASF_HEADER,
@@ -2100,7 +2100,7 @@ impl ::core::default::Default for Struct_acpi_asf_remote {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_ASF_REMOTE = Struct_acpi_asf_remote;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_asf_control_data {
     pub Function: UINT8,
@@ -2115,7 +2115,7 @@ impl ::core::default::Default for Struct_acpi_asf_control_data {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_ASF_CONTROL_DATA = Struct_acpi_asf_control_data;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_asf_rmcp {
     pub Header: ACPI_ASF_HEADER,
@@ -2134,7 +2134,7 @@ impl ::core::default::Default for Struct_acpi_asf_rmcp {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_ASF_RMCP = Struct_acpi_asf_rmcp;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_asf_address {
     pub Header: ACPI_ASF_HEADER,
@@ -2148,7 +2148,7 @@ impl ::core::default::Default for Struct_acpi_asf_address {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_ASF_ADDRESS = Struct_acpi_asf_address;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_boot {
     pub Header: ACPI_TABLE_HEADER,
@@ -2162,7 +2162,7 @@ impl ::core::default::Default for Struct_acpi_table_boot {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_BOOT = Struct_acpi_table_boot;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_csrt {
     pub Header: ACPI_TABLE_HEADER,
@@ -2174,7 +2174,7 @@ impl ::core::default::Default for Struct_acpi_table_csrt {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_CSRT = Struct_acpi_table_csrt;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_csrt_group {
     pub Length: UINT32,
@@ -2193,7 +2193,7 @@ impl ::core::default::Default for Struct_acpi_csrt_group {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_CSRT_GROUP = Struct_acpi_csrt_group;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_csrt_shared_info {
     pub MajorVersion: UINT16,
@@ -2216,7 +2216,7 @@ impl ::core::default::Default for Struct_acpi_csrt_shared_info {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_CSRT_SHARED_INFO = Struct_acpi_csrt_shared_info;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_csrt_descriptor {
     pub Length: UINT32,
@@ -2231,7 +2231,7 @@ impl ::core::default::Default for Struct_acpi_csrt_descriptor {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_CSRT_DESCRIPTOR = Struct_acpi_csrt_descriptor;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_dbg2 {
     pub Header: ACPI_TABLE_HEADER,
@@ -2245,7 +2245,7 @@ impl ::core::default::Default for Struct_acpi_table_dbg2 {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_DBG2 = Struct_acpi_table_dbg2;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_dbg2_header {
     pub InfoOffset: UINT32,
@@ -2258,7 +2258,7 @@ impl ::core::default::Default for Struct_acpi_dbg2_header {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_DBG2_HEADER = Struct_acpi_dbg2_header;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_dbg2_device {
     pub Revision: UINT8,
@@ -2281,7 +2281,7 @@ impl ::core::default::Default for Struct_acpi_dbg2_device {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_DBG2_DEVICE = Struct_acpi_dbg2_device;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_dbgp {
     pub Header: ACPI_TABLE_HEADER,
@@ -2296,7 +2296,7 @@ impl ::core::default::Default for Struct_acpi_table_dbgp {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_DBGP = Struct_acpi_table_dbgp;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_dmar {
     pub Header: ACPI_TABLE_HEADER,
@@ -2311,7 +2311,7 @@ impl ::core::default::Default for Struct_acpi_table_dmar {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_DMAR = Struct_acpi_table_dmar;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_dmar_header {
     pub Type: UINT16,
@@ -2334,7 +2334,7 @@ pub enum Enum_AcpiDmarType {
     ACPI_DMAR_TYPE_NAMESPACE = 4,
     ACPI_DMAR_TYPE_RESERVED = 5,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_dmar_device_scope {
     pub EntryType: UINT8,
@@ -2361,7 +2361,7 @@ pub enum Enum_AcpiDmarScopeType {
     ACPI_DMAR_SCOPE_TYPE_NAMESPACE = 5,
     ACPI_DMAR_SCOPE_TYPE_RESERVED = 6,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_dmar_pci_path {
     pub Device: UINT8,
@@ -2374,7 +2374,7 @@ impl ::core::default::Default for Struct_acpi_dmar_pci_path {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_DMAR_PCI_PATH = Struct_acpi_dmar_pci_path;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_dmar_hardware_unit {
     pub Header: ACPI_DMAR_HEADER,
@@ -2390,7 +2390,7 @@ impl ::core::default::Default for Struct_acpi_dmar_hardware_unit {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_DMAR_HARDWARE_UNIT = Struct_acpi_dmar_hardware_unit;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_dmar_reserved_memory {
     pub Header: ACPI_DMAR_HEADER,
@@ -2406,7 +2406,7 @@ impl ::core::default::Default for Struct_acpi_dmar_reserved_memory {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_DMAR_RESERVED_MEMORY = Struct_acpi_dmar_reserved_memory;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_dmar_atsr {
     pub Header: ACPI_DMAR_HEADER,
@@ -2421,7 +2421,7 @@ impl ::core::default::Default for Struct_acpi_dmar_atsr {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_DMAR_ATSR = Struct_acpi_dmar_atsr;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_dmar_rhsa {
     pub Header: ACPI_DMAR_HEADER,
@@ -2436,7 +2436,7 @@ impl ::core::default::Default for Struct_acpi_dmar_rhsa {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_DMAR_RHSA = Struct_acpi_dmar_rhsa;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_dmar_andd {
     pub Header: ACPI_DMAR_HEADER,
@@ -2451,7 +2451,7 @@ impl ::core::default::Default for Struct_acpi_dmar_andd {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_DMAR_ANDD = Struct_acpi_dmar_andd;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_hpet {
     pub Header: ACPI_TABLE_HEADER,
@@ -2475,7 +2475,7 @@ pub enum Enum_AcpiHpetPageProtect {
     ACPI_HPET_PAGE_PROTECT4 = 1,
     ACPI_HPET_PAGE_PROTECT64 = 2,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_ibft {
     pub Header: ACPI_TABLE_HEADER,
@@ -2488,7 +2488,7 @@ impl ::core::default::Default for Struct_acpi_table_ibft {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_IBFT = Struct_acpi_table_ibft;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_ibft_header {
     pub Type: UINT8,
@@ -2515,7 +2515,7 @@ pub enum Enum_AcpiIbftType {
     ACPI_IBFT_TYPE_EXTENSIONS = 5,
     ACPI_IBFT_TYPE_RESERVED = 6,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_ibft_control {
     pub Header: ACPI_IBFT_HEADER,
@@ -2533,7 +2533,7 @@ impl ::core::default::Default for Struct_acpi_ibft_control {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_IBFT_CONTROL = Struct_acpi_ibft_control;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_ibft_initiator {
     pub Header: ACPI_IBFT_HEADER,
@@ -2551,7 +2551,7 @@ impl ::core::default::Default for Struct_acpi_ibft_initiator {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_IBFT_INITIATOR = Struct_acpi_ibft_initiator;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_ibft_nic {
     pub Header: ACPI_IBFT_HEADER,
@@ -2575,7 +2575,7 @@ impl ::core::default::Default for Struct_acpi_ibft_nic {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_IBFT_NIC = Struct_acpi_ibft_nic;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_ibft_target {
     pub Header: ACPI_IBFT_HEADER,
@@ -2602,7 +2602,7 @@ impl ::core::default::Default for Struct_acpi_ibft_target {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_IBFT_TARGET = Struct_acpi_ibft_target;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_iort {
     pub Header: ACPI_TABLE_HEADER,
@@ -2617,7 +2617,7 @@ impl ::core::default::Default for Struct_acpi_table_iort {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_IORT = Struct_acpi_table_iort;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_iort_node {
     pub Type: UINT8,
@@ -2643,7 +2643,7 @@ pub enum Enum_AcpiIortNodeType {
     ACPI_IORT_NODE_PCI_ROOT_COMPLEX = 2,
     ACPI_IORT_NODE_SMMU = 3,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_iort_id_mapping {
     pub InputBase: UINT32,
@@ -2659,7 +2659,7 @@ impl ::core::default::Default for Struct_acpi_iort_id_mapping {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_IORT_ID_MAPPING = Struct_acpi_iort_id_mapping;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_iort_memory_access {
     pub CacheCoherency: UINT32,
@@ -2674,7 +2674,7 @@ impl ::core::default::Default for Struct_acpi_iort_memory_access {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_IORT_MEMORY_ACCESS = Struct_acpi_iort_memory_access;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_iort_its_group {
     pub ItsCount: UINT32,
@@ -2687,7 +2687,7 @@ impl ::core::default::Default for Struct_acpi_iort_its_group {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_IORT_ITS_GROUP = Struct_acpi_iort_its_group;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_iort_named_component {
     pub NodeFlags: UINT32,
@@ -2702,7 +2702,7 @@ impl ::core::default::Default for Struct_acpi_iort_named_component {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_IORT_NAMED_COMPONENT = Struct_acpi_iort_named_component;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_iort_root_complex {
     pub MemoryProperties: UINT64,
@@ -2716,7 +2716,7 @@ impl ::core::default::Default for Struct_acpi_iort_root_complex {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_IORT_ROOT_COMPLEX = Struct_acpi_iort_root_complex;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_iort_smmu {
     pub BaseAddress: UINT64,
@@ -2737,7 +2737,7 @@ impl ::core::default::Default for Struct_acpi_iort_smmu {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_IORT_SMMU = Struct_acpi_iort_smmu;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_ivrs {
     pub Header: ACPI_TABLE_HEADER,
@@ -2751,7 +2751,7 @@ impl ::core::default::Default for Struct_acpi_table_ivrs {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_IVRS = Struct_acpi_table_ivrs;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_ivrs_header {
     pub Type: UINT8,
@@ -2774,7 +2774,7 @@ pub enum Enum_AcpiIvrsType {
     ACPI_IVRS_TYPE_MEMORY2 = 33,
     ACPI_IVRS_TYPE_MEMORY3 = 34,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_ivrs_hardware {
     pub Header: ACPI_IVRS_HEADER,
@@ -2791,7 +2791,7 @@ impl ::core::default::Default for Struct_acpi_ivrs_hardware {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_IVRS_HARDWARE = Struct_acpi_ivrs_hardware;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_ivrs_de_header {
     pub Type: UINT8,
@@ -2821,7 +2821,7 @@ pub enum Enum_AcpiIvrsDeviceEntryType {
     ACPI_IVRS_TYPE_EXT_START = 71,
     ACPI_IVRS_TYPE_SPECIAL = 72,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_ivrs_device4 {
     pub Header: ACPI_IVRS_DE_HEADER,
@@ -2833,7 +2833,7 @@ impl ::core::default::Default for Struct_acpi_ivrs_device4 {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_IVRS_DEVICE4 = Struct_acpi_ivrs_device4;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_ivrs_device8a {
     pub Header: ACPI_IVRS_DE_HEADER,
@@ -2848,7 +2848,7 @@ impl ::core::default::Default for Struct_acpi_ivrs_device8a {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_IVRS_DEVICE8A = Struct_acpi_ivrs_device8a;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_ivrs_device8b {
     pub Header: ACPI_IVRS_DE_HEADER,
@@ -2861,7 +2861,7 @@ impl ::core::default::Default for Struct_acpi_ivrs_device8b {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_IVRS_DEVICE8B = Struct_acpi_ivrs_device8b;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_ivrs_device8c {
     pub Header: ACPI_IVRS_DE_HEADER,
@@ -2876,7 +2876,7 @@ impl ::core::default::Default for Struct_acpi_ivrs_device8c {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_IVRS_DEVICE8C = Struct_acpi_ivrs_device8c;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_ivrs_memory {
     pub Header: ACPI_IVRS_HEADER,
@@ -2892,7 +2892,7 @@ impl ::core::default::Default for Struct_acpi_ivrs_memory {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_IVRS_MEMORY = Struct_acpi_ivrs_memory;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_lpit {
     pub Header: ACPI_TABLE_HEADER,
@@ -2904,7 +2904,7 @@ impl ::core::default::Default for Struct_acpi_table_lpit {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_LPIT = Struct_acpi_table_lpit;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_lpit_header {
     pub Type: UINT32,
@@ -2926,7 +2926,7 @@ pub enum Enum_AcpiLpitType {
     ACPI_LPIT_TYPE_NATIVE_CSTATE = 0,
     ACPI_LPIT_TYPE_RESERVED = 1,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_lpit_native {
     pub Header: ACPI_LPIT_HEADER,
@@ -2943,7 +2943,7 @@ impl ::core::default::Default for Struct_acpi_lpit_native {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_LPIT_NATIVE = Struct_acpi_lpit_native;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_mcfg {
     pub Header: ACPI_TABLE_HEADER,
@@ -2956,7 +2956,7 @@ impl ::core::default::Default for Struct_acpi_table_mcfg {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_MCFG = Struct_acpi_table_mcfg;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_mcfg_allocation {
     pub Address: UINT64,
@@ -2972,7 +2972,7 @@ impl ::core::default::Default for Struct_acpi_mcfg_allocation {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MCFG_ALLOCATION = Struct_acpi_mcfg_allocation;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_mchi {
     pub Header: ACPI_TABLE_HEADER,
@@ -2996,7 +2996,7 @@ impl ::core::default::Default for Struct_acpi_table_mchi {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_MCHI = Struct_acpi_table_mchi;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_msdm {
     pub Header: ACPI_TABLE_HEADER,
@@ -3008,7 +3008,7 @@ impl ::core::default::Default for Struct_acpi_table_msdm {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_MSDM = Struct_acpi_table_msdm;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_mtmr {
     pub Header: ACPI_TABLE_HEADER,
@@ -3020,7 +3020,7 @@ impl ::core::default::Default for Struct_acpi_table_mtmr {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_MTMR = Struct_acpi_table_mtmr;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_mtmr_entry {
     pub PhysicalAddress: ACPI_GENERIC_ADDRESS,
@@ -3034,7 +3034,7 @@ impl ::core::default::Default for Struct_acpi_mtmr_entry {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MTMR_ENTRY = Struct_acpi_mtmr_entry;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_slic {
     pub Header: ACPI_TABLE_HEADER,
@@ -3046,7 +3046,7 @@ impl ::core::default::Default for Struct_acpi_table_slic {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_SLIC = Struct_acpi_table_slic;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_spcr {
     pub Header: ACPI_TABLE_HEADER,
@@ -3078,7 +3078,7 @@ impl ::core::default::Default for Struct_acpi_table_spcr {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_SPCR = Struct_acpi_table_spcr;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_spmi {
     pub Header: ACPI_TABLE_HEADER,
@@ -3114,7 +3114,7 @@ pub enum Enum_AcpiSpmiInterfaceTypes {
     ACPI_SPMI_SMBUS = 4,
     ACPI_SPMI_RESERVED = 5,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_tcpa_hdr {
     pub Header: ACPI_TABLE_HEADER,
@@ -3127,7 +3127,7 @@ impl ::core::default::Default for Struct_acpi_table_tcpa_hdr {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_TCPA_HDR = Struct_acpi_table_tcpa_hdr;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_tcpa_client {
     pub MinimumLogLength: UINT32,
@@ -3140,7 +3140,7 @@ impl ::core::default::Default for Struct_acpi_table_tcpa_client {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_TCPA_CLIENT = Struct_acpi_table_tcpa_client;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_tcpa_server {
     pub Reserved: UINT16,
@@ -3167,7 +3167,7 @@ impl ::core::default::Default for Struct_acpi_table_tcpa_server {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_TCPA_SERVER = Struct_acpi_table_tcpa_server;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_tpm2 {
     pub Header: ACPI_TABLE_HEADER,
@@ -3183,7 +3183,7 @@ impl ::core::default::Default for Struct_acpi_table_tpm2 {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_TPM2 = Struct_acpi_table_tpm2;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_uefi {
     pub Header: ACPI_TABLE_HEADER,
@@ -3197,7 +3197,7 @@ impl ::core::default::Default for Struct_acpi_table_uefi {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_UEFI = Struct_acpi_table_uefi;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_vrtc {
     pub Header: ACPI_TABLE_HEADER,
@@ -3209,7 +3209,7 @@ impl ::core::default::Default for Struct_acpi_table_vrtc {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_VRTC = Struct_acpi_table_vrtc;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_vrtc_entry {
     pub PhysicalAddress: ACPI_GENERIC_ADDRESS,
@@ -3222,7 +3222,7 @@ impl ::core::default::Default for Struct_acpi_vrtc_entry {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_VRTC_ENTRY = Struct_acpi_vrtc_entry;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_waet {
     pub Header: ACPI_TABLE_HEADER,
@@ -3235,7 +3235,7 @@ impl ::core::default::Default for Struct_acpi_table_waet {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_WAET = Struct_acpi_table_waet;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_wdat {
     pub Header: ACPI_TABLE_HEADER,
@@ -3259,7 +3259,7 @@ impl ::core::default::Default for Struct_acpi_table_wdat {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_WDAT = Struct_acpi_table_wdat;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_wdat_entry {
     pub Action: UINT8,
@@ -3305,7 +3305,7 @@ pub enum Enum_AcpiWdatInstructions {
     ACPI_WDAT_INSTRUCTION_RESERVED = 4,
     ACPI_WDAT_PRESERVE_REGISTER = 128,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_wddt {
     pub Header: ACPI_TABLE_HEADER,
@@ -3326,7 +3326,7 @@ impl ::core::default::Default for Struct_acpi_table_wddt {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_WDDT = Struct_acpi_table_wddt;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_wdrt {
     pub Header: ACPI_TABLE_HEADER,
@@ -3348,7 +3348,7 @@ impl ::core::default::Default for Struct_acpi_table_wdrt {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_WDRT = Struct_acpi_table_wdrt;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_bgrt {
     pub Header: ACPI_TABLE_HEADER,
@@ -3366,7 +3366,7 @@ impl ::core::default::Default for Struct_acpi_table_bgrt {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_BGRT = Struct_acpi_table_bgrt;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_drtm {
     pub Header: ACPI_TABLE_HEADER,
@@ -3387,7 +3387,7 @@ impl ::core::default::Default for Struct_acpi_table_drtm {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_DRTM = Struct_acpi_table_drtm;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_drtm_vtable_list {
     pub ValidatedTableCount: UINT32,
@@ -3400,7 +3400,7 @@ impl ::core::default::Default for Struct_acpi_drtm_vtable_list {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_DRTM_VTABLE_LIST = Struct_acpi_drtm_vtable_list;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_drtm_resource {
     pub Size: [UINT8; 7usize],
@@ -3414,7 +3414,7 @@ impl ::core::default::Default for Struct_acpi_drtm_resource {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_DRTM_RESOURCE = Struct_acpi_drtm_resource;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_drtm_resource_list {
     pub ResourceCount: UINT32,
@@ -3427,7 +3427,7 @@ impl ::core::default::Default for Struct_acpi_drtm_resource_list {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_DRTM_RESOURCE_LIST = Struct_acpi_drtm_resource_list;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_drtm_dps_id {
     pub DpsIdLength: UINT32,
@@ -3440,7 +3440,7 @@ impl ::core::default::Default for Struct_acpi_drtm_dps_id {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_DRTM_DPS_ID = Struct_acpi_drtm_dps_id;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_fpdt {
     pub Header: ACPI_TABLE_HEADER,
@@ -3452,7 +3452,7 @@ impl ::core::default::Default for Struct_acpi_table_fpdt {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_FPDT = Struct_acpi_table_fpdt;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_fpdt_header {
     pub Type: UINT16,
@@ -3472,7 +3472,7 @@ pub enum Enum_AcpiFpdtType {
     ACPI_FPDT_TYPE_BOOT = 0,
     ACPI_FPDT_TYPE_S3PERF = 1,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_fpdt_boot {
     pub Header: ACPI_FPDT_HEADER,
@@ -3490,7 +3490,7 @@ impl ::core::default::Default for Struct_acpi_fpdt_boot {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_FPDT_BOOT = Struct_acpi_fpdt_boot;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_fpdt_s3pt_ptr {
     pub Header: ACPI_FPDT_HEADER,
@@ -3504,7 +3504,7 @@ impl ::core::default::Default for Struct_acpi_fpdt_s3pt_ptr {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_FPDT_S3PT_PTR = Struct_acpi_fpdt_s3pt_ptr;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_s3pt {
     pub Signature: [UINT8; 4usize],
@@ -3517,7 +3517,7 @@ impl ::core::default::Default for Struct_acpi_table_s3pt {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_S3PT = Struct_acpi_table_s3pt;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_s3pt_header {
     pub Type: UINT16,
@@ -3537,7 +3537,7 @@ pub enum Enum_AcpiS3ptType {
     ACPI_S3PT_TYPE_RESUME = 0,
     ACPI_S3PT_TYPE_SUSPEND = 1,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_s3pt_resume {
     pub Header: ACPI_S3PT_HEADER,
@@ -3552,7 +3552,7 @@ impl ::core::default::Default for Struct_acpi_s3pt_resume {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_S3PT_RESUME = Struct_acpi_s3pt_resume;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_s3pt_suspend {
     pub Header: ACPI_S3PT_HEADER,
@@ -3566,7 +3566,7 @@ impl ::core::default::Default for Struct_acpi_s3pt_suspend {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_S3PT_SUSPEND = Struct_acpi_s3pt_suspend;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_gtdt {
     pub Header: ACPI_TABLE_HEADER,
@@ -3591,7 +3591,7 @@ impl ::core::default::Default for Struct_acpi_table_gtdt {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_GTDT = Struct_acpi_table_gtdt;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_gtdt_header {
     pub Type: UINT8,
@@ -3611,7 +3611,7 @@ pub enum Enum_AcpiGtdtType {
     ACPI_GTDT_TYPE_WATCHDOG = 1,
     ACPI_GTDT_TYPE_RESERVED = 2,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_gtdt_timer_block {
     pub Header: ACPI_GTDT_HEADER,
@@ -3627,7 +3627,7 @@ impl ::core::default::Default for Struct_acpi_gtdt_timer_block {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_GTDT_TIMER_BLOCK = Struct_acpi_gtdt_timer_block;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_gtdt_timer_entry {
     pub FrameNumber: UINT8,
@@ -3647,7 +3647,7 @@ impl ::core::default::Default for Struct_acpi_gtdt_timer_entry {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_GTDT_TIMER_ENTRY = Struct_acpi_gtdt_timer_entry;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_gtdt_watchdog {
     pub Header: ACPI_GTDT_HEADER,
@@ -3664,7 +3664,7 @@ impl ::core::default::Default for Struct_acpi_gtdt_watchdog {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_GTDT_WATCHDOG = Struct_acpi_gtdt_watchdog;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_mpst {
     pub Header: ACPI_TABLE_HEADER,
@@ -3680,7 +3680,7 @@ impl ::core::default::Default for Struct_acpi_table_mpst {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_MPST = Struct_acpi_table_mpst;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_mpst_channel {
     pub ChannelId: UINT8,
@@ -3695,7 +3695,7 @@ impl ::core::default::Default for Struct_acpi_mpst_channel {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MPST_CHANNEL = Struct_acpi_mpst_channel;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_mpst_power_node {
     pub Flags: UINT8,
@@ -3714,7 +3714,7 @@ impl ::core::default::Default for Struct_acpi_mpst_power_node {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MPST_POWER_NODE = Struct_acpi_mpst_power_node;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_mpst_power_state {
     pub PowerState: UINT8,
@@ -3727,7 +3727,7 @@ impl ::core::default::Default for Struct_acpi_mpst_power_state {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MPST_POWER_STATE = Struct_acpi_mpst_power_state;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_mpst_component {
     pub ComponentId: UINT16,
@@ -3739,7 +3739,7 @@ impl ::core::default::Default for Struct_acpi_mpst_component {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MPST_COMPONENT = Struct_acpi_mpst_component;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_mpst_data_hdr {
     pub CharacteristicsCount: UINT16,
@@ -3752,7 +3752,7 @@ impl ::core::default::Default for Struct_acpi_mpst_data_hdr {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MPST_DATA_HDR = Struct_acpi_mpst_data_hdr;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_mpst_power_data {
     pub StructureId: UINT8,
@@ -3770,7 +3770,7 @@ impl ::core::default::Default for Struct_acpi_mpst_power_data {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MPST_POWER_DATA = Struct_acpi_mpst_power_data;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_mpst_shared {
     pub Signature: UINT32,
@@ -3790,7 +3790,7 @@ impl ::core::default::Default for Struct_acpi_mpst_shared {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MPST_SHARED = Struct_acpi_mpst_shared;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_pcct {
     pub Header: ACPI_TABLE_HEADER,
@@ -3811,7 +3811,7 @@ pub enum Enum_AcpiPcctType {
     ACPI_PCCT_TYPE_HW_REDUCED_SUBSPACE = 1,
     ACPI_PCCT_TYPE_RESERVED = 2,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_pcct_subspace {
     pub Header: ACPI_SUBTABLE_HEADER,
@@ -3832,7 +3832,7 @@ impl ::core::default::Default for Struct_acpi_pcct_subspace {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_PCCT_SUBSPACE = Struct_acpi_pcct_subspace;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_pcct_hw_reduced {
     pub Header: ACPI_SUBTABLE_HEADER,
@@ -3855,7 +3855,7 @@ impl ::core::default::Default for Struct_acpi_pcct_hw_reduced {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_PCCT_HW_REDUCED = Struct_acpi_pcct_hw_reduced;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_pcct_shared_memory {
     pub Signature: UINT32,
@@ -3869,7 +3869,7 @@ impl ::core::default::Default for Struct_acpi_pcct_shared_memory {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_PCCT_SHARED_MEMORY = Struct_acpi_pcct_shared_memory;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_pmtt {
     pub Header: ACPI_TABLE_HEADER,
@@ -3882,7 +3882,7 @@ impl ::core::default::Default for Struct_acpi_table_pmtt {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_PMTT = Struct_acpi_table_pmtt;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_pmtt_header {
     pub Type: UINT8,
@@ -3898,7 +3898,7 @@ impl ::core::default::Default for Struct_acpi_pmtt_header {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_PMTT_HEADER = Struct_acpi_pmtt_header;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_pmtt_socket {
     pub Header: ACPI_PMTT_HEADER,
@@ -3912,7 +3912,7 @@ impl ::core::default::Default for Struct_acpi_pmtt_socket {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_PMTT_SOCKET = Struct_acpi_pmtt_socket;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_pmtt_controller {
     pub Header: ACPI_PMTT_HEADER,
@@ -3932,7 +3932,7 @@ impl ::core::default::Default for Struct_acpi_pmtt_controller {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_PMTT_CONTROLLER = Struct_acpi_pmtt_controller;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_pmtt_domain {
     pub ProximityDomain: UINT32,
@@ -3944,7 +3944,7 @@ impl ::core::default::Default for Struct_acpi_pmtt_domain {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_PMTT_DOMAIN = Struct_acpi_pmtt_domain;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_pmtt_physical_component {
     pub Header: ACPI_PMTT_HEADER,
@@ -3960,7 +3960,7 @@ impl ::core::default::Default for Struct_acpi_pmtt_physical_component {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_PMTT_PHYSICAL_COMPONENT = Struct_acpi_pmtt_physical_component;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_rasf {
     pub Header: ACPI_TABLE_HEADER,
@@ -3973,7 +3973,7 @@ impl ::core::default::Default for Struct_acpi_table_rasf {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_RASF = Struct_acpi_table_rasf;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_rasf_shared_memory {
     pub Signature: UINT32,
@@ -3992,7 +3992,7 @@ impl ::core::default::Default for Struct_acpi_rasf_shared_memory {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RASF_SHARED_MEMORY = Struct_acpi_rasf_shared_memory;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_rasf_parameter_block {
     pub Type: UINT16,
@@ -4006,7 +4006,7 @@ impl ::core::default::Default for Struct_acpi_rasf_parameter_block {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RASF_PARAMETER_BLOCK = Struct_acpi_rasf_parameter_block;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_rasf_patrol_scrub_parameter {
     pub Header: ACPI_RASF_PARAMETER_BLOCK,
@@ -4051,7 +4051,7 @@ pub enum Enum_AcpiRasfStatus {
     ACPI_RASF_ABORTED = 5,
     ACPI_RASF_INVALID_DATA = 6,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_stao {
     pub Header: ACPI_TABLE_HEADER,
@@ -4064,7 +4064,7 @@ impl ::core::default::Default for Struct_acpi_table_stao {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_STAO = Struct_acpi_table_stao;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_wpbt {
     pub Header: ACPI_TABLE_HEADER,
@@ -4081,7 +4081,7 @@ impl ::core::default::Default for Struct_acpi_table_wpbt {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_TABLE_WPBT = Struct_acpi_table_wpbt;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_table_xenv {
     pub Header: ACPI_TABLE_HEADER,
@@ -4099,7 +4099,7 @@ impl ::core::default::Default for Struct_acpi_table_xenv {
 pub type ACPI_TABLE_XENV = Struct_acpi_table_xenv;
 pub type ACPI_RS_LENGTH = UINT16;
 pub type ACPI_RSDESC_SIZE = UINT32;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_uuid {
     pub Data: [UINT8; 16usize],
@@ -4111,7 +4111,7 @@ impl ::core::default::Default for Struct_acpi_uuid {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_UUID = Struct_acpi_uuid;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_vendor_uuid {
     pub Subtype: UINT8,
@@ -4124,7 +4124,7 @@ impl ::core::default::Default for Struct_acpi_vendor_uuid {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_VENDOR_UUID = Struct_acpi_vendor_uuid;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_irq {
     pub DescriptorLength: UINT8,
@@ -4142,7 +4142,7 @@ impl ::core::default::Default for Struct_acpi_resource_irq {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE_IRQ = Struct_acpi_resource_irq;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_dma {
     pub Type: UINT8,
@@ -4158,7 +4158,7 @@ impl ::core::default::Default for Struct_acpi_resource_dma {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE_DMA = Struct_acpi_resource_dma;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_start_dependent {
     pub DescriptorLength: UINT8,
@@ -4172,7 +4172,7 @@ impl ::core::default::Default for Struct_acpi_resource_start_dependent {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE_START_DEPENDENT = Struct_acpi_resource_start_dependent;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_io {
     pub IoDecode: UINT8,
@@ -4188,7 +4188,7 @@ impl ::core::default::Default for Struct_acpi_resource_io {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE_IO = Struct_acpi_resource_io;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_fixed_io {
     pub Address: UINT16,
@@ -4201,7 +4201,7 @@ impl ::core::default::Default for Struct_acpi_resource_fixed_io {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE_FIXED_IO = Struct_acpi_resource_fixed_io;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_fixed_dma {
     pub RequestLines: UINT16,
@@ -4215,7 +4215,7 @@ impl ::core::default::Default for Struct_acpi_resource_fixed_dma {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE_FIXED_DMA = Struct_acpi_resource_fixed_dma;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_vendor {
     pub ByteLength: UINT16,
@@ -4228,7 +4228,7 @@ impl ::core::default::Default for Struct_acpi_resource_vendor {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE_VENDOR = Struct_acpi_resource_vendor;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_vendor_typed {
     pub ByteLength: UINT16,
@@ -4243,7 +4243,7 @@ impl ::core::default::Default for Struct_acpi_resource_vendor_typed {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE_VENDOR_TYPED = Struct_acpi_resource_vendor_typed;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_end_tag {
     pub Checksum: UINT8,
@@ -4255,7 +4255,7 @@ impl ::core::default::Default for Struct_acpi_resource_end_tag {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE_END_TAG = Struct_acpi_resource_end_tag;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_memory24 {
     pub WriteProtect: UINT8,
@@ -4271,7 +4271,7 @@ impl ::core::default::Default for Struct_acpi_resource_memory24 {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE_MEMORY24 = Struct_acpi_resource_memory24;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_memory32 {
     pub WriteProtect: UINT8,
@@ -4287,7 +4287,7 @@ impl ::core::default::Default for Struct_acpi_resource_memory32 {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE_MEMORY32 = Struct_acpi_resource_memory32;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_fixed_memory32 {
     pub WriteProtect: UINT8,
@@ -4301,7 +4301,7 @@ impl ::core::default::Default for Struct_acpi_resource_fixed_memory32 {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE_FIXED_MEMORY32 = Struct_acpi_resource_fixed_memory32;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_memory_attribute {
     pub WriteProtect: UINT8,
@@ -4316,7 +4316,7 @@ impl ::core::default::Default for Struct_acpi_memory_attribute {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_MEMORY_ATTRIBUTE = Struct_acpi_memory_attribute;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_io_attribute {
     pub RangeType: UINT8,
@@ -4331,7 +4331,7 @@ impl ::core::default::Default for Struct_acpi_io_attribute {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_IO_ATTRIBUTE = Struct_acpi_io_attribute;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Union_acpi_resource_attribute {
     pub _bindgen_data_: [u8; 4usize],
@@ -4357,7 +4357,7 @@ impl ::core::default::Default for Union_acpi_resource_attribute {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE_ATTRIBUTE = Union_acpi_resource_attribute;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_source {
     pub Index: UINT8,
@@ -4371,7 +4371,7 @@ impl ::core::default::Default for Struct_acpi_resource_source {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE_SOURCE = Struct_acpi_resource_source;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_address16_attribute {
     pub Granularity: UINT16,
@@ -4387,7 +4387,7 @@ impl ::core::default::Default for Struct_acpi_address16_attribute {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_ADDRESS16_ATTRIBUTE = Struct_acpi_address16_attribute;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_address32_attribute {
     pub Granularity: UINT32,
@@ -4403,7 +4403,7 @@ impl ::core::default::Default for Struct_acpi_address32_attribute {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_ADDRESS32_ATTRIBUTE = Struct_acpi_address32_attribute;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_address64_attribute {
     pub Granularity: UINT64,
@@ -4419,7 +4419,7 @@ impl ::core::default::Default for Struct_acpi_address64_attribute {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_ADDRESS64_ATTRIBUTE = Struct_acpi_address64_attribute;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_address {
     pub ResourceType: UINT8,
@@ -4436,7 +4436,7 @@ impl ::core::default::Default for Struct_acpi_resource_address {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE_ADDRESS = Struct_acpi_resource_address;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_address16 {
     pub ResourceType: UINT8,
@@ -4455,7 +4455,7 @@ impl ::core::default::Default for Struct_acpi_resource_address16 {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE_ADDRESS16 = Struct_acpi_resource_address16;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_address32 {
     pub ResourceType: UINT8,
@@ -4474,7 +4474,7 @@ impl ::core::default::Default for Struct_acpi_resource_address32 {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE_ADDRESS32 = Struct_acpi_resource_address32;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_address64 {
     pub ResourceType: UINT8,
@@ -4493,7 +4493,7 @@ impl ::core::default::Default for Struct_acpi_resource_address64 {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE_ADDRESS64 = Struct_acpi_resource_address64;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_extended_address64 {
     pub ResourceType: UINT8,
@@ -4514,7 +4514,7 @@ impl ::core::default::Default for Struct_acpi_resource_extended_address64 {
 }
 pub type ACPI_RESOURCE_EXTENDED_ADDRESS64 =
     Struct_acpi_resource_extended_address64;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_extended_irq {
     pub ProducerConsumer: UINT8,
@@ -4533,7 +4533,7 @@ impl ::core::default::Default for Struct_acpi_resource_extended_irq {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE_EXTENDED_IRQ = Struct_acpi_resource_extended_irq;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_generic_register {
     pub SpaceId: UINT8,
@@ -4550,7 +4550,7 @@ impl ::core::default::Default for Struct_acpi_resource_generic_register {
 }
 pub type ACPI_RESOURCE_GENERIC_REGISTER =
     Struct_acpi_resource_generic_register;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_gpio {
     pub RevisionId: UINT8,
@@ -4577,7 +4577,7 @@ impl ::core::default::Default for Struct_acpi_resource_gpio {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE_GPIO = Struct_acpi_resource_gpio;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_common_serialbus {
     pub RevisionId: UINT8,
@@ -4598,7 +4598,7 @@ impl ::core::default::Default for Struct_acpi_resource_common_serialbus {
 }
 pub type ACPI_RESOURCE_COMMON_SERIALBUS =
     Struct_acpi_resource_common_serialbus;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_i2c_serialbus {
     pub RevisionId: UINT8,
@@ -4621,7 +4621,7 @@ impl ::core::default::Default for Struct_acpi_resource_i2c_serialbus {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE_I2C_SERIALBUS = Struct_acpi_resource_i2c_serialbus;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_spi_serialbus {
     pub RevisionId: UINT8,
@@ -4648,7 +4648,7 @@ impl ::core::default::Default for Struct_acpi_resource_spi_serialbus {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE_SPI_SERIALBUS = Struct_acpi_resource_spi_serialbus;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource_uart_serialbus {
     pub RevisionId: UINT8,
@@ -4677,7 +4677,7 @@ impl ::core::default::Default for Struct_acpi_resource_uart_serialbus {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE_UART_SERIALBUS = Struct_acpi_resource_uart_serialbus;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Union_acpi_resource_data {
     pub _bindgen_data_: [u8; 60usize],
@@ -4794,7 +4794,7 @@ impl ::core::default::Default for Union_acpi_resource_data {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE_DATA = Union_acpi_resource_data;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_resource {
     pub Type: UINT32,
@@ -4808,7 +4808,7 @@ impl ::core::default::Default for Struct_acpi_resource {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_RESOURCE = Struct_acpi_resource;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_pci_routing_table {
     pub Length: UINT32,
@@ -4836,7 +4836,7 @@ pub enum Enum_Unnamed9 {
     OSL_EC_BURST_HANDLER = 6,
 }
 pub type ACPI_EXECUTE_TYPE = Enum_Unnamed9;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_signal_fatal_info {
     pub Type: UINT32,
@@ -4850,7 +4850,7 @@ impl ::core::default::Default for Struct_acpi_signal_fatal_info {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_SIGNAL_FATAL_INFO = Struct_acpi_signal_fatal_info;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_fde_info {
     pub Floppy0: UINT32,
@@ -4866,7 +4866,7 @@ impl ::core::default::Default for Struct_acpi_fde_info {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_FDE_INFO = Struct_acpi_fde_info;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_grt_info {
     pub Year: UINT16,
@@ -4888,7 +4888,7 @@ impl ::core::default::Default for Struct_acpi_grt_info {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_GRT_INFO = Struct_acpi_grt_info;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_gtm_info {
     pub PioSpeed0: UINT32,
@@ -4904,7 +4904,7 @@ impl ::core::default::Default for Struct_acpi_gtm_info {
     fn default() -> Self { unsafe { ::core::mem::zeroed() } }
 }
 pub type ACPI_GTM_INFO = Struct_acpi_gtm_info;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy)]
 pub struct Struct_acpi_pld_info {
     pub Revision: UINT8,
