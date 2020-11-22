@@ -16,7 +16,7 @@ OBJS := $(SRCS:$(SRCDIR)%.c=$(OBJDIR)%.o)
 
 CPPFLAGS := -I $(SRCDIR)include/ -D BESPIN -DACPI_APPLICATION
 CFLAGS := -ffreestanding -Wno-redundant-decls -Wno-unused-function
-CFLAGS += -O2
+CFLAGS += -O2 -fPIC
 
 .PHONY: all clean srcdir
 
@@ -32,4 +32,4 @@ $(OUT_DIR)/libacpica-$(TARGET).a: $(SRCDIR) $(OBJS)
 $(OBJDIR)%.o: $(SRCDIR)%.c _Makefile
 	@mkdir -p $(dir $@)
 	@echo [GCC] -o $@
-	@gcc -m64 -o $@ -c $< $(CFLAGS) $(CPPFLAGS)
+	@gcc $(CFLAGS) $(CPPFLAGS) -m64 -o $@ -c $<
