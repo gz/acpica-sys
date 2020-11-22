@@ -16,7 +16,7 @@ OBJS := $(SRCS:$(SRCDIR)%.c=$(OBJDIR)%.o)
 
 CPPFLAGS := -I $(SRCDIR)include/ -D BESPIN -DACPI_APPLICATION
 CFLAGS := -ffreestanding -Wno-redundant-decls -Wno-unused-function
-CFLAGS += -O2
+CFLAGS += -O2 -fPIC
 
 .PHONY: all clean srcdir
 
