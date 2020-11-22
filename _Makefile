@@ -32,4 +32,4 @@ $(OUT_DIR)/libacpica-$(TARGET).a: $(SRCDIR) $(OBJS)
 $(OBJDIR)%.o: $(SRCDIR)%.c _Makefile
 	@mkdir -p $(dir $@)
 	@echo [GCC] -o $@
-	@gcc -m64 -o $@ -c $< $(CFLAGS) $(CPPFLAGS)
+	@gcc $(CFLAGS) $(CPPFLAGS) -m64 -o $@ -c $<
