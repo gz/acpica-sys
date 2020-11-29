@@ -14,7 +14,7 @@ SRCS += $(SRCDIR)components/hardware/hwacpi.c
 #SRCS += $(SRCDIR)compiler/aslmapenter.c
 OBJS := $(SRCS:$(SRCDIR)%.c=$(OBJDIR)%.o)
 
-CPPFLAGS := -I $(SRCDIR)include/ -D BESPIN -DACPI_APPLICATION
+CPPFLAGS := -I $(SRCDIR)include/ -D BESPIN -DACPI_APPLICATION -DACPI_DEBUG_OUTPUT
 CFLAGS := -ffreestanding -Wno-redundant-decls -Wno-unused-function
 CFLAGS += -O2 -fPIC
 
