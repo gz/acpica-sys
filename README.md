@@ -8,3 +8,6 @@ reference manual.
 This is a fork of the existing acpica-sys crate with minor modifications:
  * Use GCC
  * Modified build
+
+Check https://crates.io/crates/acpica-sys for more details.
+

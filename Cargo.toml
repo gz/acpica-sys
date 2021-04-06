@@ -5,12 +5,12 @@
 # project carrying such notice may not be copied, modified, or distributed
 # except according to those terms.
 [package]
-name = "acpica-sys"
-version = "0.0.4"
+name = "libacpica"
+version = "0.0.5"
 authors = ["Corey Richardson <corey@octayn.net>"]
 description = "Bindings to the ACPI Component Architecture"
-documentation = "https://doc.robigalia.org/acpica_sys"
-repository = "https://gitlab.com/robigalia/acpica-sys"
+documentation = "https://acpica.org/documentation"
+repository = "https://github.com/gz/acpica-sys"
 readme = "README.md"
 license = "MIT OR Apache-2.0"
 build = "build.rs"
