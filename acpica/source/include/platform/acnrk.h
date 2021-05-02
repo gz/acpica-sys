@@ -107,18 +107,18 @@
  *
  *****************************************************************************/
 
-#ifndef __ACBESPIN_H__
-#define __ACBESPIN_H__
+#ifndef __ACNRK_H__
+#define __ACNRK_H__
 
 #include "acgcc.h"
 
 #include <stdint.h>
 #include <stdarg.h>
 
-#define COMPILER_DEPENDENT_INT64    int64_t
-#define COMPILER_DEPENDENT_UINT64   uint64_t
+#define COMPILER_DEPENDENT_INT64 int64_t
+#define COMPILER_DEPENDENT_UINT64 uint64_t
 
-#define ACPI_MACHINE_WIDTH          64
+#define ACPI_MACHINE_WIDTH 64
 #define ACPI_SINGLE_THREADED
 
 //#define ACPI_USE_LOCAL_CACHE 1
@@ -127,4 +127,4 @@
 
 #undef ACPI_USE_SYSTEM_CLIBRARY
 
-#endif /* __ACBESPIN_H__ */
+#endif /* __ACNRK_H__ */

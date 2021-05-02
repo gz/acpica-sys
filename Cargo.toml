@@ -5,9 +5,9 @@
 # project carrying such notice may not be copied, modified, or distributed
 # except according to those terms.
 [package]
-name = "acpica-sys"
-version = "0.0.5"
-authors = ["Corey Richardson <corey@octayn.net>"]
+name = "libacpica"
+version = "0.0.6"
+authors = ["Corey Richardson <corey@octayn.net>", "Gerd Zellweger <mail@gerdzellweger.com>"]
 description = "Bindings to the ACPI Component Architecture"
 documentation = "https://acpica.org/documentation"
 repository = "https://github.com/gz/acpica-sys"
