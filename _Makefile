@@ -1,4 +1,4 @@
-ifeq ($(TARGET),x86_64-bespin)
+ifeq ($(TARGET),x86_64-nrk)
  CLANG_TRIPLE := x86_64-elf
 endif
 
@@ -14,7 +14,7 @@ SRCS += $(SRCDIR)components/hardware/hwacpi.c
 #SRCS += $(SRCDIR)compiler/aslmapenter.c
 OBJS := $(SRCS:$(SRCDIR)%.c=$(OBJDIR)%.o)
 
-CPPFLAGS := -I $(SRCDIR)include/ -D BESPIN -DACPI_DEBUG_OUTPUT -DACPI_APPLICATION
+CPPFLAGS := -I $(SRCDIR)include/ -D NRK -DACPI_DEBUG_OUTPUT -DACPI_APPLICATION
 CFLAGS := -ffreestanding -Wno-redundant-decls -Wno-unused-function
 CFLAGS += -O2 -fPIC
 

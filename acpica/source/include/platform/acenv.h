@@ -52,14 +52,13 @@
 
 /* Types for ACPI_MUTEX_TYPE */
 
-#define ACPI_BINARY_SEMAPHORE       0
-#define ACPI_OSL_MUTEX              1
+#define ACPI_BINARY_SEMAPHORE 0
+#define ACPI_OSL_MUTEX 1
 
 /* Types for DEBUGGER_THREADING */
 
-#define DEBUGGER_SINGLE_THREADED    0
-#define DEBUGGER_MULTI_THREADED     1
-
+#define DEBUGGER_SINGLE_THREADED 0
+#define DEBUGGER_MULTI_THREADED 1
 
 /******************************************************************************
  *
@@ -94,12 +93,12 @@
  * AcpiBin/AcpiDump/AcpiHelp/AcpiNames/AcpiSrc/AcpiXtract/Example
  * configuration. All single threaded.
  */
-#if (defined ACPI_BIN_APP)      || \
-    (defined ACPI_DUMP_APP)     || \
-    (defined ACPI_HELP_APP)     || \
-    (defined ACPI_NAMES_APP)    || \
-    (defined ACPI_SRC_APP)      || \
-    (defined ACPI_XTRACT_APP)   || \
+#if (defined ACPI_BIN_APP) ||    \
+    (defined ACPI_DUMP_APP) ||   \
+    (defined ACPI_HELP_APP) ||   \
+    (defined ACPI_NAMES_APP) ||  \
+    (defined ACPI_SRC_APP) ||    \
+    (defined ACPI_XTRACT_APP) || \
     (defined ACPI_EXAMPLE_APP)
 #define ACPI_APPLICATION
 #define ACPI_SINGLE_THREADED
@@ -119,8 +118,8 @@
 
 /* AcpiExec/AcpiNames/Example configuration. Native RSDP used. */
 
-#if (defined ACPI_EXEC_APP)     || \
-    (defined ACPI_EXAMPLE_APP)  || \
+#if (defined ACPI_EXEC_APP) ||    \
+    (defined ACPI_EXAMPLE_APP) || \
     (defined ACPI_NAMES_APP)
 #define ACPI_USE_NATIVE_RSDP_POINTER
 #endif
@@ -134,7 +133,7 @@
 
 /* AcpiNames/Example configuration. Hardware disabled */
 
-#if (defined ACPI_EXAMPLE_APP)  || \
+#if (defined ACPI_EXAMPLE_APP) || \
     (defined ACPI_NAMES_APP)
 #define ACPI_REDUCED_HARDWARE 1
 #endif
@@ -170,8 +169,8 @@
  *
  *****************************************************************************/
 
-#if defined(BESPIN)
-#include "acbespin.h"
+#if defined(NRK)
+#include "acnrk.h"
 
 #elif defined(_LINUX) || defined(__linux__)
 #include "aclinux.h"
@@ -230,7 +229,6 @@
 
 /*! [End] no source code translation !*/
 
-
 /******************************************************************************
  *
  * Setup defaults for the required symbols that were not defined in one of
@@ -241,17 +239,17 @@
 /* 64-bit data types */
 
 #ifndef COMPILER_DEPENDENT_INT64
-#define COMPILER_DEPENDENT_INT64   long long
+#define COMPILER_DEPENDENT_INT64 long long
 #endif
 
 #ifndef COMPILER_DEPENDENT_UINT64
-#define COMPILER_DEPENDENT_UINT64  unsigned long long
+#define COMPILER_DEPENDENT_UINT64 unsigned long long
 #endif
 
 /* Type of mutex supported by host. Default is binary semaphores. */
 
 #ifndef ACPI_MUTEX_TYPE
-#define ACPI_MUTEX_TYPE             ACPI_BINARY_SEMAPHORE
+#define ACPI_MUTEX_TYPE ACPI_BINARY_SEMAPHORE
 #endif
 
 /* Global Lock acquire/release */
@@ -300,7 +298,6 @@
 #define ACPI_INTERNAL_VAR_XFACE
 #endif
 
-
 /*
  * Debugger threading model
  * Use single threaded if the entire subsystem is contained in an application
@@ -310,14 +307,13 @@
  * multi-threaded if ACPI_APPLICATION is not set.
  */
 #ifndef DEBUGGER_THREADING
-#if !defined (ACPI_APPLICATION) || defined (ACPI_EXEC_APP)
-#define DEBUGGER_THREADING          DEBUGGER_MULTI_THREADED
+#if !defined(ACPI_APPLICATION) || defined(ACPI_EXEC_APP)
+#define DEBUGGER_THREADING DEBUGGER_MULTI_THREADED
 
 #else
-#define DEBUGGER_THREADING          DEBUGGER_SINGLE_THREADED
+#define DEBUGGER_THREADING DEBUGGER_SINGLE_THREADED
 #endif
 #endif /* !DEBUGGER_THREADING */
-
 
 /******************************************************************************
  *
@@ -377,15 +373,15 @@ typedef char *va_list;
 
 /* Storage alignment properties */
 
-#define  _AUPBND                (sizeof (ACPI_NATIVE_INT) - 1)
-#define  _ADNBND                (sizeof (ACPI_NATIVE_INT) - 1)
+#define _AUPBND (sizeof(ACPI_NATIVE_INT) - 1)
+#define _ADNBND (sizeof(ACPI_NATIVE_INT) - 1)
 
 /* Variable argument list macro definitions */
 
-#define _Bnd(X, bnd)            (((sizeof (X)) + (bnd)) & (~(bnd)))
-#define va_arg(ap, T)           (*(T *)(((ap) += (_Bnd (T, _AUPBND))) - (_Bnd (T,_ADNBND))))
-#define va_end(ap)              (ap = (va_list) NULL)
-#define va_start(ap, A)         (void) ((ap) = (((char *) &(A)) + (_Bnd (A,_AUPBND))))
+#define _Bnd(X, bnd) (((sizeof(X)) + (bnd)) & (~(bnd)))
+#define va_arg(ap, T) (*(T *)(((ap) += (_Bnd(T, _AUPBND))) - (_Bnd(T, _ADNBND))))
+#define va_end(ap) (ap = (va_list)NULL)
+#define va_start(ap, A) (void)((ap) = (((char *)&(A)) + (_Bnd(A, _AUPBND))))
 
 #endif /* va_arg */
 
@@ -396,13 +392,13 @@ typedef char *va_list;
 #ifndef ACPI_FILE
 #ifdef ACPI_APPLICATION
 #include <stdio.h>
-#define ACPI_FILE              void *
-#define ACPI_FILE_OUT          NULL
-#define ACPI_FILE_ERR          NULL
+#define ACPI_FILE void *
+#define ACPI_FILE_OUT NULL
+#define ACPI_FILE_ERR NULL
 #else
-#define ACPI_FILE              void *
-#define ACPI_FILE_OUT          NULL
-#define ACPI_FILE_ERR          NULL
+#define ACPI_FILE void *
+#define ACPI_FILE_OUT NULL
+#define ACPI_FILE_ERR NULL
 #endif /* ACPI_APPLICATION */
 #endif /* ACPI_FILE */
 
