@@ -11,7 +11,7 @@
 use std::env;
 use std::process::Command;
 fn main() {
-    if env::var("TARGET").unwrap() == "x86_64-bespin" {
+    if env::var("TARGET").unwrap() == "x86_64-nrk" {
         assert!(Command::new("make")
             .arg("-f")
             .arg("_Makefile")
