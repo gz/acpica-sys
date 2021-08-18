@@ -32,6 +32,7 @@ OBJECTS = \
 	$(OBJDIR)/cmfsize.o\
 	$(OBJDIR)/getopt.o\
 	$(OBJDIR)/utalloc.o\
+	$(OBJDIR)/utascii.o\
 	$(OBJDIR)/utbuffer.o\
 	$(OBJDIR)/utcache.o\
 	$(OBJDIR)/utdebug.o\
@@ -42,11 +43,9 @@ OBJECTS = \
 	$(OBJDIR)/utmath.o\
 	$(OBJDIR)/utmisc.o\
 	$(OBJDIR)/utmutex.o\
-	$(OBJDIR)/utprint.o\
 	$(OBJDIR)/utstate.o\
 	$(OBJDIR)/utstring.o\
 	$(OBJDIR)/utxferror.o\
-	$(OBJDIR)/oslibcfs.o\
 	$(OBJDIR)/osunixxf.o
 
 #

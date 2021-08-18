@@ -1,5 +1,5 @@
 /*
- * Some or all of this work - Copyright (c) 2006 - 2016, Intel Corp.
+ * Some or all of this work - Copyright (c) 2006 - 2020, Intel Corp.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -28,7 +28,7 @@
 
 //
 //
-// Grammar.asl - Minimally excercises most ASL constructs
+// Grammar.asl - Minimally exercises most ASL constructs
 //
 // NOTE -- use: iasl -f -of grammar.asl to compile
 //
@@ -723,7 +723,7 @@ DefinitionBlock (
                             BUS0
                     ) } )// PRT0
 
-                CreateWordField(PRT0, BUS0._MIN, BMIN)          //Minimum bus number suported under this bridge.
+                CreateWordField(PRT0, BUS0._MIN, BMIN)          //Minimum bus number supported under this bridge.
 
                 Store(3, BMIN)
                 Return(PRT0)
@@ -946,7 +946,7 @@ DefinitionBlock (
         Notify (\_PR.CPU0, 0)
     }
 
-    Method (_ERR, 2)
+    Method (_ERR, 3)
     {
         Increment (ERRS)
         Store ("Run-time exception:", Debug)
@@ -965,19 +965,20 @@ DefinitionBlock (
         Store ("DIV0 - noabort", Debug)
     }
 
-    Method (ERR_, 1)
+    Method (ERR_, 2)
     {
+        Local0 = ToDecimalString (Arg1)
         if (LEqual (Arg0, 0))
         {
-            Store ("+*+*+*+* MTHD_ERROR: Results not equal!", Debug)
+            Printf ("+*+*+*+* MTHD_ERROR at line %o: Results not equal!", Local0)
         }
         if (LEqual (Arg0, 1))
         {
-            Store ("+*+*+*+* MTHD_ERROR: Numeric result is incorrect!", Debug)
+            Printf ("+*+*+*+* MTHD_ERROR at line %o: Numeric result is incorrect!", Local0)
         }
         if (LEqual (Arg0, 2))
         {
-            Store ("+*+*+*+* MTHD_ERROR: Operand was clobbered!", Debug)
+            Printf ("+*+*+*+* MTHD_ERROR at line %o: Operand was clobbered!", Local0)
         }
 
         Notify (DEV1, Arg0)
@@ -1033,245 +1034,245 @@ DefinitionBlock (
         Store (\IFEL.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\NOSV.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\IDXF.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\_SB_.NSTL.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\RTBF.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\_SB_.RTLV.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\_SB_.RETP.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\WHLR.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\ANDO.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\BRKP.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\ADSU.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\INDC.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\LOPS.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\FDSO.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\MLDV.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\NBIT.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\SHFT.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\XORD.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\CRBF.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\IDX4.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\EVNT.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\SZLV.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\_SB_.BYTF.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\DWDF.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\DVAX.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\IDX6.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\IDX5.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\_SB_.IDX0.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\_SB_.IDX3.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\IDX7.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\MTCH.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\WHLB.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\_SB_.IDX2.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\SIZO.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
         Store (\_SB_.SMIS.TEST(), Local0)
         if (LGreater (Local0, 0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
             Return(Local0)
         }
 
@@ -1331,14 +1332,14 @@ DefinitionBlock (
         Store (BIT2, Local0)
         if (LNotEqual (Local0, 0x1))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
         }
         else
         {
             Store (DerefOf (Index (BUF2, 0)), Local0)
             if (LNotEqual (Local0, 0x08))
             {
-                ERR_ (1)
+                ERR_ (1, __LINE__)
             }
             else
             {
@@ -1350,7 +1351,7 @@ DefinitionBlock (
         Store (BYT2, Local0)
         if (LNotEqual (Local0, 0x1A))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
         }
         else
         {
@@ -1361,7 +1362,7 @@ DefinitionBlock (
         Store (WRD2, Local0)
         if (LNotEqual (Local0, 0x1234))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
         }
         else
         {
@@ -1372,7 +1373,7 @@ DefinitionBlock (
         Store (FLD2, Local0)
         if (LNotEqual (Local0, 0x123))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
         }
         else
         {
@@ -1383,7 +1384,7 @@ DefinitionBlock (
         Store (DWD2, Local0)
         if (LNotEqual (Local0, 0x12345678))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
         }
         else
         {
@@ -1394,7 +1395,7 @@ DefinitionBlock (
         Store (QWD2, Local0)
         if (LNotEqual (Local0, 0x1234567887654321))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
         }
         else
         {
@@ -1546,7 +1547,7 @@ DefinitionBlock (
         Store ("++++++++ Checking result from ADD", Debug)
         if (LNotEqual (Local0, Local1))
         {
-            ERR_ (0)
+            ERR_ (0, __LINE__)
         }
 
 
@@ -1561,7 +1562,7 @@ DefinitionBlock (
         Store ("++++++++ Checking result from SUBTRACT", Debug)
         if (LNotEqual (Local4, Local5))
         {
-            ERR_ (0)
+            ERR_ (0, __LINE__)
         }
 
 
@@ -1577,7 +1578,7 @@ DefinitionBlock (
         Store ("++++++++ Checking result from MULTIPLY", Debug)
         if (LNotEqual (Local6, Local7))
         {
-            ERR_ (0)
+            ERR_ (0, __LINE__)
         }
 
 
@@ -1592,7 +1593,7 @@ DefinitionBlock (
         Store ("++++++++ Checking (quotient) result from DIVIDE", Debug)
         if (LNotEqual (Local2, Local3))
         {
-            ERR_ (0)
+            ERR_ (0, __LINE__)
         }
 
 
@@ -1606,7 +1607,7 @@ DefinitionBlock (
         Store ("++++++++ Checking result from INCREMENT", Debug)
         if (LNotEqual (Local0, Local1))
         {
-            ERR_ (0)
+            ERR_ (0, __LINE__)
         }
 
 
@@ -1620,7 +1621,7 @@ DefinitionBlock (
         Store ("++++++++ Checking result from DECREMENT", Debug)
         if (LNotEqual (Local0, Local1))
         {
-            ERR_ (0)
+            ERR_ (0, __LINE__)
         }
 
 
@@ -1649,22 +1650,22 @@ DefinitionBlock (
         Add (Local0, Local1)
         if (LNotEqual (Local0, 3))
         {
-            ERR_ (2)
+            ERR_ (2, __LINE__)
         }
         if (LNotEqual (Local1, 7))
         {
-            ERR_ (2)
+            ERR_ (2, __LINE__)
         }
 
 
         Add (Local0, Local1, Local2)
         if (LNotEqual (Local0, 3))
         {
-            ERR_ (2)
+            ERR_ (2, __LINE__)
         }
         if (LNotEqual (Local1, 7))
         {
-            ERR_ (2)
+            ERR_ (2, __LINE__)
         }
     }
 
@@ -1692,63 +1693,63 @@ DefinitionBlock (
         FindSetLeftBit (0x00100100, Local0)
         if (LNotEqual (Local0, 21))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
         }
 
         Store ("++++++++ FindSetRightBit (0x00100100, Local1)", Debug)
         FindSetRightBit (0x00100100, Local1)
         if (LNotEqual (Local1, 9))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
         }
 
         Store ("++++++++ And (0xF0F0F0F0, 0x11111111, Local2)", Debug)
         And (0xF0F0F0F0, 0x11111111, Local2)
         if (LNotEqual (Local2, 0x10101010))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
         }
 
         Store ("++++++++ NAnd (0xF0F0F0F0, 0x11111111, Local3)", Debug)
         NAnd (0xF0F0F0F0, 0x11111111, Local3)
         if (LNotEqual (Local3, 0xEFEFEFEF))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
         }
 
         Store ("++++++++ Or (0x11111111, 0x22222222, Local4)", Debug)
         Or (0x11111111, 0x22222222, Local4)
         if (LNotEqual (Local4, 0x33333333))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
         }
 
         Store ("++++++++ NOr (0x11111111, 0x22222222, Local5)", Debug)
         NOr (0x11111111, 0x22222222, Local5)
         if (LNotEqual (Local5, 0xCCCCCCCC))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
         }
 
         Store ("++++++++ XOr (0x11113333, 0x22222222, Local6)", Debug)
         XOr (0x11113333, 0x22222222, Local6)
         if (LNotEqual (Local6, 0x33331111))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
         }
 
         Store ("++++++++ ShiftLeft (0x11112222, 2, Local7)", Debug)
         ShiftLeft (0x11112222, 2, Local7)
         if (LNotEqual (Local7, 0x44448888))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
         }
 
         Store ("++++++++ ShiftRight (Local7, 2, Local7)", Debug)
         ShiftRight (Local7, 2, Local7)
         if (LNotEqual (Local7, 0x11112222))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
         }
 
 
@@ -1757,12 +1758,12 @@ DefinitionBlock (
         Not (Local0, Local1)
         if (LNotEqual (Local0, 0x22224444))
         {
-            ERR_ (2)
+            ERR_ (2, __LINE__)
         }
 
         if (LNotEqual (Local1, 0xDDDDBBBB))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
         }
 
         Return (Local7)
@@ -1795,12 +1796,12 @@ DefinitionBlock (
         Store (LNot (Local6), Local7)
         if (LNotEqual (Local6, 0x00001111))
         {
-            ERR_ (2)
+            ERR_ (2, __LINE__)
         }
 
         if (LNotEqual (Local7, 0x0))
         {
-            ERR_ (1)
+            ERR_ (1, __LINE__)
         }
 
 
@@ -1933,25 +1934,25 @@ DefinitionBlock (
         Store (CondRefOf (ABCD, Local0), Local1)
         if (LNotEqual (Local1, 0))
         {
-            ERR_ (2)
+            ERR_ (2, __LINE__)
         }
 
         Store (CondRefOf (BBUF, Local0), Local1)
         if (LNotEqual (Local1, Ones))
         {
-            ERR_ (2)
+            ERR_ (2, __LINE__)
         }
 
         Store (DeRefOf (Index (BBUF, 3)), Local6)
         if (LNotEqual (Local6, 0xB3))
         {
-            ERR_ (2)
+            ERR_ (2, __LINE__)
         }
 
         Store (DeRefOf (Index (DeRefOf (Index (NEST, 1)), 3)), Local0)
         if (LNotEqual (Local0, 0x14))
         {
-            ERR_ (2)
+            ERR_ (2, __LINE__)
         }
 
 
@@ -1961,7 +1962,7 @@ DefinitionBlock (
         Store (DerefOf (Local1), Local2)
         If (LNotEqual (Local2, 0x11223344))
         {
-            ERR_ (2)
+            ERR_ (2, __LINE__)
         }
 
 
@@ -3817,7 +3818,7 @@ DefinitionBlock (
         Method(LSGR,2)
         {//LSGR
 
-            //Test on arguements passed
+            //Test on arguments passed
 
             //in test data, Arg1 > Arg0
             if(LEqual(Ones,LNot(LGreater(Arg1,Arg0))))
@@ -4474,7 +4475,7 @@ DefinitionBlock (
 //  Result  //Nothing | SuperName
 //) => Integer
 //Source and ShiftCount are evaluated as integer data types. Source is shifted right with the most significant bit
-//zeroed ShiftCount times.  The result is optionally stored into Result.
+//zeroed ShiftCount times. The result is optionally stored into Result.
 
 //ShiftLeft(
 //  Source, //TermArg=>Integer
@@ -5024,7 +5025,7 @@ DefinitionBlock (
         {
             Store ("++++++++ CrBytFld Test", Debug)
 
-            //  Local0 is unitialized buffer with 4 elements
+            //  Local0 is uninitialized buffer with 4 elements
             Store (Buffer (4) {}, Local0)
 
             //  create Byte Field named BF0 based on Local0 element 0
@@ -5691,7 +5692,7 @@ DefinitionBlock (
                 {   Return (0x41)   }       //  Local1 indicates Local0 is not a Number
 
             If (LEqual (Local0, 0))     //  Number is type 1
-                {   Return (0x42)   }       //  non-existant signal was acquired
+                {   Return (0x42)   }       //  non-existent signal was acquired
 
             Store ("Acquire signal timeout PASS", Debug)
 
@@ -5712,7 +5713,7 @@ DefinitionBlock (
                 {   Return (0x51)   }       //  Local1 indicates Local0 is not a Number
 
             If (LEqual (Local0, 0))     //  Number is type 1
-                {   Return (0x52)   }       //  non-existant signal was acquired
+                {   Return (0x52)   }       //  non-existent signal was acquired
 
             Store ("Reset signal PASS", Debug)
 
@@ -5726,7 +5727,7 @@ DefinitionBlock (
                 {   Return (0x61)   }       //  Local1 indicates Local0 is not a Number
 
             If (LEqual (Local0, 0))     //  Number is type 1
-                {   Return (0x62)   }       //  non-existant signal was acquired
+                {   Return (0x62)   }       //  non-existent signal was acquired
 
             Store ("Zero Lvalue PASS", Debug)
 
@@ -5740,7 +5741,7 @@ DefinitionBlock (
                 {   Return (0x71)   }       //  Local1 indicates Local0 is not a Number
 
             If (LEqual (Local0, 0))     //  Number is type 1
-                {   Return (0x72)   }       //  non-existant signal was acquired
+                {   Return (0x72)   }       //  non-existent signal was acquired
 
             Store ("One Lvalue PASS", Debug)
 
@@ -5781,7 +5782,7 @@ DefinitionBlock (
                 {   Return (0x84)   }       //  Local1 indicates Local0 is not a Number
 
             If (LEqual (Local0, 0))     //  Number is type 1
-                {   Return (0x85)   }       //  non-existant signal was acquired
+                {   Return (0x85)   }       //  non-existent signal was acquired
 
             Store ("Acquire Lvalue signal timeout PASS", Debug)
 
@@ -5805,10 +5806,10 @@ DefinitionBlock (
 //  Test for SizeOf (Lvalue)
 //
 //  This next section will contain the packages that the SizeOfOp will be
-//  exercised on.  The first one, PKG0, is a regular package of 3 elements.
+//  exercised on. The first one, PKG0, is a regular package of 3 elements.
 //  The 2nd one, PKG1, is a nested package with 3 packages inside it, each
-//  with 3 elements.  It is expected that SizeOf operator will return the
-//  same value for these two packages since they both have 3 elements.  The
+//  with 3 elements. It is expected that SizeOf operator will return the
+//  same value for these two packages since they both have 3 elements. The
 //  final package, PKG2, has 4 elements and the SizeOf operator is expected
 //  to return different results for this package.
 
@@ -5839,7 +5840,7 @@ DefinitionBlock (
 //  End Packages    **********************************************************
 
 //  The following section will declare the data strings that will be used to
-//  exercise the SizeOf operator.  STR0 and STR1 are expected to be equal,
+//  exercise the SizeOf operator. STR0 and STR1 are expected to be equal,
 //  STR2 is expected to have a different SizeOf value than STR0 and STR1.
 
     Name (STR0, "ACPI permits very flexible methods of expressing a system")
@@ -5868,7 +5869,7 @@ DefinitionBlock (
 
         Method (CMPR, 2)
         {
-            //  CMPR is passed two arguments.  If unequal, return 1 to indicate
+            //  CMPR is passed two arguments. If unequal, return 1 to indicate
             //  that, otherwise return 0 to indicate SizeOf each is equal.
 
             Store (0x01, Local0)
@@ -5898,7 +5899,7 @@ DefinitionBlock (
 
             //  TBD:    SLOC [SizeOf (Local0)] -- dup SARG
 
-            //  Compare the elements that we expect to be the same.  Exit out with an error
+            //  Compare the elements that we expect to be the same. Exit out with an error
             //  code on the first failure.
             if (LNotEqual (0x00, CMPR (STR0, STR1)))
             {
@@ -5934,7 +5935,7 @@ DefinitionBlock (
                 Return (0x05)
             }
 
-            //  Finally, check for the return of SizeOf for a known Buffer.  Just
+            //  Finally, check for the return of SizeOf for a known Buffer. Just
             //  in case we magically pass above cases due to all Buffers being Zero
             //  bytes in size, or Infinity, etc.
             if (LNotEqual (0x05, SizeOf (BUF3)))
@@ -6292,7 +6293,7 @@ DefinitionBlock (
             Store (0, B1HI)
 
             //  We'll multiply 25 * 3 to get 75, add 99 to it then divide
-            //  by 100.  We expect to get 74 for the remainder and 1 for
+            //  by 100. We expect to get 74 for the remainder and 1 for
             //  the quotient.
             Divide(
                 Add (Multiply (3, MKW_ (B1LO, B1HI)), 0x63),
@@ -6589,7 +6590,7 @@ DefinitionBlock (
                 Store ("++++++++ IndexOp Test", Debug)
 
                 //  test storing into uninitialized package elements
-                Name (PBUF, Package(4) {})  //  leave unitialized
+                Name (PBUF, Package(4) {})  //  leave uninitialized
                 Store (0x01234567, Index (PBUF,0))
                 Store (0x89ABCDEF, Index (PBUF,1))
                 Store (0xFEDCBA98, Index (PBUF,2))
@@ -6660,8 +6661,8 @@ DefinitionBlock (
 //
 //  BitIndex test
 //  This is a test case for accessing fields defined as single bits in
-//  memory.  This is done by creating two index fields that overlay the
-//  same DWORD in memory.  One field accesses the DWORD as a DWORD, the
+//  memory. This is done by creating two index fields that overlay the
+//  same DWORD in memory. One field accesses the DWORD as a DWORD, the
 //  other accesses individual bits of the same DWORD field in memory.
 //
     Scope (\_SB)    //  System Bus
@@ -6747,8 +6748,8 @@ DefinitionBlock (
                         Or (Local0, 0x08, Local0)
                     }
 
-                    //  Now check the upper nibble.  Only the "even" bits should
-                    //  be set.  BIT4, BIT6.  BIT5 and BIT7 should be clear.
+                    //  Now check the upper nibble. Only the "even" bits should
+                    //  be set. BIT4, BIT6. BIT5 and BIT7 should be clear.
                     If (LNot (BIT4))
                     {
                         Or (Local0, 0x10, Local0)
@@ -8339,7 +8340,7 @@ DefinitionBlock (
                 //
                 // The following sections have been rewritten because storing into
                 // an Indexed buffer only changes one byte - the FIRST byte of the
-                // buffer is written to the source index.  This is the ONLY byte
+                // buffer is written to the source index. This is the ONLY byte
                 // written -- as per ACPI 2.0
                 //
                 // Overwrite DEST contents, at buffer position 2 [only]
@@ -8572,7 +8573,7 @@ DefinitionBlock (
 
                 //
                 // This section was modified from the original iPCO code because
-                //  it attempted to compare two buffers.  This is not allowed until
+                //  it attempted to compare two buffers. This is not allowed until
                 //  ACPI v2.0, so the test has been modified to just check the
                 //  changed \_SB.MEM.SMD0
                 //
@@ -10279,4 +10280,3 @@ DefinitionBlock (
     })  // END MBUF
 
 } //end DefinitionBlock
-

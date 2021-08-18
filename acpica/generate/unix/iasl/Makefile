@@ -33,12 +33,15 @@ vpath %.c \
 HEADERS = \
     $(wildcard $(ASL_COMPILER)/*.h)\
     $(OBJDIR)/aslcompiler.y.h\
+    $(OBJDIR)/dtcompilerparser.y.h\
     $(OBJDIR)/dtparser.y.h\
     $(OBJDIR)/prparser.y.h
 
 OBJECTS = \
 	$(OBJDIR)/aslcompilerlex.o\
 	$(OBJDIR)/aslcompilerparse.o\
+	$(OBJDIR)/dtcompilerparserlex.o\
+	$(OBJDIR)/dtcompilerparserparse.o\
 	$(OBJDIR)/dtparserlex.o\
 	$(OBJDIR)/dtparserparse.o\
 	$(OBJDIR)/prparserlex.o\
@@ -51,9 +54,11 @@ OBJECTS = \
 	$(OBJDIR)/ahpredef.o\
 	$(OBJDIR)/ahtable.o\
 	$(OBJDIR)/ahuuids.o\
+	$(OBJDIR)/aslallocate.o\
 	$(OBJDIR)/aslanalyze.o\
 	$(OBJDIR)/aslascii.o\
 	$(OBJDIR)/aslbtypes.o\
+	$(OBJDIR)/aslcache.o\
 	$(OBJDIR)/aslcodegen.o\
 	$(OBJDIR)/aslcompile.o\
 	$(OBJDIR)/asldebug.o\
@@ -62,6 +67,7 @@ OBJECTS = \
 	$(OBJDIR)/aslfiles.o\
 	$(OBJDIR)/aslfileio.o\
 	$(OBJDIR)/aslfold.o\
+	$(OBJDIR)/aslhelp.o\
 	$(OBJDIR)/aslhex.o\
 	$(OBJDIR)/asllength.o\
 	$(OBJDIR)/asllisting.o\
@@ -81,6 +87,7 @@ OBJECTS = \
 	$(OBJDIR)/asloperands.o\
 	$(OBJDIR)/aslopt.o\
 	$(OBJDIR)/asloptions.o\
+	$(OBJDIR)/aslparseop.o\
 	$(OBJDIR)/aslpredef.o\
 	$(OBJDIR)/aslprepkg.o\
 	$(OBJDIR)/aslprintf.o\
@@ -96,6 +103,7 @@ OBJECTS = \
 	$(OBJDIR)/aslrestype2w.o\
 	$(OBJDIR)/aslstartup.o\
 	$(OBJDIR)/aslstubs.o\
+	$(OBJDIR)/aslpld.o\
 	$(OBJDIR)/asltransform.o\
 	$(OBJDIR)/asltree.o\
 	$(OBJDIR)/aslutils.o\
@@ -103,6 +111,9 @@ OBJECTS = \
 	$(OBJDIR)/aslwalks.o\
 	$(OBJDIR)/aslxref.o\
 	$(OBJDIR)/aslxrefout.o\
+	$(OBJDIR)/cvcompiler.o\
+	$(OBJDIR)/cvdisasm.o\
+	$(OBJDIR)/cvparser.o\
 	$(OBJDIR)/cmfsize.o\
 	$(OBJDIR)/dbfileio.o\
 	$(OBJDIR)/dmbuffer.o\
@@ -116,10 +127,17 @@ OBJECTS = \
 	$(OBJDIR)/dmresrcl2.o\
 	$(OBJDIR)/dmresrcs.o\
 	$(OBJDIR)/dmrestag.o\
+	$(OBJDIR)/dmswitch.o\
 	$(OBJDIR)/dmtable.o\
 	$(OBJDIR)/dmtables.o\
 	$(OBJDIR)/dmtbdump.o\
+	$(OBJDIR)/dmtbdump1.o\
+	$(OBJDIR)/dmtbdump2.o\
+	$(OBJDIR)/dmtbdump3.o\
 	$(OBJDIR)/dmtbinfo.o\
+	$(OBJDIR)/dmtbinfo1.o\
+	$(OBJDIR)/dmtbinfo2.o\
+	$(OBJDIR)/dmtbinfo3.o\
 	$(OBJDIR)/dmutils.o\
 	$(OBJDIR)/dmwalk.o\
 	$(OBJDIR)/dsargs.o\
@@ -127,6 +145,7 @@ OBJECTS = \
 	$(OBJDIR)/dsfield.o\
 	$(OBJDIR)/dsobject.o\
 	$(OBJDIR)/dsopcode.o\
+	$(OBJDIR)/dspkginit.o\
 	$(OBJDIR)/dsutils.o\
 	$(OBJDIR)/dswexec.o\
 	$(OBJDIR)/dswload.o\
@@ -143,6 +162,7 @@ OBJECTS = \
 	$(OBJDIR)/dttable2.o\
 	$(OBJDIR)/dttemplate.o\
 	$(OBJDIR)/dtutils.o\
+	$(OBJDIR)/exconcat.o\
 	$(OBJDIR)/exconvrt.o\
 	$(OBJDIR)/excreate.o\
 	$(OBJDIR)/exdump.o\
@@ -175,7 +195,6 @@ OBJECTS = \
 	$(OBJDIR)/nswalk.o\
 	$(OBJDIR)/nsxfobj.o\
 	$(OBJDIR)/osunixxf.o\
-	$(OBJDIR)/oslibcfs.o\
 	$(OBJDIR)/prexpress.o\
 	$(OBJDIR)/prmacros.o\
 	$(OBJDIR)/prscan.o\
@@ -199,6 +218,7 @@ OBJECTS = \
 	$(OBJDIR)/tbxfload.o\
 	$(OBJDIR)/utaddress.o\
 	$(OBJDIR)/utalloc.o\
+	$(OBJDIR)/utascii.o\
 	$(OBJDIR)/utbuffer.o\
 	$(OBJDIR)/utcache.o\
 	$(OBJDIR)/utcopy.o\
@@ -218,9 +238,11 @@ OBJECTS = \
 	$(OBJDIR)/utobject.o\
 	$(OBJDIR)/utownerid.o\
 	$(OBJDIR)/utpredef.o\
-	$(OBJDIR)/utprint.o\
+	$(OBJDIR)/utresdecode.o\
 	$(OBJDIR)/utresrc.o\
 	$(OBJDIR)/utstate.o\
+	$(OBJDIR)/utstrtoul64.o\
+	$(OBJDIR)/utstrsuppt.o\
 	$(OBJDIR)/utstring.o\
 	$(OBJDIR)/utuuid.o\
 	$(OBJDIR)/utxface.o\
@@ -232,22 +254,27 @@ INTERMEDIATES = \
 	$(OBJDIR)/aslcompilerparse.c\
 	$(OBJDIR)/dtparserlex.c\
 	$(OBJDIR)/dtparserparse.c\
+	$(OBJDIR)/dtcompilerparserlex.c\
+	$(OBJDIR)/dtcompilerparserparse.c\
 	$(OBJDIR)/prparserlex.c\
 	$(OBJDIR)/prparserparse.c
 
 MISC = \
 	$(OBJDIR)/aslcompiler.y.h\
+	$(OBJDIR)/dtcompilerparser.y.h\
 	$(OBJDIR)/dtparser.y.h\
 	$(OBJDIR)/prparser.y.h
 
 ASL_PARSER = \
 	$(ASL_COMPILER)/aslcstyle.y\
+	$(ASL_COMPILER)/aslhelpers.y\
 	$(ASL_COMPILER)/aslparser.y\
+	$(ASL_COMPILER)/aslprimaries.y\
 	$(ASL_COMPILER)/aslresources.y\
+	$(ASL_COMPILER)/aslrules.y\
 	$(ASL_COMPILER)/aslsupport.y\
 	$(ASL_COMPILER)/asltokens.y\
-	$(ASL_COMPILER)/asltypes.y\
-	$(ASL_COMPILER)/aslrules.y
+	$(ASL_COMPILER)/asltypes.y
 
 ASL_LEXER = \
 	$(ASL_COMPILER)/aslcompiler.l\
@@ -269,42 +296,61 @@ CFLAGS += \
 include ../Makefile.rules
 
 #
-# Function to safely execute yacc
+# Function to safely execute yacc:
+# Generate the output files to a temporary directory,
+# move the file to $(OBJDIR), and discard the directory.
 #
 safe_yacc = \
-	_f=`echo $(1) | tr '[:upper:]' '[:lower:]'` &&\
-	_d=`mktemp -d $(OBJDIR)/$$_f.XXXXXX` &&\
-	_t=`basename $(3)` &&\
-	$(YACC) $(YFLAGS) -p$(1) -o$$_d/$$_f.c -d $(2) &&\
-	mv $$_d/$$_f.$${_t\#\#*.} $(3);\
-	test -d $$_d && rm -fr $$_d
+	_d=`mktemp -d $(OBJDIR)/$(1).XXXXXX` &&\
+	cd $$_d &&\
+	$(YACC) $(YFLAGS) -v -d -p$(1) "$(abspath $(2))" &&\
+	cd - > /dev/null;\
+	mv $$_d/y.tab$(suffix $(3)) $(3);\
+	_r=$$?;\
+	rm -fr $$_d;\
+	exit $$_r
 
 #
 # Macro processing for iASL .y files
 #
 $(OBJDIR)/aslcompiler.y :      $(ASL_PARSER)
-	$(MACROPROC) $(MFLAGS) $(ASL_COMPILER)/aslparser.y > $@
+	@echo "- " $(MACROPROC) "          Preprocess main iASL parser"
+	@$(MACROPROC) $(MFLAGS) $(ASL_COMPILER)/aslparser.y > $@
 
 #
 # Parser and Lexer - intermediate C files
 #
 $(OBJDIR)/aslcompilerlex.c :   $(ASL_LEXER)
-	$(LEX) $(LFLAGS) -PAslCompiler -o$@ $(ASL_COMPILER)/aslcompiler.l
+	@echo "- " $(LEX) "        "$<
+	@$(LEX) $(LFLAGS) -PAslCompiler -o$@ $(ASL_COMPILER)/aslcompiler.l
 
 $(OBJDIR)/aslcompilerparse.c $(OBJDIR)/aslcompiler.y.h : $(OBJDIR)/aslcompiler.y
-	$(call safe_yacc,AslCompiler,$<,$@)
+	@echo "- " $(YACC) "       "$<
+	@$(call safe_yacc,AslCompiler,$<,$@)
+
+$(OBJDIR)/dtcompilerparserlex.c :      $(ASL_COMPILER)/dtcompilerparser.l $(OBJDIR)/dtcompilerparser.y.h
+	@echo "- " $(LEX) "        "$<
+	@$(LEX) $(DLFLAGS) -PDtCompilerParser -o$@ $<
+
+$(OBJDIR)/dtcompilerparserparse.c $(OBJDIR)/dtcompilerparser.y.h :       $(ASL_COMPILER)/dtcompilerparser.y
+	@echo "- " $(YACC) "       "$<
+	@$(call safe_yacc,DtCompilerParser,$<,$@)
 
 $(OBJDIR)/dtparserlex.c :      $(ASL_COMPILER)/dtparser.l $(OBJDIR)/dtparser.y.h
-	$(LEX) $(LFLAGS) -PDtParser -o$@ $<
+	@echo "- " $(LEX) "        "$<
+	@$(LEX) $(DLFLAGS) -PDtParser -o$@ $<
 
 $(OBJDIR)/dtparserparse.c $(OBJDIR)/dtparser.y.h :       $(ASL_COMPILER)/dtparser.y
-	$(call safe_yacc,DtParser,$<,$@)
+	@echo "- " $(YACC) "       "$<
+	@$(call safe_yacc,DtParser,$<,$@)
 
 $(OBJDIR)/prparserlex.c :      $(ASL_COMPILER)/prparser.l $(OBJDIR)/prparser.y.h
-	$(LEX) $(LFLAGS) -PPrParser -o$@ $<
+	@echo "- " $(LEX) "        "$<
+	@$(LEX) $(LFLAGS) -PPrParser -o$@ $<
 
 $(OBJDIR)/prparserparse.c $(OBJDIR)/prparser.y.h :       $(ASL_COMPILER)/prparser.y
-	$(call safe_yacc,PrParser,$<,$@)
+	@echo "- " $(YACC) "       "$<
+	@$(call safe_yacc,PrParser,$<,$@)
 
 #
 # Parsers and Lexers - final object files
@@ -313,19 +359,33 @@ $(OBJDIR)/prparserparse.c $(OBJDIR)/prparser.y.h :       $(ASL_COMPILER)/prparse
 # by the utilities above and they are not necessarily ANSI C, etc.
 #
 $(OBJDIR)/aslcompilerlex.o :   $(OBJDIR)/aslcompilerlex.c
-	$(CC) -c $(CFLAGS) -Wall -Werror -o$@ $<
+	@echo "- " "Intermediate" $<
+	@$(CC) -c $(CFLAGS) -Wall -Werror -o$@ $<
 
 $(OBJDIR)/aslcompilerparse.o : $(OBJDIR)/aslcompilerparse.c
-	$(CC) -c $(CFLAGS) -Wall -Werror -o$@ $<
+	@echo "- " "Intermediate" $<
+	@$(CC) -c $(CFLAGS) -Wall -Werror -o$@ $<
+
+$(OBJDIR)/dtcompilerparserlex.o :      $(OBJDIR)/dtcompilerparserlex.c
+	@echo "- " "Intermediate" $<
+	@$(CC) -c $(CFLAGS) -Wall -Werror -o$@ $<
+
+$(OBJDIR)/dtcompilerparserparse.o :    $(OBJDIR)/dtcompilerparserparse.c
+	@echo "- " "Intermediate" $<
+	@$(CC) -c $(CFLAGS) -Wall -Werror -o$@ $<
 
 $(OBJDIR)/dtparserlex.o :      $(OBJDIR)/dtparserlex.c
-	$(CC) -c $(CFLAGS) -Wall -Werror -o$@ $<
+	@echo "- " "Intermediate" $<
+	@$(CC) -c $(CFLAGS) -Wall -Werror -o$@ $<
 
 $(OBJDIR)/dtparserparse.o :    $(OBJDIR)/dtparserparse.c
-	$(CC) -c $(CFLAGS) -Wall -Werror -o$@ $<
+	@echo "- " "Intermediate" $<
+	@$(CC) -c $(CFLAGS) -Wall -Werror -o$@ $<
 
 $(OBJDIR)/prparserlex.o :      $(OBJDIR)/prparserlex.c
-	$(CC) -c $(CFLAGS) -Wall -Werror -o$@ $<
+	@echo "- " "Intermediate" $<
+	@$(CC) -c $(CFLAGS) -Wall -Werror -o$@ $<
 
 $(OBJDIR)/prparserparse.o :    $(OBJDIR)/prparserparse.c
-	$(CC) -c $(CFLAGS) -Wall -Werror -o$@ $<
+	@echo "- " "Intermediate" $<
+	@$(CC) -c $(CFLAGS) -Wall -Werror -o$@ $<

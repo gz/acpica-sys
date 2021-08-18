@@ -1,12 +1,121 @@
 /******************************************************************************
  *
- * Module Name: acpixtract - convert ascii ACPI tables to binary
+ * Module Name: acpixtract - Top level functions to convert ascii/hex
+ *                           ACPI tables to the original binary tables
  *
  *****************************************************************************/
 
-/*
- * Copyright (C) 2000 - 2016, Intel Corp.
+/******************************************************************************
+ *
+ * 1. Copyright Notice
+ *
+ * Some or all of this work - Copyright (c) 1999 - 2021, Intel Corp.
  * All rights reserved.
+ *
+ * 2. License
+ *
+ * 2.1. This is your license from Intel Corp. under its intellectual property
+ * rights. You may have additional license terms from the party that provided
+ * you this software, covering your right to use that party's intellectual
+ * property rights.
+ *
+ * 2.2. Intel grants, free of charge, to any person ("Licensee") obtaining a
+ * copy of the source code appearing in this file ("Covered Code") an
+ * irrevocable, perpetual, worldwide license under Intel's copyrights in the
+ * base code distributed originally by Intel ("Original Intel Code") to copy,
+ * make derivatives, distribute, use and display any portion of the Covered
+ * Code in any form, with the right to sublicense such rights; and
+ *
+ * 2.3. Intel grants Licensee a non-exclusive and non-transferable patent
+ * license (with the right to sublicense), under only those claims of Intel
+ * patents that are infringed by the Original Intel Code, to make, use, sell,
+ * offer to sell, and import the Covered Code and derivative works thereof
+ * solely to the minimum extent necessary to exercise the above copyright
+ * license, and in no event shall the patent license extend to any additions
+ * to or modifications of the Original Intel Code. No other license or right
+ * is granted directly or by implication, estoppel or otherwise;
+ *
+ * The above copyright and patent license is granted only if the following
+ * conditions are met:
+ *
+ * 3. Conditions
+ *
+ * 3.1. Redistribution of Source with Rights to Further Distribute Source.
+ * Redistribution of source code of any substantial portion of the Covered
+ * Code or modification with rights to further distribute source must include
+ * the above Copyright Notice, the above License, this list of Conditions,
+ * and the following Disclaimer and Export Compliance provision. In addition,
+ * Licensee must cause all Covered Code to which Licensee contributes to
+ * contain a file documenting the changes Licensee made to create that Covered
+ * Code and the date of any change. Licensee must include in that file the
+ * documentation of any changes made by any predecessor Licensee. Licensee
+ * must include a prominent statement that the modification is derived,
+ * directly or indirectly, from Original Intel Code.
+ *
+ * 3.2. Redistribution of Source with no Rights to Further Distribute Source.
+ * Redistribution of source code of any substantial portion of the Covered
+ * Code or modification without rights to further distribute source must
+ * include the following Disclaimer and Export Compliance provision in the
+ * documentation and/or other materials provided with distribution. In
+ * addition, Licensee may not authorize further sublicense of source of any
+ * portion of the Covered Code, and must include terms to the effect that the
+ * license from Licensee to its licensee is limited to the intellectual
+ * property embodied in the software Licensee provides to its licensee, and
+ * not to intellectual property embodied in modifications its licensee may
+ * make.
+ *
+ * 3.3. Redistribution of Executable. Redistribution in executable form of any
+ * substantial portion of the Covered Code or modification must reproduce the
+ * above Copyright Notice, and the following Disclaimer and Export Compliance
+ * provision in the documentation and/or other materials provided with the
+ * distribution.
+ *
+ * 3.4. Intel retains all right, title, and interest in and to the Original
+ * Intel Code.
+ *
+ * 3.5. Neither the name Intel nor any other trademark owned or controlled by
+ * Intel shall be used in advertising or otherwise to promote the sale, use or
+ * other dealings in products derived from or relating to the Covered Code
+ * without prior written authorization from Intel.
+ *
+ * 4. Disclaimer and Export Compliance
+ *
+ * 4.1. INTEL MAKES NO WARRANTY OF ANY KIND REGARDING ANY SOFTWARE PROVIDED
+ * HERE. ANY SOFTWARE ORIGINATING FROM INTEL OR DERIVED FROM INTEL SOFTWARE
+ * IS PROVIDED "AS IS," AND INTEL WILL NOT PROVIDE ANY SUPPORT, ASSISTANCE,
+ * INSTALLATION, TRAINING OR OTHER SERVICES. INTEL WILL NOT PROVIDE ANY
+ * UPDATES, ENHANCEMENTS OR EXTENSIONS. INTEL SPECIFICALLY DISCLAIMS ANY
+ * IMPLIED WARRANTIES OF MERCHANTABILITY, NONINFRINGEMENT AND FITNESS FOR A
+ * PARTICULAR PURPOSE.
+ *
+ * 4.2. IN NO EVENT SHALL INTEL HAVE ANY LIABILITY TO LICENSEE, ITS LICENSEES
+ * OR ANY OTHER THIRD PARTY, FOR ANY LOST PROFITS, LOST DATA, LOSS OF USE OR
+ * COSTS OF PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES, OR FOR ANY INDIRECT,
+ * SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THIS AGREEMENT, UNDER ANY
+ * CAUSE OF ACTION OR THEORY OF LIABILITY, AND IRRESPECTIVE OF WHETHER INTEL
+ * HAS ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES. THESE LIMITATIONS
+ * SHALL APPLY NOTWITHSTANDING THE FAILURE OF THE ESSENTIAL PURPOSE OF ANY
+ * LIMITED REMEDY.
+ *
+ * 4.3. Licensee shall not export, either directly or indirectly, any of this
+ * software or system incorporating such software without first obtaining any
+ * required license or other approval from the U. S. Department of Commerce or
+ * any other agency or department of the United States Government. In the
+ * event Licensee exports any such software from the United States or
+ * re-exports any such software from a foreign destination, Licensee shall
+ * ensure that the distribution and export/re-export of the software is in
+ * compliance with all laws, regulations, orders, or other restrictions of the
+ * U.S. Export Administration Regulations. Licensee agrees that neither it nor
+ * any of its subsidiaries will export/re-export any technical data, process,
+ * software, or service, directly or indirectly, to any country for which the
+ * United States government or any agency thereof requires an export license,
+ * other governmental approval, or letter of assurance, without first obtaining
+ * such license, approval or letter.
+ *
+ *****************************************************************************
+ *
+ * Alternatively, you may choose to be licensed under the terms of the
+ * following license:
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -23,23 +132,23 @@
  *    of any contributors may be used to endorse or promote products derived
  *    from this software without specific prior written permission.
  *
- * Alternatively, this software may be distributed under the terms of the
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ * OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ * Alternatively, you may choose to be licensed under the terms of the
  * GNU General Public License ("GPL") version 2 as published by the Free
  * Software Foundation.
  *
- * NO WARRANTY
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
- * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
- * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR
- * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
- * HOLDERS OR CONTRIBUTORS BE LIABLE FOR SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
- * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
- * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
- * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
- * STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
- * IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
- * POSSIBILITY OF SUCH DAMAGES.
- */
+ *****************************************************************************/
 
 #include "acpixtract.h"
 
@@ -67,38 +176,48 @@ AxExtractTables (
 {
     FILE                    *InputFile;
     FILE                    *OutputFile = NULL;
-    unsigned int            BytesConverted;
-    unsigned int            ThisTableBytesWritten = 0;
+    int                     BytesConverted;
+    int                     ThisTableBytesWritten = 0;
     unsigned int            FoundTable = 0;
     unsigned int            Instances = 0;
     unsigned int            ThisInstance;
-    char                    ThisSignature[4];
+    char                    ThisSignature[5];
+    char                    UpperSignature[5];
     int                     Status = 0;
     unsigned int            State = AX_STATE_FIND_HEADER;
 
 
     /* Open input in text mode, output is in binary mode */
 
-    InputFile = fopen (InputPathname, "rt");
+    InputFile = fopen (InputPathname, "r");
     if (!InputFile)
     {
         printf ("Could not open input file %s\n", InputPathname);
         return (-1);
     }
 
+    if (!AxIsFileAscii (InputFile))
+    {
+        fclose (InputFile);
+        return (-1);
+    }
+
     if (Signature)
     {
+        strncpy (UpperSignature, Signature, ACPI_NAMESEG_SIZE);
+        AcpiUtStrupr (UpperSignature);
+
         /* Are there enough instances of the table to continue? */
 
-        AxNormalizeSignature (Signature);
+        AxNormalizeSignature (UpperSignature);
+        Instances = AxCountTableInstances (InputPathname, UpperSignature);
 
-        Instances = AxCountTableInstances (InputPathname, Signature);
         if (Instances < MinimumInstances)
         {
             printf ("Table [%s] was not found in %s\n",
-                Signature, InputPathname);
+                UpperSignature, InputPathname);
             fclose (InputFile);
-            return (-1);
+            return (0);             /* Don't abort */
         }
 
         if (Instances == 0)
@@ -112,6 +231,28 @@ AxExtractTables (
 
     while (fgets (Gbl_LineBuffer, AX_LINE_BUFFER_SIZE, InputFile))
     {
+        /*
+         * Check up front if we have a header line of the form:
+         * DSDT @ 0xdfffd0c0 (10999 bytes)
+         */
+        if (AX_IS_TABLE_BLOCK_HEADER &&
+            (State == AX_STATE_EXTRACT_DATA))
+        {
+            /* End of previous table, start of new table */
+
+            if (ThisTableBytesWritten)
+            {
+                printf (AX_TABLE_INFO_FORMAT, ThisSignature, ThisTableBytesWritten,
+                    ThisTableBytesWritten, Gbl_OutputFilename);
+            }
+            else
+            {
+                Gbl_TableCount--;
+            }
+
+            State = AX_STATE_FIND_HEADER;
+        }
+
         switch (State)
         {
         case AX_STATE_FIND_HEADER:
@@ -121,12 +262,12 @@ AxExtractTables (
                 continue;
             }
 
-            ACPI_MOVE_NAME (ThisSignature, Gbl_LineBuffer);
+            ACPI_COPY_NAMESEG (ThisSignature, Gbl_LineBuffer);
             if (Signature)
             {
                 /* Ignore signatures that don't match */
 
-                if (!ACPI_COMPARE_NAME (ThisSignature, Signature))
+                if (!ACPI_COMPARE_NAMESEG (ThisSignature, UpperSignature))
                 {
                     continue;
                 }
@@ -175,10 +316,14 @@ AxExtractTables (
 
         case AX_STATE_EXTRACT_DATA:
 
+            if (!AxIsHexDataLine ())
+            {
+                continue;   /* Toss any lines that are not raw hex data */
+            }
+
             /* Empty line or non-data line terminates the data block */
 
-            BytesConverted = AxProcessOneTextLine (
-                OutputFile, ThisSignature, ThisTableBytesWritten);
+            BytesConverted = AxConvertAndWrite (OutputFile, ThisSignature);
             switch (BytesConverted)
             {
             case 0:
@@ -188,6 +333,7 @@ AxExtractTables (
 
             case -1:
 
+                Status = -1;
                 goto CleanupAndExit; /* There was a write error */
 
             default: /* Normal case, get next line */
@@ -205,8 +351,7 @@ AxExtractTables (
 
     if (!FoundTable)
     {
-        printf ("Table [%s] was not found in %s\n",
-            Signature, InputPathname);
+        printf ("No ACPI tables were found in %s\n", InputPathname);
     }
 
 
@@ -216,14 +361,8 @@ CleanupAndExit:
     {
         /* Received an input file EOF while extracting data */
 
-        printf (AX_TABLE_INFO_FORMAT,
-            ThisSignature, ThisTableBytesWritten, Gbl_OutputFilename);
-    }
-
-    if (Gbl_TableCount > 1)
-    {
-        printf ("\n%d binary ACPI tables extracted\n",
-            Gbl_TableCount);
+        printf (AX_TABLE_INFO_FORMAT, ThisSignature, ThisTableBytesWritten,
+            ThisTableBytesWritten, Gbl_OutputFilename);
     }
 
     if (OutputFile)
@@ -258,9 +397,9 @@ AxExtractToMultiAmlFile (
     FILE                    *InputFile;
     FILE                    *OutputFile;
     int                     Status = 0;
-    unsigned int            TotalBytesWritten = 0;
-    unsigned int            ThisTableBytesWritten = 0;
-    unsigned int             BytesConverted;
+    int                     TotalBytesWritten = 0;
+    int                     ThisTableBytesWritten = 0;
+    unsigned int            BytesConverted;
     char                    ThisSignature[4];
     unsigned int            State = AX_STATE_FIND_HEADER;
 
@@ -269,10 +408,16 @@ AxExtractToMultiAmlFile (
 
     /* Open the input file in text mode */
 
-    InputFile = fopen (InputPathname, "rt");
+    InputFile = fopen (InputPathname, "r");
     if (!InputFile)
     {
         printf ("Could not open input file %s\n", InputPathname);
+        return (-1);
+    }
+
+    if (!AxIsFileAscii (InputFile))
+    {
+        fclose (InputFile);
         return (-1);
     }
 
@@ -290,6 +435,28 @@ AxExtractToMultiAmlFile (
 
     while (fgets (Gbl_LineBuffer, AX_LINE_BUFFER_SIZE, InputFile))
     {
+        /*
+         * Check up front if we have a header line of the form:
+         * DSDT @ 0xdfffd0c0 (10999 bytes)
+         */
+        if (AX_IS_TABLE_BLOCK_HEADER &&
+            (State == AX_STATE_EXTRACT_DATA))
+        {
+            /* End of previous table, start of new table */
+
+            if (ThisTableBytesWritten)
+            {
+                printf (AX_TABLE_INFO_FORMAT, ThisSignature, ThisTableBytesWritten,
+                    ThisTableBytesWritten, Gbl_OutputFilename);
+            }
+            else
+            {
+                Gbl_TableCount--;
+            }
+
+            State = AX_STATE_FIND_HEADER;
+        }
+
         switch (State)
         {
         case AX_STATE_FIND_HEADER:
@@ -299,12 +466,12 @@ AxExtractToMultiAmlFile (
                 continue;
             }
 
-            ACPI_MOVE_NAME (ThisSignature, Gbl_LineBuffer);
+            ACPI_COPY_NAMESEG (ThisSignature, Gbl_LineBuffer);
 
             /* Only want DSDT and SSDTs */
 
-            if (!ACPI_COMPARE_NAME (ThisSignature, ACPI_SIG_DSDT) &&
-                !ACPI_COMPARE_NAME (ThisSignature, ACPI_SIG_SSDT))
+            if (!ACPI_COMPARE_NAMESEG (ThisSignature, ACPI_SIG_DSDT) &&
+                !ACPI_COMPARE_NAMESEG (ThisSignature, ACPI_SIG_SSDT))
             {
                 continue;
             }
@@ -320,10 +487,14 @@ AxExtractToMultiAmlFile (
 
         case AX_STATE_EXTRACT_DATA:
 
+            if (!AxIsHexDataLine ())
+            {
+                continue;   /* Toss any lines that are not raw hex data */
+            }
+
             /* Empty line or non-data line terminates the data block */
 
-            BytesConverted = AxProcessOneTextLine (
-                OutputFile, ThisSignature, ThisTableBytesWritten);
+            BytesConverted = AxConvertAndWrite (OutputFile, ThisSignature);
             switch (BytesConverted)
             {
             case 0:
@@ -333,6 +504,7 @@ AxExtractToMultiAmlFile (
 
             case -1:
 
+                Status = -1;
                 goto CleanupAndExit; /* There was a write error */
 
             default: /* Normal case, get next line */
@@ -356,11 +528,11 @@ CleanupAndExit:
     {
         /* Received an input file EOF or error while writing data */
 
-        printf (AX_TABLE_INFO_FORMAT,
-            ThisSignature, ThisTableBytesWritten, Gbl_OutputFilename);
+        printf (AX_TABLE_INFO_FORMAT, ThisSignature, ThisTableBytesWritten,
+            ThisTableBytesWritten, Gbl_OutputFilename);
     }
 
-    printf ("\n%d binary ACPI tables extracted and written to %s (%u bytes)\n",
+    printf ("\n%u binary ACPI tables extracted and written to %s (%u bytes)\n",
         Gbl_TableCount, Gbl_OutputFilename, TotalBytesWritten);
 
     fclose (InputFile);
@@ -371,7 +543,7 @@ CleanupAndExit:
 
 /******************************************************************************
  *
- * FUNCTION:    AxListTables
+ * FUNCTION:    AxListAllTables
  *
  * PARAMETERS:  InputPathname       - Filename for acpidump file
  *
@@ -383,94 +555,107 @@ CleanupAndExit:
  ******************************************************************************/
 
 int
-AxListTables (
+AxListAllTables (
     char                    *InputPathname)
 {
     FILE                    *InputFile;
-    size_t                  HeaderSize;
     unsigned char           Header[48];
-    ACPI_TABLE_HEADER       *TableHeader = (ACPI_TABLE_HEADER *) (void *) Header;
+    UINT32                  ByteCount = 0;
+    UINT32                  ThisLineByteCount;
+    unsigned int            State = AX_STATE_FIND_HEADER;
 
 
     /* Open input in text mode, output is in binary mode */
 
-    InputFile = fopen (InputPathname, "rt");
+    InputFile = fopen (InputPathname, "r");
     if (!InputFile)
     {
         printf ("Could not open input file %s\n", InputPathname);
         return (-1);
     }
 
-    /* Dump the headers for all tables found in the input file */
+    if (!AxIsFileAscii (InputFile))
+    {
+        fclose (InputFile);
+        return (-1);
+    }
 
-    printf ("\nSignature  Length      Revision   OemId    OemTableId"
-        "   OemRevision CompilerId CompilerRevision\n\n");
+    /* Info header */
+
+    printf ("\n Signature  Length    Version Oem       Oem         "
+        "Oem         Compiler Compiler\n");
+    printf (  "                              Id        TableId     "
+        "RevisionId  Name     Revision\n");
+    printf (  " _________  __________  ____  ________  __________  "
+        "__________  _______  __________\n\n");
+
+    /* Dump the headers for all tables found in the input file */
 
     while (fgets (Gbl_LineBuffer, AX_LINE_BUFFER_SIZE, InputFile))
     {
-        /* Ignore empty lines and lines that start with a space */
+        /* Ignore empty lines */
 
-        if (AxIsEmptyLine (Gbl_LineBuffer) ||
-            (Gbl_LineBuffer[0] == ' '))
+        if (AxIsEmptyLine (Gbl_LineBuffer))
         {
             continue;
         }
 
-        /* Get the 36 byte header and display the fields */
-
-        HeaderSize = AxGetTableHeader (InputFile, Header);
-        if (HeaderSize < 16)
+        /*
+         * Check up front if we have a header line of the form:
+         * DSDT @ 0xdfffd0c0 (10999 bytes)
+         */
+        if (AX_IS_TABLE_BLOCK_HEADER &&
+            (State == AX_STATE_EXTRACT_DATA))
         {
-            continue;
+            State = AX_STATE_FIND_HEADER;
         }
 
-        /* RSDP has an oddball signature and header */
-
-        if (!strncmp (TableHeader->Signature, "RSD PTR ", 8))
+        switch (State)
         {
-            AxCheckAscii ((char *) &Header[9], 6);
-            printf ("%7.4s                          \"%6.6s\"\n", "RSDP",
-                &Header[9]);
-            Gbl_TableCount++;
+        case AX_STATE_FIND_HEADER:
+
+            ByteCount = 0;
+            if (!AxIsDataBlockHeader ())
+            {
+                continue;
+            }
+
+            State = AX_STATE_EXTRACT_DATA;
             continue;
-        }
 
-        /* Minimum size for table with standard header */
+        case AX_STATE_EXTRACT_DATA:
 
-        if (HeaderSize < sizeof (ACPI_TABLE_HEADER))
-        {
+            /* Ignore any lines that don't look like a data line */
+
+            if (!AxIsHexDataLine ())
+            {
+                continue;   /* Toss any lines that are not raw hex data */
+            }
+
+            /* Convert header to hex and display it */
+
+            ThisLineByteCount = AxConvertToBinary (Gbl_LineBuffer,
+                &Header[ByteCount]);
+            if (ThisLineByteCount == EOF)
+            {
+                fclose (InputFile);
+                return (-1);
+            }
+
+            ByteCount += ThisLineByteCount;
+            if (ByteCount >= sizeof (ACPI_TABLE_HEADER))
+            {
+                AxDumpTableHeader (Header);
+                State = AX_STATE_FIND_HEADER;
+            }
             continue;
+
+        default:
+            break;
         }
-
-        /* Signature and Table length */
-
-        Gbl_TableCount++;
-        printf ("%7.4s   0x%8.8X", TableHeader->Signature,
-            TableHeader->Length);
-
-        /* FACS has only signature and length */
-
-        if (ACPI_COMPARE_NAME (TableHeader->Signature, "FACS"))
-        {
-            printf ("\n");
-            continue;
-        }
-
-        /* OEM IDs and Compiler IDs */
-
-        AxCheckAscii (TableHeader->OemId, 6);
-        AxCheckAscii (TableHeader->OemTableId, 8);
-        AxCheckAscii (TableHeader->AslCompilerId, 4);
-
-        printf (
-            "     0x%2.2X    \"%6.6s\"  \"%8.8s\"   0x%8.8X"
-            "    \"%4.4s\"     0x%8.8X\n",
-            TableHeader->Revision, TableHeader->OemId,
-            TableHeader->OemTableId, TableHeader->OemRevision,
-            TableHeader->AslCompilerId, TableHeader->AslCompilerRevision);
     }
 
-    printf ("\nFound %u ACPI tables\n", Gbl_TableCount);
+    printf ("\nFound %u ACPI tables in %s\n", Gbl_TableCount, InputPathname);
     fclose (InputFile);
     return (0);
 }

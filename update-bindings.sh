@@ -1,15 +1,9 @@
 #!/usr/bin/env bash
+set -ex
 
-if [ ! -e "$BINDGEN" ]; then
-    echo "BINDGEN not executable or not defined, set it to path to rust-bindgen"
-fi
+REGEX=".*(acpi|ACPI|Acpi).*"
+bindgen --use-core --default-enum-style rust --allowlist-var $REGEX --allowlist-type $REGEX --allowlist-function $REGEX --size_t-is-usize --no-layout-tests -o src/raw64.rs acpica/source/include/acpi.h -- -D NRK -I "/usr/lib/clang/*/include/"
 
-if [ ! -f acpica/source/include/platform/acrobigalia.h ]; then
-    patch -N -d acpica -p1 < patches/add-robigalia.patch
-fi
-
-$BINDGEN -match acpica -o src/raw32.rs -D NRK -I /usr/lib/clang/*/include/ acpica/source/include/acpi.h
-$BINDGEN -match acpica -o src/raw64.rs -D NRK -I /usr/lib/clang/*/include/ acpica/source/include/acpi.h
 
 function replacements() {
     sed $1 -i -e 's/::std::os::raw::c_char/i8/'
@@ -29,8 +23,7 @@ function replacements() {
     sed $1 -i -e 's/::std::mem/::core::mem/'
     sed $1 -i -e 's/::std::clone/::core::clone/'
     sed $1 -i -e 's/::std::default/::core::default/'
-    sed $1 -i -e 's/ = 1, }/ = 1, _UNUSED_VARIANT = 2, }/'
+    #sed $1 -i -e 's/ = 1, }/ = 1, _UNUSED_VARIANT = 2, }/'
 }
 
-replacements src/raw32.rs
 replacements src/raw64.rs

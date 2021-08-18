@@ -42,11 +42,14 @@ OBJECTS = \
 	$(OBJDIR)/acgetline.o\
 	$(OBJDIR)/acfileio.o\
 	$(OBJDIR)/aeexec.o\
+	$(OBJDIR)/aeexception.o\
 	$(OBJDIR)/aehandlers.o\
 	$(OBJDIR)/aeinitfile.o\
+	$(OBJDIR)/aeinstall.o\
 	$(OBJDIR)/aemain.o\
 	$(OBJDIR)/aeregion.o\
 	$(OBJDIR)/aetables.o\
+	$(OBJDIR)/aetests.o\
 	$(OBJDIR)/ahids.o\
 	$(OBJDIR)/ahuuids.o\
 	$(OBJDIR)/cmfsize.o\
@@ -84,6 +87,7 @@ OBJECTS = \
 	$(OBJDIR)/dsmthdat.o\
 	$(OBJDIR)/dsobject.o\
 	$(OBJDIR)/dsopcode.o\
+	$(OBJDIR)/dspkginit.o\
 	$(OBJDIR)/dsutils.o\
 	$(OBJDIR)/dswexec.o\
 	$(OBJDIR)/dswload.o\
@@ -106,6 +110,7 @@ OBJECTS = \
 	$(OBJDIR)/evxfgpe.o\
 	$(OBJDIR)/evxfregn.o\
 	$(OBJDIR)/exconfig.o\
+	$(OBJDIR)/exconcat.o\
 	$(OBJDIR)/exconvrt.o\
 	$(OBJDIR)/excreate.o\
 	$(OBJDIR)/exdebug.o\
@@ -124,6 +129,7 @@ OBJECTS = \
 	$(OBJDIR)/exresnte.o\
 	$(OBJDIR)/exresolv.o\
 	$(OBJDIR)/exresop.o\
+	$(OBJDIR)/exserial.o\
 	$(OBJDIR)/exstore.o\
 	$(OBJDIR)/exstoren.o\
 	$(OBJDIR)/exstorob.o\
@@ -137,6 +143,7 @@ OBJECTS = \
 	$(OBJDIR)/hwpci.o\
 	$(OBJDIR)/hwregs.o\
 	$(OBJDIR)/hwsleep.o\
+	$(OBJDIR)/hwtimer.o\
 	$(OBJDIR)/hwvalid.o\
 	$(OBJDIR)/hwxface.o\
 	$(OBJDIR)/hwxfsleep.o\
@@ -162,7 +169,7 @@ OBJECTS = \
 	$(OBJDIR)/nsxfeval.o\
 	$(OBJDIR)/nsxfname.o\
 	$(OBJDIR)/nsxfobj.o\
-	$(OBJDIR)/oslibcfs.o\
+	$(OBJDIR)/osgendbg.o\
 	$(OBJDIR)/osunixxf.o\
 	$(OBJDIR)/psargs.o\
 	$(OBJDIR)/psloop.o\
@@ -200,6 +207,7 @@ OBJECTS = \
 	$(OBJDIR)/tbxfroot.o\
 	$(OBJDIR)/utaddress.o\
 	$(OBJDIR)/utalloc.o\
+	$(OBJDIR)/utascii.o\
 	$(OBJDIR)/utbuffer.o\
 	$(OBJDIR)/utcache.o\
 	$(OBJDIR)/utcopy.o\
@@ -222,10 +230,12 @@ OBJECTS = \
 	$(OBJDIR)/utownerid.o\
 	$(OBJDIR)/utnonansi.o\
 	$(OBJDIR)/utpredef.o\
-	$(OBJDIR)/utprint.o\
+	$(OBJDIR)/utresdecode.o\
 	$(OBJDIR)/utresrc.o\
 	$(OBJDIR)/utstate.o\
 	$(OBJDIR)/utstring.o\
+	$(OBJDIR)/utstrsuppt.o\
+	$(OBJDIR)/utstrtoul64.o\
 	$(OBJDIR)/uttrack.o\
 	$(OBJDIR)/utuuid.o\
 	$(OBJDIR)/utxface.o\
@@ -245,10 +255,14 @@ CFLAGS += \
     -DACPI_CHECKSUM_ABORT=TRUE
 endif
 
+ifneq ($(ACPI_HOST),_QNX)
 LDFLAGS += -lpthread
+endif
 
-ifneq ($(HOST),_APPLE)
+ifneq ($(ACPI_HOST),_APPLE)
+ifneq ($(ACPI_HOST),_QNX)
 LDFLAGS += -lrt
+endif
 endif
 
 #
