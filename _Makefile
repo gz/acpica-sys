@@ -9,13 +9,14 @@ SRCS := $(wildcard $(SRCDIR)components/*/*.c)
 SRCS := $(filter-out $(SRCDIR)components/disassembler/%,$(SRCS))
 SRCS := $(filter-out $(SRCDIR)components/debugger/%,$(SRCS))
 SRCS := $(filter-out $(SRCDIR)components/resources/rsdump.c,$(SRCS))
+#SRCS := $(filter-out $(SRCDIR)components/events/%,$(SRCS))
 SRCS += $(SRCDIR)components/hardware/hwacpi.c
 #SRCS += $(SRCDIR)common/ahuuids.c $(SRCDIR)common/ahids.c
 #SRCS += $(SRCDIR)compiler/aslmapenter.c
 OBJS := $(SRCS:$(SRCDIR)%.c=$(OBJDIR)%.o)
 
 CPPFLAGS := -I $(SRCDIR)include/ -D NRK -DACPI_DEBUG_OUTPUT -DACPI_APPLICATION
-CFLAGS := -ffreestanding -Wno-redundant-decls -Wno-unused-function
+CFLAGS := -ffreestanding -Wno-redundant-decls -Wno-unused-function -nostdlib -nodefaultlibs -lgcc
 CFLAGS += -O2 -fPIC
 
 .PHONY: all clean srcdir

@@ -1744,7 +1744,6 @@ pub struct acpi_cedt_chbs {
 }
 pub type ACPI_CEDT_CHBS = acpi_cedt_chbs;
 #[repr(C, packed)]
-#[derive(Debug)]
 pub struct acpi_cedt_cfmws {
     pub Header: ACPI_CEDT_HEADER,
     pub Reserved1: UINT32,
@@ -2879,7 +2878,6 @@ pub type ACPI_IBFT_TARGET = acpi_ibft_target;
 #[doc = " September 2020."]
 #[doc = ""]
 #[repr(C, packed)]
-#[derive(Debug)]
 pub struct acpi_table_aest {
     pub Header: ACPI_TABLE_HEADER,
     pub NodeArray: __IncompleteArrayField<*mut ::core::ffi::c_void>,
@@ -4388,7 +4386,6 @@ pub enum AcpiRasfStatus {
 #[doc = " https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/AcpiRGRT/feature_acpi_rgrt/"]
 #[doc = ""]
 #[repr(C, packed)]
-#[derive(Debug)]
 pub struct acpi_table_rgrt {
     pub Header: ACPI_TABLE_HEADER,
     pub Version: UINT16,

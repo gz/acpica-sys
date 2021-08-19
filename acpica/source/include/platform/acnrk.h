@@ -121,10 +121,13 @@
 #define ACPI_MACHINE_WIDTH 64
 #define ACPI_SINGLE_THREADED
 
+#define FILE void *
+#define stdout ((FILE)0)
+
 //#define ACPI_USE_LOCAL_CACHE 1
 #define ACPI_USE_NATIVE_DIVIDE
-#define ACPI_USE_STANDARD_HEADERS
 
+#undef ACPI_USE_STANDARD_HEADERS
 #undef ACPI_USE_SYSTEM_CLIBRARY
 
 #endif /* __ACNRK_H__ */

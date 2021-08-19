@@ -6,7 +6,7 @@
 # except according to those terms.
 [package]
 name = "libacpica"
-version = "0.0.7"
+version = "0.0.8"
 authors = ["Corey Richardson <corey@octayn.net>", "Gerd Zellweger <mail@gerdzellweger.com>"]
 description = "Bindings to the ACPI Component Architecture"
 documentation = "https://acpica.org/documentation"
